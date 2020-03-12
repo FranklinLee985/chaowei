@@ -1,0 +1,84 @@
+
+> classroom@1.0.0 build-dev-cordova-android D:\Framework7\webappclassroom
+> cross-env TARGET=cordova cross-env NODE_ENV=development node ./build/build.js && cd cordova && cordova build android
+
+Hash: [1mac48b79f48c481c166e1[39m[22m
+Version: webpack [1m4.41.6[39m[22m
+Time: [1m34717[39m[22mms
+Built at: 2020-03-04 [1m23:55:20[39m[22m
+                              [1mAsset[39m[22m      [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m[1mChunk Names[39m[22m
+                       [1m[32m./index.html[39m[22m  1.34 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+  [1m[32mfonts/Framework7Icons-Regular.eot[39m[22m   292 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+  [1m[32mfonts/Framework7Icons-Regular.ttf[39m[22m   291 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+ [1m[32mfonts/Framework7Icons-Regular.woff[39m[22m   145 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+[1m[32mfonts/Framework7Icons-Regular.woff2[39m[22m   108 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+    [1m[32mfonts/MaterialIcons-Regular.eot[39m[22m   140 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+    [1m[32mfonts/MaterialIcons-Regular.ttf[39m[22m   125 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+   [1m[32mfonts/MaterialIcons-Regular.woff[39m[22m  56.3 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+  [1m[32mfonts/MaterialIcons-Regular.woff2[39m[22m  43.3 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m  
+                          [1m[32mjs/app.js[39m[22m   6.5 MiB     [1mapp[39m[22m  [1m[32m[emitted][39m[22m  app
+Entrypoint [1mapp[39m[22m = [1m[32mjs/app.js[39m[22m
+
+Build complete.
+
+Checking Java JDK and Android SDK versions
+ANDROID_SDK_ROOT=c:\Users\rongjianan\AppData\Local\Android\Sdk (recommended setting)
+ANDROID_HOME=c:\Users\rongjianan\AppData\Local\Android\Sdk (DEPRECATED)
+Subproject Path: CordovaLib
+Subproject Path: app
+Subproject Path: ClassRoomSdk
+
+> Configure project :app
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to C:\Android\Sdk\ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+
+> Configure project :ClassRoomSdk
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to C:\Android\Sdk\ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+WARNING: Configuration 'androidTestCompile' is obsolete and has been replaced with 'androidTestImplementation'.
+It will be removed at the end of 2018. For more information see: http://d.android.com/r/tools/update-dependency-configurations.html
+WARNING: Configuration 'compile' is obsolete and has been replaced with 'implementation' and 'api'.
+It will be removed at the end of 2018. For more information see: http://d.android.com/r/tools/update-dependency-configurations.html
+
+> Configure project :CordovaLib
+NDK is missing a "platforms" directory.
+If you are using NDK, verify the ndk.dir is set to a valid NDK directory.  It is currently set to C:\Android\Sdk\ndk-bundle.
+If you are not using NDK, unset the NDK variable from ANDROID_NDK_HOME or local.properties to remove this warning.
+
+
+> Task :app:preBuild UP-TO-DATE
+> Task :ClassRoomSdk:preBuild UP-TO-DATE
+> Task :ClassRoomSdk:preDebugBuild UP-TO-DATE
+> Task :ClassRoomSdk:checkDebugManifest UP-TO-DATE
+> Task :ClassRoomSdk:processDebugManifest UP-TO-DATE
+> Task :CordovaLib:preBuild UP-TO-DATE
+> Task :CordovaLib:preDebugBuild UP-TO-DATE
+> Task :CordovaLib:checkDebugManifest UP-TO-DATE
+> Task :CordovaLib:processDebugManifest UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :ClassRoomSdk:compileDebugAidl NO-SOURCE
+> Task :CordovaLib:compileDebugAidl NO-SOURCE
+> Task :app:compileDebugAidl NO-SOURCE
+> Task :ClassRoomSdk:packageDebugRenderscript NO-SOURCE
+> Task :CordovaLib:packageDebugRenderscript NO-SOURCE
+> Task :app:compileDebugRenderscript UP-TO-DATE
+> Task :app:checkDebugManifest UP-TO-DATE
+> Task :app:generateDebugBuildConfig UP-TO-DATE
+> Task :app:prepareLintJar UP-TO-DATE
+> Task :app:generateDebugSources UP-TO-DATE
+> Task :ClassRoomSdk:compileDebugRenderscript UP-TO-DATE
+> Task :ClassRoomSdk:generateDebugBuildConfig UP-TO-DATE
+> Task :ClassRoomSdk:generateDebugResValues UP-TO-DATE
+> Task :ClassRoomSdk:generateDebugResources UP-TO-DATE
+> Task :ClassRoomSdk:packageDebugResources UP-TO-DATE
+> Task :ClassRoomSdk:generateDebugRFile UP-TO-DATE
+> Task :ClassRoomSdk:prepareLintJar UP-TO-DATE
+> Task :ClassRoomSdk:generateDebugSources UP-TO-DATE
+> Task :ClassRoomSdk:javaPreCompileDebug UP-TO-DATE
+
+> Task :ClassRoomSdk:compileDebugJavaWithJavac FAILED
+17 actionable tasks: 1 executed, 16 up-to-date
