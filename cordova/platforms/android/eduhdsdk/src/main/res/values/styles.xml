@@ -1,0 +1,131 @@
+<resources>
+
+    //黑屏问题
+
+    <style name="activityVoipVideoTransparentTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@color/window_back_black</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <style name="CustomDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="CustomProgressDialog" parent="@style/CustomDialog">
+        <item name="android:windowBackground">@android:color/background_dark</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="tv_class_no_checked">
+        <item name="android:textColor">@color/color_chat_nickname</item>
+    </style>
+
+    <style name="three_tv_class_no_checked">
+        <item name="android:textColor">@color/three_popup_student_name_color</item>
+    </style>
+
+    <style name="tv_class_checked">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="rb_course_left_checked">
+        <item name="android:textColor">@color/color_course_popup_text_select</item>
+    </style>
+
+    <style name="rb_course_left_no_checked">
+        <item name="android:textColor">@color/color_course_popup_text_default</item>
+    </style>
+
+
+    <style name="old_rb_course_left_checked">
+        <item name="android:textColor">@color/color_course_popup_text_select</item>
+    </style>
+
+
+    <style name="pop_choose_role_no_checked">
+        <item name="android:textColor">@color/color_choose_role_no_checked</item>
+    </style>
+
+    <style name="three_color_chose_number">
+        <item name="android:textColor">@color/three_color_chose_number</item>
+    </style>
+
+    <style name="course_white">
+        <item name="android:textColor">@color/course_white</item>
+    </style>
+
+    <style name="pop_choose_role_checked">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="time_yel">
+        <item name="android:textColor">@color/time_yel</item>
+    </style>
+
+    <style name="time_red">
+        <item name="android:textColor">@color/time_red</item>
+    </style>
+
+    <style name="color_hands_up">
+        <item name="android:textColor">@color/color_hands_up</item>
+    </style>
+
+    <style name="three_color_hands_up">
+        <item name="android:textColor">@color/three_one_outclass</item>
+    </style>
+
+    <style name="white">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="msg_system_enter">
+        <item name="android:textColor">@color/color_D2A6FF</item>
+    </style>
+
+    <style name="msg_system_ban">
+        <item name="android:textColor">@color/color_ban_red</item>
+    </style>
+    <style name="msg_system_cancle">
+        <item name="android:textColor">@color/color_ban_cancle</item>
+    </style>
+
+    <style name="msg_nickname_color">
+        <item name="android:textColor">@color/msg_nickname_color</item>
+    </style>
+
+    //弹窗显示隐藏样式
+
+    <style name="three_popup_animation" mce_bogus="1" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/tk_popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/tk_popup_exit</item>
+    </style>
+
+    //聊天弹窗显示隐藏样式
+
+    <style name="chat_pop_anim">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowEnterAnimation">@anim/tk_chatpopshow_anim</item>
+        <item name="android:windowExitAnimation">@anim/tk_chatpophide_anim</item>
+    </style>
+
+    <style name="unselect_action">
+        <item name="android:textColor">@color/unselect_action</item>
+    </style>
+
+    <style name="course_sort_select">
+        <item name="android:textColor">@color/color_media_play_seek_bar_have_play</item>
+    </style>
+
+
+    <!-- popwidnow 显示消失 动画-->
+
+    <style name="mypopwindow_anim_style">
+        <item name="android:windowEnterAnimation">@anim/popshow_anim</item>        <!-- 指定显示的动画xml  -->
+        <item name="android:windowExitAnimation">@anim/pophidden_anim</item>       <!-- 指定消失的动画xml  -->
+    </style>
+
+</resources>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true">
+
+    <com.eduhdsdk.ui.ChlistView
+        android:id="@+id/lv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_message"
+        android:layout_marginBottom="10px"
+        android:divider="@color/nothing"
+        android:dividerHeight="0px"
+        android:listSelector="@android:color/transparent"
+        android:scrollbars="none"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="20px">
+
+        <CheckBox
+            android:id="@+id/cb_message"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:background="@drawable/tk_selector_message"
+            android:button="@null"
+            android:enabled="false"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_no_read_message_number"
+            android:layout_width="20px"
+            android:layout_height="14px"
+            android:layout_alignTop="@id/cb_message"
+            android:layout_marginLeft="28px"
+            android:background="@drawable/tk_shape_no_read_chat_message_round_bg"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="10px"
+            android:visibility="gone" />
+
+        <!--打开输入框-->
+        <ImageView
+            android:id="@+id/iv_open_input"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@id/cb_message"
+            android:src="@drawable/tk_shuru"
+            android:visibility="invisible" />
+
+        <!--全体禁言-->
+        <CheckBox
+            android:id="@+id/cb_choose_shut_chat"
+            android:layout_width="44px"
+            android:layout_height="44px"
+            android:layout_marginLeft="20px"
+            android:layout_toRightOf="@id/iv_open_input"
+            android:background="@drawable/tk_selector_shut_chat"
+            android:button="@null"
+            android:enabled="false"
+            android:visibility="invisible" />
+
+    </RelativeLayout>
+</RelativeLayout>

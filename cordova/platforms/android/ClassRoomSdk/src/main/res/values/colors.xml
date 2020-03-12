@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#FFFFFF</color>
+    <color name="url_bg">#699FFF</color>
+    <color name="colourless">#00000000</color>
+    <color name="tools_answer_num">#795CBF</color>
+    <color name="tools_answer_seebar_default">#F7F4FF</color>
+    <color name="tools_answer_seebar">#A291D3</color>
+
+    <color name="public_black_9">#999999</color>
+
+    <color name="color_small_input_edit_bg">#F4F4F4</color>
+    <color name="chat_message_line_color">#E0D3FF</color>
+
+    <color name="three_color_chat_input_hint">#C6C0D7</color>
+    <color name="three_color_chat_input">#503A8F</color>
+    <color name="tools_timer_select">#FFA291D3</color>
+    <color name="tools_timer_unselect">#53a291d3</color>
+    <color name="tools_timer_line">#FFE3E1EB</color>
+    <color name="color_rel_wb_container">#00000000</color>
+
+
+    <!--画板工具颜色-->
+    <color name="tools_backgroud">#80160C30</color>
+    <color name="tools_bottom_line">#FFFFFF</color>
+    <color name="tools_toop_bg">#33666669</color>
+
+    <color name="white_board_lord">#A291D3</color>
+
+    <color name="small_top_buttom">#BDB0E1</color>
+    <color name="small_top_buttom_white">#ffffff</color>
+
+    <color name="remark_bg">#96000000</color>
+    <color name="remark_txt">#ffffff</color>
+    <color name="screen_border">#1AABFF</color>
+
+    <color name="download_progress_view_bg">#000000</color>
+    <color name="download_progress">#FF2BAD1E</color>
+    <color name="download_progress_bg">#FFFEFFFE</color>
+    <color name="chat_sys_tv_color">#E5D0FA</color>
+
+</resources>

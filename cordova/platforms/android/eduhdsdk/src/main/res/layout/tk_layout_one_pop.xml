@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/up_arr"
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:src="@drawable/tk_up_arr_selectphoto"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/up_arr"
+        android:background="@drawable/tk_popup_window_bg_layout"
+        android:orientation="vertical"
+        android:paddingBottom="17px"
+        android:paddingLeft="2px"
+        android:paddingRight="2px"
+        android:paddingTop="16px">
+
+        <LinearLayout
+            android:id="@+id/ll_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--常规布局-->
+            <LinearLayout
+                android:id="@+id/ll_layout_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="14px"
+                android:paddingRight="14px">
+
+                <CheckBox
+                    android:id="@+id/cb_layout_normal"
+                    android:layout_width="61px"
+                    android:layout_height="51px"
+                    android:background="@drawable/tk_selector_tool_one_normal"
+                    android:button="@null"
+                    android:clickable="false" />
+
+                <TextView
+                    android:id="@+id/tv_layout_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9px"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/layout_normal"
+                    android:textColor="@color/white"
+                    android:textSize="12px" />
+            </LinearLayout>
+
+            <!--双师布局-->
+            <LinearLayout
+                android:id="@+id/ll_layout_double"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="14px"
+                android:paddingRight="14px">
+
+                <CheckBox
+                    android:id="@+id/cb_layout_double"
+                    android:layout_width="61px"
+                    android:layout_height="51px"
+                    android:background="@drawable/tk_selector_tool_double"
+                    android:button="@null"
+                    android:clickable="false" />
+
+                <TextView
+                    android:id="@+id/tv_layout_double"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9px"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/layout_double"
+                    android:textColor="@color/white"
+                    android:textSize="12px" />
+            </LinearLayout>
+
+            <!--视频布局-->
+            <LinearLayout
+                android:id="@+id/ll_layout_video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingLeft="14px"
+                android:paddingRight="14px">
+
+                <CheckBox
+                    android:id="@+id/cb_layout_video"
+                    android:layout_width="61px"
+                    android:layout_height="51px"
+                    android:background="@drawable/tk_selector_tool_video"
+                    android:button="@null"
+                    android:clickable="false" />
+
+                <TextView
+                    android:id="@+id/tv_layout_video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="9px"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/layout_full_screen"
+                    android:textColor="@color/white"
+                    android:textSize="12px" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="271px"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15px"
+            android:gravity="center_vertical"
+            android:paddingLeft="16px"
+            android:paddingRight="16px"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_sync"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:text="@string/sync_student"
+                android:textColor="@color/white"
+                android:textSize="14px" />
+
+            <com.eduhdsdk.ui.SwitchButton
+                android:id="@+id/sync_switch_button"
+                android:layout_width="38px"
+                android:layout_height="23px"
+                android:layout_marginLeft="8px"
+                android:layout_toRightOf="@+id/tv_sync"
+                app:checked_color="@color/button_green" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

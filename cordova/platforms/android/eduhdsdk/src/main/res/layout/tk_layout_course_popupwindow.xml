@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="103px"
+            android:layout_height="match_parent"
+            android:background="@color/three_popup_title_bg"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_course_library"
+                android:layout_width="82px"
+                android:layout_height="45px"
+                android:layout_marginTop="19px"
+                android:layout_marginLeft="11px"
+                android:orientation="horizontal"
+                android:background="@drawable/tk_selector_library_default"
+                android:gravity="center"
+                android:paddingRight="5px"
+                android:paddingLeft="5px">
+                <View
+                    android:id="@+id/view_courselibrary_point"
+                    android:layout_width="8px"
+                    android:layout_height="8px"
+                    android:background="@drawable/tk_shape_popou_course_point_select"/>
+                <TextView
+                    android:id="@+id/tv_courselibrary_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5px"
+                    android:text="@string/doclist"
+                    android:textColor="@color/three_color_chose_number"
+                    android:textSize="14px"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_media"
+                android:layout_width="82px"
+                android:layout_height="45px"
+                android:layout_marginTop="19px"
+                android:layout_marginLeft="11px"
+                android:orientation="horizontal"
+                android:background="@drawable/tk_selector_library_select"
+                android:gravity="center"
+                android:paddingRight="5px"
+                android:paddingLeft="5px">
+                <View
+                    android:id="@+id/view_media_point"
+                    android:layout_width="8px"
+                    android:layout_height="8px"
+                    android:background="@drawable/tk_selector_library_select"/>
+
+                <TextView
+                    android:id="@+id/tv_media_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5px"
+                    android:text="@string/medialist"
+                    android:textColor="@color/course_white"
+                    android:textSize="14px" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <include
+                android:id="@+id/ll_course_list"
+                layout="@layout/tk_popup_course_list_layout" />
+
+            <include
+                android:id="@+id/ll_media_list"
+                layout="@layout/tk_popup_media_list_layout"
+                android:visibility="gone" />
+
+        </LinearLayout>
+    <!--</LinearLayout>-->
+</LinearLayout>

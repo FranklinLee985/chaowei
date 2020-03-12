@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30px"
+    android:layout_marginRight="30px"
+    android:background="@color/tools_answer_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10px"
+        android:layout_marginBottom="10px">
+
+        <TextView
+            android:id="@+id/answer_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/answer_number"
+            android:textColor="@color/tools_answer_num"
+            android:textSize="8sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/answer_time_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/answer_time"
+                android:textColor="@color/tools_answer_num"
+                android:textSize="8sp" />
+
+            <com.classroomsdk.viewUi.TimerChronometer
+                android:id="@+id/answer_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:format="00:00:00"
+                android:textSize="8sp"
+                app:chronometerColor="@color/tools_answer_num" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/answer_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="@drawable/tk_answer_detail"
+            android:paddingLeft="20px"
+            android:paddingTop="5px"
+            android:paddingRight="20px"
+            android:paddingBottom="5px"
+            android:text="@string/answer_details"
+            android:textColor="@color/white"
+            android:textSize="8sp" />
+
+        <TextView
+            android:id="@+id/answer_details_tv_pagecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/1"
+            android:visibility="gone"
+            android:textColor="@color/tools_answer_details_page_text"
+            android:textSize="8sp" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/answer_ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/answer_ll_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/answer_rl_a"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_tv_a"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="A"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/answer_sbar_a"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:maxHeight="16px"
+                    android:progressDrawable="@drawable/tk_answer_seekbar"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:id="@+id/answer_tv_a_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_people"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30px"
+                android:layout_height="1px" />
+
+            <LinearLayout
+                android:id="@+id/answer_rl_e"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_tv_e"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/answer_sbar_e"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:maxHeight="16px"
+                    android:progressDrawable="@drawable/tk_answer_seekbar"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:id="@+id/answer_tv_e_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_people"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answer_ll_b"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/answer_rl_b"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_tv_b"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="B"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/answer_sbar_b"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:maxHeight="16px"
+                    android:progressDrawable="@drawable/tk_answer_seekbar"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:id="@+id/answer_tv_b_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_people"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30px"
+                android:layout_height="1px" />
+
+            <LinearLayout
+                android:id="@+id/answer_rl_f"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_tv_f"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="F"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/answer_sbar_f"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:maxHeight="16px"
+                    android:progressDrawable="@drawable/tk_answer_seekbar"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:id="@+id/answer_tv_f_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/answer_people"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answer_ll_c"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/answer_rl_c"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_tv_c"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="C"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/answer_sbar_c"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:maxHeight="16px"
+                    android:progressDrawable="@drawable/tk_answer_seekbar"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:id="@+id/answer_tv_c_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_people"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30px"
+                android:layout_height="1px" />
+
+            <LinearLayout
+                android:id="@+id/answer_rl_g"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_tv_g"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="G"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/answer_sbar_g"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:maxHeight="16px"
+                    android:progressDrawable="@drawable/tk_answer_seekbar"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:id="@+id/answer_tv_g_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_people"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/answer_ll_d"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5px"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/answer_rl_d"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_tv_d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="D"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/answer_sbar_d"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:maxHeight="16px"
+                    android:progressDrawable="@drawable/tk_answer_seekbar"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:id="@+id/answer_tv_d_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_people"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="30px"
+                android:layout_height="1px" />
+
+            <LinearLayout
+                android:id="@+id/answer_rl_h"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/answer_tv_h"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="H"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+
+                <SeekBar
+                    android:id="@+id/answer_sbar_h"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:duplicateParentState="true"
+                    android:maxHeight="16px"
+                    android:progressDrawable="@drawable/tk_answer_seekbar"
+                    android:thumb="@null" />
+
+                <TextView
+                    android:id="@+id/answer_tv_h_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/answer_people"
+                    android:textColor="@color/tools_answer_text"
+                    android:textSize="8sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/answer_ll_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.eduhdsdk.ui.FixItemListView
+            android:id="@+id/answer_details_lv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="10px" />
+
+        <TextView
+            android:id="@+id/amswer_nodata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginBottom="20px"
+            android:background="@drawable/tk_answer_item_details_bg"
+            android:padding="20px"
+            android:text="@string/answer_nodata"
+            android:textColor="@color/tools_answer_details_text"
+            android:textSize="8sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10px"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/answer_details_img_left"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:src="@drawable/tk_common_icon_left_disable" />
+
+            <TextView
+                android:id="@+id/answer_details_tv_page"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15px"
+                android:text="1"
+                android:textColor="@color/tools_answer_details_page_text"
+                android:textSize="8sp" />
+
+            <ImageView
+                android:id="@+id/answer_details_img_right"
+                android:layout_width="30px"
+                android:layout_height="30px"
+                android:layout_marginLeft="15px"
+                android:src="@drawable/tk_common_icon_right_disable" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

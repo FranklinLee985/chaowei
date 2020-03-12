@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <GridView
+        android:id="@+id/answer_gv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="10px"
+        android:layout_marginRight="30px"
+        android:layout_marginBottom="10px"
+        android:horizontalSpacing="20px"
+        android:numColumns="4"
+        android:verticalSpacing="20px" />
+
+    <TextView
+        android:id="@+id/answer_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer_gv"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="10px"
+        android:background="@drawable/tk_popup_window_text_bg"
+        android:paddingLeft="20px"
+        android:paddingTop="10px"
+        android:paddingRight="20px"
+        android:paddingBottom="10px"
+        android:text="@string/answer_add"
+        android:textColor="@color/white"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/answer_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer_gv"
+        android:layout_marginLeft="28px"
+        android:layout_marginTop="10px"
+        android:layout_toRightOf="@+id/answer_add"
+        android:background="@drawable/tk_popup_window_text_bg"
+        android:paddingLeft="20px"
+        android:paddingTop="10px"
+        android:paddingRight="20px"
+        android:paddingBottom="10px"
+        android:text="@string/answer_delete"
+        android:textColor="@color/white"
+        android:textSize="8sp" />
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/nothing"
+    android:orientation="vertical">
+
+    <com.eduhdsdk.ui.ChlistView
+        android:id="@+id/lv_chat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10px"
+        android:background="@color/nothing"
+        android:divider="@color/nothing"
+        android:dividerHeight="10px"
+        android:scrollbars="none"
+        android:transcriptMode="alwaysScroll" />
+
+</RelativeLayout>

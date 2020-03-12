@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:splitMotionEvents="false"
+    android:background="@color/color_rel_wb_container"
+    tools:context="com.classroomsdk.fragment.WBFragment">
+
+    <com.classroomsdk.viewUi.X5WebView
+        android:visibility="gone"
+        android:id="@+id/xwalkWebView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:splitMotionEvents="false" />
+
+</RelativeLayout>

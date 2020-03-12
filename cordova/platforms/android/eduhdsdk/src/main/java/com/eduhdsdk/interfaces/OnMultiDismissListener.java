@@ -1,0 +1,29 @@
+package com.eduhdsdk.interfaces;
+
+import android.view.View;
+import android.widget.PopupWindow;
+import android.widget.PopupWindow.OnDismissListener;
+
+/**
+ * Created by Administrator on 2019/3/20/020.
+ */
+
+public abstract class OnMultiDismissListener implements PopupWindow.OnDismissListener {
+
+    // 两次点击按钮之间的点击间隔不能少于800毫秒
+    private static final int MIN_CLICK_DELAY_TIME = 800;
+    private static long lastClickTime;
+
+    public abstract void OnMultiDismiss();
+
+
+    @Override
+    public void onDismiss() {
+        long curClickTime = System.currentTimeMillis();
+        if ((curClickTime - lastClickTime) >= MIN_CLICK_DELAY_TIME) {
+            // 超过点击间隔后再将lastClickTime重置为当前点击时间
+            lastClickTime = curClickTime;
+            OnMultiDismiss();
+        }
+    }
+}

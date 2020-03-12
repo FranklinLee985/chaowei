@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 白色圆点-->
+
+    <solid android:color="@color/color_seekbar_point" />
+
+    <corners android:radius="18dp" />
+
+    <size
+        android:width="14dp"
+        android:height="14dp" />
+
+</shape>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp">
+
+    <LinearLayout
+        android:id="@+id/ll_retract"
+        android:layout_width="25px"
+        android:layout_height="match_parent"
+        android:background="@drawable/tk_double_teacher_video_navigation"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_retract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tk_shouqi" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_video_label"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bg_video_back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/three_bg_video_back" />
+
+        <ImageView
+            android:id="@+id/img_video_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside"
+            android:src="@drawable/tk_zhanwei_student" />
+
+        <RelativeLayout
+            android:id="@+id/rel_group"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <org.tkwebrtc.SurfaceViewRenderer
+                android:id="@+id/sf_video"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <FrameLayout
+                android:id="@+id/lin_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6px"
+                android:layout_marginTop="6px">
+
+                <com.eduhdsdk.ui.AutoFitTextView
+                    android:id="@+id/txt_gift_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:background="@drawable/tk_item_video_trophy_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="20px"
+                    android:paddingRight="5px"
+                    android:text="0"
+                    android:textColor="@color/txt_gift_num"
+                    android:textSize="26px" />
+
+                <ImageView
+                    android:id="@+id/icon_gif"
+                    android:layout_width="18px"
+                    android:layout_height="18px"
+                    android:layout_gravity="center_vertical"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tk_icon_trophy" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/img_hand_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="6px"
+                android:layout_marginRight="6px"
+                android:scaleType="fitCenter"
+                android:src="@drawable/tk_icon_hand" />
+
+            <RelativeLayout
+                android:id="@+id/lin_name_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/tk_jianbian"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/img_mic"
+                    android:layout_width="19px"
+                    android:layout_height="23px"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/tk_icon_sound" />
+
+                <com.eduhdsdk.ui.VolumeView
+                    android:id="@+id/volume"
+                    android:layout_width="32px"
+                    android:layout_height="23px"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/img_mic" />
+
+                <com.eduhdsdk.ui.AutoFitTextView
+                    android:id="@+id/txt_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text="@string/teacher"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/img_pen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/tk_icon_shouquan" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/re_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_student_press_home_button"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@color/nothing"
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view_choose_selected"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/tk_shape_choose_selected_bg"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+</LinearLayout>

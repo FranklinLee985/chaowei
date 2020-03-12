@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:src="@drawable/tk_qiangdaqi_bg" />
+
+    <ImageView
+        android:id="@+id/responder_img_gif"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="1dp"
+        android:src="@drawable/tk_qiangdaqi_gif" />
+
+    <TextView
+        android:id="@+id/responder_tv_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|top"
+        android:text="@string/responder_click"
+        android:textColor="@color/tools_responder_text"
+        android:textSize="8sp" />
+
+    <TextView
+        android:id="@+id/responder_tv_btn"
+        android:layout_width="130px"
+        android:layout_height="52px"
+        android:layout_gravity="center_horizontal|bottom"
+        android:background="@drawable/tk_tools_btn"
+        android:gravity="center"
+        android:text="@string/responder_start"
+        android:textColor="@color/white"
+        android:textSize="10sp" />
+
+    <ImageView
+        android:id="@+id/responder_img_close"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_gravity="right"
+        android:src="@drawable/tk_tools_close" />
+
+</FrameLayout>

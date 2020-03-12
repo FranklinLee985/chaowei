@@ -1,0 +1,6 @@
+framework module TKUISDK {
+  umbrella header "TKUISDK.h"
+
+  export *
+  module * { export * }
+}

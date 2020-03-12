@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="login_et_hint_color">#C2C1CB</color>
+    <color name="login_choose_user_role_color">#323236</color>
+    <color name="login_choose_user_role_hint_color">#C7C6D6</color>
+    <color name="login_join_room_color">#FFFFFF</color>
+    <color name="login_version_text_color">#8C8E97</color>
+    <color name="color_choose_role">#000000</color>
+    <color name="color_choose_view">#E9E5EC</color>
+
+    <color name="color_login_edittext_cursor">#8D7BAF</color>
+
+
+    <color name="color_login_error_dialog_room_need_pwd_text">#5F5F5F</color>
+
+    <color name="color_pwd_input_hint">#ffadadad</color>
+
+    <color name="color_login_edittext_bg">#33DADAE6</color>
+    <color name="color_login_edittext_selected_bg">#FFFFFF</color>
+    <color name="color_login_edittext_select_bg">#C7C6D6</color>
+    <color name="login_et_text_color">#323236</color>
+
+</resources>

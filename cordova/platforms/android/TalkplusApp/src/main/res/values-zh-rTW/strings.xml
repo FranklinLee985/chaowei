@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">拓課雲Plus</string>
+    <string name="crash_dialog_negative_button">取消</string>
+    <string name="crash_dialog_positive_button">發送</string>
+    <string name="crash_dialog_title">異常報告</string>
+    <string name="update_dialog_title">發現新版本</string>
+    <string name="update_dialog_negative_button">忽略</string>
+    <string name="update_dialog_positive_button">顯示</string>
+    <string name="nickname_not_empty">昵稱不能為空</string>
+    <string name="find_new_version">為了達到最佳使用體驗，建議您立即完成版本陞級</string>
+    <string name="find_new_version_fouce">為了獲得完整的學習體驗，請您立即完成版本陞級</string>
+    <string name="et_default_nick_name">請輸入您的昵稱</string>
+    <string name="login_version_name">版本號</string>
+    <string name="permissions_prompt">獲取相關許可權失敗，功能將無法正常使用，需要到設定頁面手動授權</string>
+    <string name="login_choose_user_role">請選擇身份</string>
+    <string name="password_not_empty">密碼不能為空</string>
+
+    <string name="login_choose_user_room">請選擇房間模式</string>
+</resources>

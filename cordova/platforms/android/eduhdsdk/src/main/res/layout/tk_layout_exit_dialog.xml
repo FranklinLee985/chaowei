@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tk_popup_window_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/rl_temp1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/remind"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_close_popup"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tk_close"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_temp1"
+        android:layout_margin="7px"
+        android:background="@drawable/tk_popup_window_bg_centent_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_exit_dialog_message"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_weight="1"
+            android:gravity="top|center"
+            android:text=""
+            android:textColor="@color/exit_dialog_message_textcolor"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/bt_cancel_dialog"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/tk_button_ok_default"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/crash_cancel_color"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/bt_ok_dialog"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/tk_ok_button"
+                    android:gravity="center"
+                    android:text="@string/OK"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

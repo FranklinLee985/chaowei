@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/fl_layout"
+    android:layout_height="match_parent"
+    android:layout_gravity="center">
+
+    <com.classroomsdk.common.ScreenPaint
+        android:id="@+id/screenpaint_1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+    
+    <com.classroomsdk.common.ScreenPaint
+        android:id="@+id/screenpaint_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/tk_screen_border" />
+
+</FrameLayout>

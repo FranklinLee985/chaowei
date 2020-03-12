@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="341dp"
+    android:layout_height="199dp"
+    android:background="@drawable/tk_popup_window_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/tools_title_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/timer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="15px"
+            android:text="@string/timer"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/img_close_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20px"
+            android:paddingLeft="20px"
+            android:paddingTop="20px"
+            android:paddingRight="20px"
+            android:paddingBottom="20px"
+            android:src="@drawable/tk_close_fork" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/tools_content_start_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7px"
+        android:layout_marginRight="7px"
+        android:layout_marginBottom="8px"
+        android:background="@drawable/tk_popup_window_content_bg"
+        android:orientation="horizontal"
+        android:visibility="visible">
+
+        <com.classroomsdk.viewUi.WheelView
+            android:id="@+id/wp_hour_timer"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30px"
+            android:layout_weight="4" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="10px"
+                android:src="@drawable/tk_tools_timer_circle_point" />
+
+            <ImageView
+                android:layout_width="10px"
+                android:layout_height="10px"
+                android:layout_marginTop="15px"
+                android:src="@drawable/tk_tools_timer_circle_point" />
+        </FrameLayout>
+
+
+        <com.classroomsdk.viewUi.WheelView
+            android:id="@+id/wp_mintur_timer"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_toRightOf="@id/wp_hour_timer"
+            android:layout_weight="4" />
+
+        <TextView
+            android:id="@+id/tv_start_timer"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="19dp"
+            android:layout_marginRight="19dp"
+            android:background="@drawable/tk_tools_timer_start"
+            android:gravity="center"
+            android:text="@string/timer_start"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/tools_content_timing_timer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7px"
+        android:layout_marginRight="7px"
+        android:layout_marginBottom="8px"
+        android:background="@drawable/tk_popup_window_content_bg"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:id="@+id/tools_content_nums"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="18dp">
+
+            <TextView
+                android:id="@+id/tv_hour_num1_timer"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="17dp"
+                android:layout_toLeftOf="@+id/tv_hour_num2_timer"
+                android:background="@drawable/tk_popup_window_num_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/tools_timer_select"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_hour_num2_timer"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="22dp"
+                android:layout_toLeftOf="@+id/ll_ponit"
+                android:background="@drawable/tk_popup_window_num_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/tools_timer_select"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <FrameLayout
+                android:id="@+id/ll_ponit"
+                android:layout_width="wrap_content"
+                android:layout_height="80px"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/time_img_point_up"
+                    android:layout_width="10px"
+                    android:layout_height="10px"
+                    android:layout_gravity="top"
+                    android:src="@drawable/tk_tools_timer_circle_point" />
+
+                <ImageView
+                    android:id="@+id/time_img_point_down"
+                    android:layout_width="10px"
+                    android:layout_height="10px"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/tk_tools_timer_circle_point" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_hour_num3_timer"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="22dp"
+                android:layout_toRightOf="@+id/ll_ponit"
+                android:background="@drawable/tk_popup_window_num_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/tools_timer_select"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tv_hour_num4_timer"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="17dp"
+                android:layout_toRightOf="@+id/tv_hour_num3_timer"
+                android:background="@drawable/tk_popup_window_num_bg"
+                android:gravity="center"
+                android:text="0"
+                android:textColor="@color/tools_timer_select"
+                android:textSize="25sp"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_pause_stu_timer"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/tk_tools_timer_icon_pause" />
+
+        <LinearLayout
+            android:id="@+id/tools_content_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tools_content_nums"
+            android:layout_marginBottom="17dp"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <ImageView
+                android:id="@+id/img_stop_timer"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentBottom="true"
+                android:src="@drawable/tk_tools_timer_stop_default" />
+
+            <ImageView
+                android:id="@+id/img_pause_timer"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="20dp"
+                android:src="@drawable/tk_tools_timer_pause_default" />
+        </LinearLayout>
+
+    </RelativeLayout>
+</LinearLayout>

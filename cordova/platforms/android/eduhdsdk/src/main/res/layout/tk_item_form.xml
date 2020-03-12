@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:background="@drawable/tk_tools_backgrouad_frame"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="40"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_frame_hollow_rectangle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/tk_frame_icon_hollow_rectangle_selected" />
+
+            <ImageView
+                android:id="@+id/iv_frame_solie_rectangle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/tk_frame_icon_solie_rectangle_default" />
+
+            <ImageView
+                android:id="@+id/iv_frame_hollow_circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/tk_frame_icon_hollow_circle_default" />
+
+            <ImageView
+                android:id="@+id/iv_frame_solie_circle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:src="@drawable/tk_frame_icon_solie_circle_default" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/three_vidios_bg" />
+
+        <com.eduhdsdk.ui.ColorSelectorView
+            android:id="@+id/color_select"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="50"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15px"
+                android:layout_marginRight="15px"
+                android:src="@drawable/tk_frame_icon_control" />
+
+            <SeekBar
+                android:id="@+id/seek_bar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@null"
+                android:paddingLeft="0dp"
+                android:paddingRight="0dp"
+                android:progress="10"
+                android:progressDrawable="@color/colourless"
+                android:splitTrack="false"
+                android:thumb="@drawable/tk_frame_icon_control_button"
+                android:thumbOffset="0dp" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/tk_frame_icon_sanjiao" />
+
+
+</LinearLayout>

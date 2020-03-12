@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19AE18C923546694009AA181 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AE18C823546694009AA181 /* AppDelegate.m */; };
+		19AE18CF23546694009AA181 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AE18CE23546694009AA181 /* ViewController.m */; };
+		19AE18D223546694009AA181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AE18D023546694009AA181 /* Main.storyboard */; };
+		19AE18D423546695009AA181 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19AE18D323546695009AA181 /* Assets.xcassets */; };
+		19AE18D723546695009AA181 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19AE18D523546695009AA181 /* LaunchScreen.storyboard */; };
+		19AE18DA23546695009AA181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19AE18D923546695009AA181 /* main.m */; };
+		4A1961242400F791005C6AFB /* TKUISDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5EF0E92400F49A0087D77F /* TKUISDK.framework */; };
+		4A1961372400F9D1005C6AFB /* tigerlily.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A1961322400F9D1005C6AFB /* tigerlily.plist */; };
+		4A1961382400F9D1005C6AFB /* black.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A1961332400F9D1005C6AFB /* black.plist */; };
+		4A1961392400F9D1005C6AFB /* purple.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A1961342400F9D1005C6AFB /* purple.plist */; };
+		4A19613A2400F9D1005C6AFB /* TKWhiteBoardResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A1961352400F9D1005C6AFB /* TKWhiteBoardResources.bundle */; };
+		4A19613B2400F9D1005C6AFB /* TKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A1961362400F9D1005C6AFB /* TKResources.bundle */; };
+		4A5EF0EE2400F49C0087D77F /* TKRoomSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5EF0E82400F49A0087D77F /* TKRoomSDK.framework */; };
+		4A5EF0EF2400F49C0087D77F /* TKRoomSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5EF0E82400F49A0087D77F /* TKRoomSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A5EF0F12400F49D0087D77F /* TKUISDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5EF0E92400F49A0087D77F /* TKUISDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4A5EF0F22400F49E0087D77F /* TKWhiteBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5EF0EA2400F49A0087D77F /* TKWhiteBoard.framework */; };
+		4A5EF0F32400F49E0087D77F /* TKWhiteBoard.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4A5EF0EA2400F49A0087D77F /* TKWhiteBoard.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		551B948C932C35658B70FDF3 /* libPods-TKUIDEMO.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D11A9E4559E4897B3D17030C /* libPods-TKUIDEMO.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		19517788235481E6000F0462 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4A5EF0F12400F49D0087D77F /* TKUISDK.framework in Embed Frameworks */,
+				4A5EF0F32400F49E0087D77F /* TKWhiteBoard.framework in Embed Frameworks */,
+				4A5EF0EF2400F49C0087D77F /* TKRoomSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		19AE18C423546694009AA181 /* TKUIDEMO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TKUIDEMO.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19AE18C723546694009AA181 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		19AE18C823546694009AA181 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		19AE18CD23546694009AA181 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		19AE18CE23546694009AA181 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		19AE18D123546694009AA181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19AE18D323546695009AA181 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19AE18D623546695009AA181 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19AE18D823546695009AA181 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19AE18D923546695009AA181 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4A1961322400F9D1005C6AFB /* tigerlily.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = tigerlily.plist; sourceTree = "<group>"; };
+		4A1961332400F9D1005C6AFB /* black.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = black.plist; sourceTree = "<group>"; };
+		4A1961342400F9D1005C6AFB /* purple.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = purple.plist; sourceTree = "<group>"; };
+		4A1961352400F9D1005C6AFB /* TKWhiteBoardResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TKWhiteBoardResources.bundle; sourceTree = "<group>"; };
+		4A1961362400F9D1005C6AFB /* TKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TKResources.bundle; sourceTree = "<group>"; };
+		4A5EF0E82400F49A0087D77F /* TKRoomSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TKRoomSDK.framework; sourceTree = "<group>"; };
+		4A5EF0E92400F49A0087D77F /* TKUISDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TKUISDK.framework; sourceTree = "<group>"; };
+		4A5EF0EA2400F49A0087D77F /* TKWhiteBoard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TKWhiteBoard.framework; sourceTree = "<group>"; };
+		62509CB8AE18D6CB1C20B021 /* Pods-TKUIDEMO.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKUIDEMO.release.xcconfig"; path = "Pods/Target Support Files/Pods-TKUIDEMO/Pods-TKUIDEMO.release.xcconfig"; sourceTree = "<group>"; };
+		D11A9E4559E4897B3D17030C /* libPods-TKUIDEMO.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TKUIDEMO.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91FA633020E7FA368E1EC66 /* Pods-TKUIDEMO.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TKUIDEMO.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TKUIDEMO/Pods-TKUIDEMO.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19AE18C123546694009AA181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				551B948C932C35658B70FDF3 /* libPods-TKUIDEMO.a in Frameworks */,
+				4A1961242400F791005C6AFB /* TKUISDK.framework in Frameworks */,
+				4A5EF0F22400F49E0087D77F /* TKWhiteBoard.framework in Frameworks */,
+				4A5EF0EE2400F49C0087D77F /* TKRoomSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195177942356F14D000F0462 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D11A9E4559E4897B3D17030C /* libPods-TKUIDEMO.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		19AE18BB23546694009AA181 = {
+			isa = PBXGroup;
+			children = (
+				19AE18C623546694009AA181 /* TKUIDEMO */,
+				19AE18C523546694009AA181 /* Products */,
+				195177942356F14D000F0462 /* Frameworks */,
+				5FC61E8D30E2FFD232770F31 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		19AE18C523546694009AA181 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19AE18C423546694009AA181 /* TKUIDEMO.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19AE18C623546694009AA181 /* TKUIDEMO */ = {
+			isa = PBXGroup;
+			children = (
+				4A1961312400F9D1005C6AFB /* resource */,
+				19AE18E02354688B009AA181 /* lib */,
+				19AE18C723546694009AA181 /* AppDelegate.h */,
+				19AE18C823546694009AA181 /* AppDelegate.m */,
+				19AE18CD23546694009AA181 /* ViewController.h */,
+				19AE18CE23546694009AA181 /* ViewController.m */,
+				19AE18D023546694009AA181 /* Main.storyboard */,
+				19AE18D323546695009AA181 /* Assets.xcassets */,
+				19AE18D523546695009AA181 /* LaunchScreen.storyboard */,
+				19AE18D823546695009AA181 /* Info.plist */,
+				19AE18D923546695009AA181 /* main.m */,
+			);
+			path = TKUIDEMO;
+			sourceTree = "<group>";
+		};
+		19AE18E02354688B009AA181 /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				4A5EF0E82400F49A0087D77F /* TKRoomSDK.framework */,
+				4A5EF0E92400F49A0087D77F /* TKUISDK.framework */,
+				4A5EF0EA2400F49A0087D77F /* TKWhiteBoard.framework */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		4A1961312400F9D1005C6AFB /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				4A1961322400F9D1005C6AFB /* tigerlily.plist */,
+				4A1961332400F9D1005C6AFB /* black.plist */,
+				4A1961342400F9D1005C6AFB /* purple.plist */,
+				4A1961352400F9D1005C6AFB /* TKWhiteBoardResources.bundle */,
+				4A1961362400F9D1005C6AFB /* TKResources.bundle */,
+			);
+			path = resource;
+			sourceTree = "<group>";
+		};
+		5FC61E8D30E2FFD232770F31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F91FA633020E7FA368E1EC66 /* Pods-TKUIDEMO.debug.xcconfig */,
+				62509CB8AE18D6CB1C20B021 /* Pods-TKUIDEMO.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19AE18C323546694009AA181 /* TKUIDEMO */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19AE18DD23546695009AA181 /* Build configuration list for PBXNativeTarget "TKUIDEMO" */;
+			buildPhases = (
+				89A4B6EA1A8F83521AE435D0 /* [CP] Check Pods Manifest.lock */,
+				19AE18C023546694009AA181 /* Sources */,
+				19AE18C123546694009AA181 /* Frameworks */,
+				19AE18C223546694009AA181 /* Resources */,
+				19517788235481E6000F0462 /* Embed Frameworks */,
+				95A0A1B5DE288ED3ECB5A25A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TKUIDEMO;
+			productName = TKUIDEMO;
+			productReference = 19AE18C423546694009AA181 /* TKUIDEMO.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19AE18BC23546694009AA181 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "李合意";
+				TargetAttributes = {
+					19AE18C323546694009AA181 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 19AE18BF23546694009AA181 /* Build configuration list for PBXProject "TKUIDEMO" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19AE18BB23546694009AA181;
+			productRefGroup = 19AE18C523546694009AA181 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19AE18C323546694009AA181 /* TKUIDEMO */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19AE18C223546694009AA181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A19613A2400F9D1005C6AFB /* TKWhiteBoardResources.bundle in Resources */,
+				4A1961392400F9D1005C6AFB /* purple.plist in Resources */,
+				19AE18D723546695009AA181 /* LaunchScreen.storyboard in Resources */,
+				19AE18D423546695009AA181 /* Assets.xcassets in Resources */,
+				4A19613B2400F9D1005C6AFB /* TKResources.bundle in Resources */,
+				4A1961372400F9D1005C6AFB /* tigerlily.plist in Resources */,
+				19AE18D223546694009AA181 /* Main.storyboard in Resources */,
+				4A1961382400F9D1005C6AFB /* black.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		89A4B6EA1A8F83521AE435D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TKUIDEMO-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95A0A1B5DE288ED3ECB5A25A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TKUIDEMO/Pods-TKUIDEMO-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TKUIDEMO/Pods-TKUIDEMO-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TKUIDEMO/Pods-TKUIDEMO-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19AE18C023546694009AA181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19AE18CF23546694009AA181 /* ViewController.m in Sources */,
+				19AE18C923546694009AA181 /* AppDelegate.m in Sources */,
+				19AE18DA23546695009AA181 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19AE18D023546694009AA181 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19AE18D123546694009AA181 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19AE18D523546695009AA181 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19AE18D623546695009AA181 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19AE18DB23546695009AA181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		19AE18DC23546695009AA181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19AE18DE23546695009AA181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91FA633020E7FA368E1EC66 /* Pods-TKUIDEMO.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VXJWE28Q2;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TKUIDEMO/lib",
+				);
+				INFOPLIST_FILE = TKUIDEMO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.talkcloud.eduPLUS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		19AE18DF23546695009AA181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62509CB8AE18D6CB1C20B021 /* Pods-TKUIDEMO.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8VXJWE28Q2;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TKUIDEMO/lib",
+				);
+				INFOPLIST_FILE = TKUIDEMO/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.talkcloud.eduPLUS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19AE18BF23546694009AA181 /* Build configuration list for PBXProject "TKUIDEMO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AE18DB23546695009AA181 /* Debug */,
+				19AE18DC23546695009AA181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19AE18DD23546695009AA181 /* Build configuration list for PBXNativeTarget "TKUIDEMO" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AE18DE23546695009AA181 /* Debug */,
+				19AE18DF23546695009AA181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19AE18BC23546694009AA181 /* Project object */;
+}

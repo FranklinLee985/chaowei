@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.eduhdsdk.ui.LongToucherLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/remark_ll"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tk_remark_bg"
+    android:visibility="visible">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <TextView
+            android:id="@+id/remark_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:textColor="@color/remark_txt"
+            android:textSize="8sp" />
+    </ScrollView>
+
+</com.eduhdsdk.ui.LongToucherLinearLayout>

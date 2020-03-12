@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sure">確定</string>
+
+    <string name="whiteboard_text">請輸入內容</string>
+
+    <string name="jump_over">跳過</string>
+
+</resources>

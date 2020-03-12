@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="10px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/popup_student_name_title_decice"
+            android:textColor="@color/three_popup_student_name_title_color"
+            android:textSize="12px" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:text="@string/popup_student_name_title_user_nick"
+            android:textColor="@color/three_popup_student_name_title_color"
+            android:textSize="12px" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1px"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/three_popup_student_name_title_color"
+            android:textSize="12px" />
+
+        <LinearLayout
+            android:id="@+id/ll_student_member_tab"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="8.5"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="@string/popup_student_name_title_up_or_down"
+                android:textColor="@color/three_popup_student_name_title_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="@string/popup_student_name_title_camera"
+                android:textColor="@color/three_popup_student_name_title_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1.5"
+                android:gravity="center"
+                android:text="@string/popup_student_name_title_microphone"
+                android:textColor="@color/three_popup_student_name_title_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/popup_student_name_title_oauth"
+                android:textColor="@color/three_popup_student_name_title_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/raise"
+                android:textColor="@color/three_popup_student_name_title_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/popup_student_name_title_forbidden_speak"
+                android:textColor="@color/three_popup_student_name_title_color"
+                android:textSize="12px" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/popup_student_name_title_remove"
+                android:textColor="@color/three_popup_student_name_title_color"
+                android:textSize="12px" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lv_student_name_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="18px"
+        android:layout_marginLeft="10px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="10px"
+        android:divider="@color/nothing"
+        android:dividerHeight="10px"
+        android:scrollbars="none" />
+
+</LinearLayout>

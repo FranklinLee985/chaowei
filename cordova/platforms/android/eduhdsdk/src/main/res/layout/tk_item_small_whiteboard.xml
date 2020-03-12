@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/small_ll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tk_popup_window_bg"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/small_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal">
+
+        <com.eduhdsdk.tools.CustomRecyclerView
+            android:id="@+id/small_recyclerview"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="bottom">
+
+        </com.eduhdsdk.tools.CustomRecyclerView>
+
+        <RelativeLayout
+            android:id="@+id/close_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/small_close"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20px"
+                android:paddingTop="20px"
+                android:paddingRight="20px"
+                android:paddingBottom="20px"
+                android:src="@drawable/tk_close_fork"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_paint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/small_top_bar">
+
+        <com.classroomsdk.common.SmallPaint
+            android:id="@+id/smallPaint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white" />
+
+        <com.classroomsdk.common.SmallPaint
+            android:id="@+id/smallPaint_top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colourless" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_buttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:id="@+id/small_paint_types"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/small_pen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:src="@drawable/tk_selector_small_pen" />
+
+            <ImageView
+                android:id="@+id/small_font"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:src="@drawable/tk_selector_small_font" />
+
+            <ImageView
+                android:id="@+id/small_eraser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:src="@drawable/tk_selector_small_eraser" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/small_dispatcher"
+            android:layout_width="345px"
+            android:layout_height="132px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10px"
+            android:background="@drawable/tk_tools_btn"
+            android:text="@string/whiteboard_small_send"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="tk_name">TalkCloud+</string>
+    <string name="checkmeeting_error_3001">Server has expired!</string>
+    <string name="checkmeeting_error_3002">Account of the company has expired.</string>
+    <string name="checkmeeting_error_3003">The class has expired</string>
+    <string name="checkmeeting_error_4007" tools:ignore="StringEscaping">The classroom doesn\'t exist.</string>
+    <string name="checkmeeting_error_4008">Wrong Password.</string>
+    <string name="checkmeeting_error_4110">You need to be authenticated.Please enter password.</string>
+    <string name="checkmeeting_error_4012">The classroom needs a password. Please enter your password.</string>
+    <string name="checkmeeting_error_5001">Live broadcast is deleted or expired</string>
+    <string name="checkmeeting_error_4109">Authentication Failed"</string>
+    <string name="checkmeeting_error_4103">The number of students has exceeded limit.</string>
+    <string name="checkmeeting_error_4112">Enterprise point overrun</string>
+    <string name="checkmeeting_error_4113">The balance of the package is insufficient. Please contact the administrator to recharge it</string>
+    <string name="checkmeeting_error_5005">The format of the protocol is not correct</string>
+    <string name="WaitingForNetwork">WaitingForNetwork</string>
+    <string name="meeting_password">password</string>
+    <string name="OK">Ok</string>
+    <string name="Permissions_prompt">To authorize</string>
+    <string name="remind">Remind</string>
+    <string name="Set_permissions">Failure to get related permissions will not function properly. Manual authorization is required on settings page</string>
+    <string name="end_class_time">5 minutes from the end of the class. Please arrange the time.</string>
+    <string name="end_class_tip_minute">minutes from the end of the class. Please arrange the time.</string>
+    <string name="end_class_tip_second">seconds from the end of the class. Please arrange the time.</string>
+    <string name="logouts">Are you sure you want to exit?</string>
+    <string name="make_sure_class_dissmiss">Are you sure you want to finish class？</string>
+    <string name="sure">sure</string>
+    <string name="cancel">Cancel</string>
+    <string name="permission_prompt">To open the Eye protection mode, you need to authorize the suspension window permission in the setting. Please go to the setting to authorize!</string>
+    <string name="settings_now">authorize</string>
+    <string name="photograph">Take Photo"</string>
+    <string name="tv_photograph">Take Photo"</string>
+    <string name="uploadphoto">Photograph</string>
+    <string name="t_uploadphoto">Take a Photo</string>
+    <string name="share_pad">whiteboard</string>
+    <string name="join">Enter Classroom</string>
+    <string name="leave">Leave Classroom</string>
+    <string name="classroom_tip_01_01">The class will start in </string>
+    <string name="classroom_tip_01_02">minute. Get ready.</string>
+    <string name="classroom_tip_02_01">You are </string>
+    <string name="classroom_tip_02_02">minute late already. Time for Class!</string>
+    <string name="classroom_tip_03_01">There are </string>
+    <string name="classroom_tip_03_02"> minutes to finish class. Be reminded.</string>
+    <string name="classroom_tip_04_01">Your class is" </string>
+    <string name="classroom_tip_04_02">minutes overtime now. This  class will end automatically in</string>
+    <string name="classroom_tip_04_03">minutes.</string>
+    <string name="classroom_tip_05">This  class is about to shut down. </string>
+    <string name="open_audio">Audio on</string>
+    <string name="close_audio">Audio off</string>
+    <string name="recovery">Restore</string>
+    <string name="recovery_teacher">Recover</string>
+    <string name="audio_teaching">Audio Mode</string>
+    <string name="stu_background">student pressed home button</string>
+    <string name="tea_background">user pressed home button</string>
+    <string name="publisherror">The media file playback failed!</string>
+    <string name="candraw">authorized</string>
+    <string name="no_candraw">unauthorized</string>
+    <string name="up_std">on stage</string>
+    <string name="down_std">off stage</string>
+    <string name="video_on">Video on</string>
+    <string name="video_off">Video off</string>
+    <string name="raise">Hand</string>
+    <string name="raiseing">Raising hand</string>
+    <string name="send_photo">Send Photo</string>
+    <string name="no_raise">Cancel your hands</string>
+    <string name="connected">Connecting to classroom....</string>
+    <string name="userlist">Students List</string>
+    <string name="doclist">Files</string>
+    <string name="medialist">Media</string>
+    <string name="classdismiss">Finish Class</string>
+    <string name="classroom_part_01">You are </string>
+    <string name="classroom_part_02"> minute late already. Time for Class!</string>
+    <string name="classbegin">Start Class</string>
+    <string name="mute_all">Mute</string>
+    <string name="unmute_all">Unmute</string>
+    <string name="send_gift_all">Trophy</string>
+    <string name="say_something">Say something</string>
+    <string name="no_say_something">You have been banned to chat</string>
+    <string name="send">send</string>
+    <string name="chat">message board</string>
+    <string name="close">close</string>
+    <string name="selectpicture">Choose Photo</string>
+    <string name="t_selectpicture">Upload from Gallery</string>
+    <string name="send_gift">Grant Trophy</string>
+    <string name="video_change">Video switch</string>
+    <string name="plitscreen">Speech</string>
+    <string name="lass_patrol">lass patrol</string>
+    <string name="assistant">assistant</string>
+    <string name="teacher">teacher</string>
+    <string name="student">student</string>
+    <string name="device_disable">The student\'s audio and video devices are unavailable. May be disabled. Please tell student to enable them.</string>
+    <string name="camera_hint">Please allow %s camera to access your camera in the "Settings" option of your mobile phone.</string>
+    <string name="mic_hint">Please allow %s access to your microphone in the "Settings" option of the mobile phone.</string>
+    <string name="fire_wall_alert">Network exception. Please close the antivirus software or firewall and re-enter</string>
+    <string name="udp_alert">Network exception, check the network environment and re-enter</string>
+    <string name="back_hint">%s executes in the background and clicks back to the classroom</string>
+    <string name="back_msg">Backstage mode</string>
+    <string name="re_back_msg">Back to normal mode</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="member_overload">Attendants number is over limit.</string>
+    <string name="select_back_hint">is running at back-end.  Presence failed.</string>
+    <string name="select_country">Please choose your country or region</string>
+    <string name="country_default">(Auto)</string>
+    <string name="server_list_empty">The server is initializing,please click later.</string>
+    <string name="net_disable">The network is not available. Please  checking and restart the application.</string>
+    <string name="publish_faild">Anomaly in server connection. Presence failed.</string>
+    <string name="udp_faild">Due to the firewall intervention,the user is unable to carry out UDP connection with the server.  Opening video failed. </string>
+    <string name="udp_break">Anomalous UDP communication occurs between the user and the server. Opening video failed.</string>
+    <string name="updateing">updateing...</string>
+    <string name="class_file_group">Room files</string>
+    <string name="admin_file_group">Public files</string>
+    <string name="default_file_group">Courseware files</string>
+    <string name="chat_hint">Do not repeat in the chat area</string>
+    <string name="me">my</string>
+    <string name="joining_classroom_home">Entering the classroom...</string>
+    <string name="all_action">Operation</string>
+    <string name="popup_student_name_title_decice">Device</string>
+    <string name="popup_student_name_title_user_nick">Nickname</string>
+    <string name="popup_student_name_title_up_or_down">Stage</string>
+    <string name="popup_student_name_title_camera">Video</string>
+    <string name="popup_student_name_title_microphone">Audio</string>
+    <string name="popup_student_name_title_oauth">Authorization</string>
+    <string name="popup_student_name_title_forbidden_speak">Chat</string>
+    <string name="popup_student_name_title_remove">Remove</string>
+    <string name="the_user_is_forbid_speak">You have been banned</string>
+    <string name="popup_title_time">Time</string>
+    <string name="popup_title_type">Type</string>
+    <string name="popup_title_name">Name</string>
+    <string name="sure_get_out_the_people">Sure to kick this attender out of room？</string>
+    <string name="please_input_room_pwd">Please input password</string>
+    <string name="select_picture_from_album">Album</string>
+    <string name="paly_back_speed_play">Double speed</string>
+    <string name="choose_sure">jump</string>
+    <string name="chat_prompt_yes">All prohibition of chat</string>
+    <string name="chat_prompt_no">All permission to chat</string>
+    <string name="old_chat">chat</string>
+    <string name="popup_title_chat">Chat banned</string>
+    <string name="popup_title_chat_cancel">Allow chat</string>
+    <string name="old_room_number">room id:</string>
+    <string name="copy_success">copy success</string>
+    <string name="kick_out">You have been invited to the classroom.please come back in three minutes.</string>
+    <string name="is_send_crash_message">The app found information about previous crashes. Would you like to send this data to the developer?</string>
+    <string name="tips_camera">You do not have permission to use the camera.</string>
+    <string name="tips_image">Image selection failed.</string>
+    <string name="hand_txt">someone hands up</string>
+    <string name="sure_delect_file_media">Are you sure you want to delete this file?</string>
+    <string name="photo_upload">Album</string>
+    <string name="select_photo">Photo</string>
+
+
+    <string name="restore_single">Restore Position</string>
+    <string name="restore_all">Restore All</string>
+
+
+    <string name="answer_panel">Answer Panel</string>
+    <string name="turntable">Turntable</string>
+    <string name="timer">Timer</string>
+    <string name="responder">Responder</string>
+    <string name="small_whiteboard">Small Board</string>
+
+    <string name="layout_normal">Default Layout</string>
+    <string name="layout_double">Double Layout</string>
+    <string name="layout_full_screen">Video Layout</string>
+    <string name="sync_student">sync</string>
+
+    <string name="layout_many_normal">Video Top</string>
+    <string name="layout_speak">Main Video</string>
+    <string name="layout_free_video">Free Video</string>
+
+    <string name="answer_add">Add Answer</string>
+    <string name="answer_delete">Reduce Answer</string>
+    <string name="answer_correct">Set the right choice</string>
+    <string name="answer_start">Start Answer</string>
+    <string name="answer_right">The right answer:</string>
+    <string name="answer_commit">Commit</string>
+    <string name="answer_publish">Publish the answer</string>
+    <string name="answer_number">Number of answer</string>
+    <string name="answer_details">Details></string>
+    <string name="answer_peoples">0 People</string>
+    <string name="answer_end">End of the answer</string>
+    <string name="answer_restart">Restart</string>
+    <string name="answer_statistics">Statistics></string>
+    <string name="answer_modify">Modify the Answer</string>
+    <string name="answer_release">Release</string>
+    <string name="answer_my">My Answer: </string>
+    <string name="answer_people">People</string>
+    <string name="answer_selections">The selections:</string>
+    <string name="answer_nodata">No Data</string>
+    <string name="answer_published">Published</string>
+    <string name="answer_time">Answer Time:</string>
+
+    <string name="responder_click">Click button to start</string>
+    <string name="responder_start">Start</string>
+    <string name="responder_rob">Someone Snatched</string>
+    <string name="responder_already">Be Snatched</string>
+    <string name="responder_winning">Congratulations,It\'s your turn</string>
+    <string name="responder_restart">Restart</string>
+    <string name="responder_answering">Is answering</string>
+    <string name="responder_answering_other">Is answering</string>
+    <string name="responder_nobody">Nobody to snatch</string>
+    <string name="responder_ready">Ready to snatch</string>
+    <string name="responder_nostart">Has not started</string>
+
+    <string name="whiteboard_small_send">Send</string>
+    <string name="whiteboard_small_take_back">Take Back</string>
+    <string name="whiteboard_small_send_again">Send Again</string>
+    <string name="whiteboard_text">Please enter content</string>
+    <string name="kick_out_tip">User of the same identity has entered the room. You are blocked.</string>
+
+
+    <string name="timer_start">start</string>
+
+    <!--网络状态-->
+    <string name="wifi_roomid">RoomID:</string>
+    <string name="wifi_page_lose">Packet:</string>
+    <string name="wifi_delay">Ping:</string>
+    <string name="wifi_you">excellent</string>
+    <string name="wifi_zhong">medium</string>
+    <string name="wifi_cha">bad</string>
+
+    <string name="answer_lastone">Please choose at least one answer</string>
+
+    <string name="docDownload">file downloading</string>
+    <string name="doc_unzipping">unzipping the file</string>
+
+
+    <string name="chairman_kick_out">You have been sent out of the classroom by the teacher.</string>
+    <string name="enter_classroom">Enter classroom</string>
+    <string name="classroomnumber_not_empty">Class number cannot be empty</string>
+    <string name="class_started">Classes have already started</string>
+    <string name="class_closeed">The class is over</string>
+
+    <string name="et_default_teach_room_number">Please input your classroom number</string>
+
+</resources>
+

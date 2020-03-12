@@ -1,0 +1,280 @@
+/*
+ Localizable.strings
+ libMeetings
+ 
+ Created by miniMac on 16/2/24.
+ Copyright © 2016年 macmini. All rights reserved.
+ */
+
+"HUD.EnteringClass" = "入室中";
+"Error.NoMeeting" = "教室番号が存在しません";
+"Error.NoLiving" = "ライブ配信が存在しません";
+"Error.NotSupportThisType" = "そのライブのタイプはサポートしていません。コンピューター端末でログインしてください";
+"Error.ServerExpired" = "サーバー期限切れ";
+"Error.CheckmeetingFail" = "会議チェックエラー";
+"Error.CheckserverInformationFail" = "サーバー情報読み取り失敗";
+"Error.CompanyFreeze" = "会社はフリーズされています";
+"Error.RoomDeletedOrExpired" = "教室は削除されたか期限切れです";
+"Error.MemberOverRoomLimit" = "教室の人数オーバー";
+"Error.NeedPwd" = "該当の教室はパスワードが必要です。パスワードを入力して下さい";
+"Error.NeedPwd.teacher"    = "パスワードが違います。入力し直してください。";
+"Error.NeedPwd.student"    = "パスワードが違います。入力し直してください。";
+"Error.NeedPwd.tourCourse" = "パスワードが違います。入力し直してください。";
+
+"Error.pointOverRun" = "企業ポイントがオーバーしています";
+"Error.PwdError" = "パスワードが違います。入力し直してください。";
+"Error.AuthIncorrect" = "認証エラー";
+"Error.NSF" = "套餐余额不足，请联系管理员充值";
+"Error.WaitingForNetwork" = "一時的にインターネットが使用できません。しばらくしてから再度お試しください。";
+//Prompt
+
+"Prompt.ExceptionReport" = "异常报告";
+"Prompt.prompt" = "プロンプト";
+"Prompt.inputPwd" = "パスワードを入力してください";
+"Prompt.kick" = "3分以内はログインできません";
+"Prompt.stuHasKicked" = "教室を出てから、3分後に教室に入ってください。";
+"Prompt.OK" = "OK";
+"Prompt.Cancel" = "キャンセル";
+"Prompt.Know" = "分かりました";
+"Prompt.Quite" = "本当に退出しますか";
+"Prompt.nicknameNotNull" = "ニックネームを入力してください";
+"Prompt.RoomIDNotNull" = "教室番号を入力してください";
+"Prompt.devicetPrompt" = "デバイス設定が低いため双方向ビデオのみの提供となります";
+"Prompt.onlyNumber" = "教室番号は数字のみです";
+"Prompt.underPlatformTime" = "クリックしすぎて";
+
+"Login.EnterRoom" = "入室";
+"Login.RoomIdPlaceHolder"    = "教室番号";
+"Login.nickName" = "ニックネーム";
+"Login.Role"      = "役割";
+// State
+"State.NoNetwork" = "インターネットに接続していません";
+"State.connecting" = "接続中";
+"State.updating" = "アップデート";
+"State.Connecting" = "接続中…";
+"State.Updating" = "アップデート中";
+"State.WaitingForNetwork" = "オフライン";
+"State.ConnectFailure" = "接続エラー";
+"State.ConnectException" = "ネットワーク異常";
+"State.ConnectLocked" = "会議室はロックされています";
+"State.Retry" = "再接続";
+"State.Reconnecting" = "教室へ接続中";
+"KickOut.ChairmanKick" = "司会者によって会議から退席させられました";
+"KickOut.Repeat" = "同じ識別情報を持つユーザーが入室したため、教室から退出しました";
+"KickOut.SentOutClassroom" = "先生によりあなたは教室から退出させられました";
+"State.isInBackGround" = "該当学生がHOMEボタンを押しました";
+"State.teacherInBackGround" = "該当ユーザーがHOMEボタンを押しました";
+//role
+"Role.Me" = "私";
+"Role.Teacher" = "先生";
+"Role.Student" = "学生";
+"Role.Patrol"  = "巡回";
+"Role.Assistant" = "助教";
+//say
+"Say.say" = "お話しください";
+//button
+"Button.RefreshPage" = "ページの更新";
+"Button.send" = "送信";
+"Button.closed" = "閉じる";
+"Button.chat" = "チャット";
+//Class.Begin
+"Class.Begin" = "授業開始";
+"Class.Over" = "授業終了";
+
+"Button.MuteAudio" = "全ミュート";
+"Button.MuteAll" = "全ミュート解除";
+"Button.Reward"    = "褒賞";
+"Button.Reset"    = "リセット";
+"Button.Audio" = "オーディオ";
+"Button.ShutUpAll" = "全発言禁止";
+"Button.CancelShutUpAll" = "全発言禁止の取り消し";
+"Button.DefaultLayout" = "デフォルト";
+"Button.DoubleLayout" = "ダブル";
+"Button.VideoLayout" = "ヴィデオ";
+
+"Button.ManyLayout.Top" = "上に";
+"Button.ManyLayout.Speaker" = "進入し";
+"Button.ManyLayout.Free" = "自由";
+
+
+"Button.ClassBegin"    = "授業開始";
+"Button.ClassIsOver"    = "授業終了";
+"Button.ClassBegin1"    = "授業開始";
+"Button.ClassIsOver1"    = "授業終了";
+"Button.ClassEnd"      = "カリキュラム終了";
+"Button.RaiseHand"     = "挙手";
+"Button.RaiseHandCancle"= "挙手中";
+"Button.CancleHandsup"= "挙手取り消し";
+
+"Button.OpenAudio"          = "オーディオ";
+"Button.CloseAudio"         = "オーディオ";
+"Button.OpenVideo"          = "ビデオ";
+"Button.CloseVideo"         = "ビデオ";
+"Button.UpPlatform"         = "発言席を上下する";
+"Button.DownPlatform"       = "発言席を上下する";
+"Button.AllowDoodle"        = "許可する";
+"Button.CancelDoodle"       = "許可する";
+"Button.GiveCup"            = "トロフィーを贈る";
+"Button.Speech"             = "動画が浮動する";
+"Button.RestoreAll"         = "全部を回復する";
+"Button.RestorePosition"    = "位置を回復する";
+"Button.Recovery"           = "リカバリー";
+"Button.CancelSplitScreen"  = "分割表示キャンセル";
+"Button.SwitchVideo"        = "换動画";
+"Button.nameSort" = "名称";
+"Button.typeSort" = "タイプ";
+"Button.timeSort" = "時間";
+
+"Button.playbackSpeed" = "倍速";
+"Button.jump" = "ジャンプ";
+
+
+"Action.EnterRoom"          = "教室に入る";
+"Action.ExitRoom"           = "教室を出る";
+"Prompt.EndClass1M"         = "授業終了まで1分です、時間配分に注意しましょう";
+"Prompt.RoomToBeClosed"     = "教室はまもなく閉じられます";
+"Prompt.ClassToBegin"       = "あと1分で授業が始まります、準備しましょう";
+"Prompt.timeoutStart.one"   = "時間が過ぎています";
+"Prompt.timeoutStart.two"   = "分です、すぐに授業を始めましょう";
+"Prompt.timeoutReadyEnd.one" = "時間がオーバーしています";
+"Prompt.timeoutReadyEnd.two" = "分です、教室は間もなく";
+"Prompt.timeoutReadyEnd.three" = "分後に自動的に閉じられます";
+"Title.DocumentList"        = "教材ファイル";
+"Title.MediaList"           = "メディアファイル";
+"Title.ControlList"         = "操作";
+"Title.TrophySend"          = "賞杯を送る";
+"Title.UserList"            = "名簿";
+"Title.UserList.two"        = "名簿（1）";
+"Title.AreaList"            = "最適なネットワーク";
+"Button.remindKnow"         = "分かりました";
+"Prompt.timeoutEnd"         = "教室はまもなく閉じられます";
+
+"Title.whiteBoard"          = "ホワイトボード";
+"Prompt.CanotOn"            = "学生のオーディオ・ビデオデバイスが使用できません。本人が使用禁止に設定しているかもしれません。使用を許可するよう促してください。";
+"Prompt.FinishClass"        = "本当に授業を終わりますか";
+"Prompt.KickOutStudent"     = "あなたはこの学生を蹴り出すことを確定しますか？";
+"Prompt.delClassFile"       = "このファイルを削除しますか?";
+"Prompt.exceeds"            = "教室の発言席の人数がオーバーです";
+"Prompt.ClassEnd"           = "本カリキュラムは終了しました";
+"Prompt.ClassEndTime"      = "分後に授業が終わります、時間配分に気を付けましょう";
+"Prompt.ClassEndTimeseconds"= "秒後に授業が終わります、適切に時間配分しましょう";
+
+"Prompt.NeedCamera"         = "iphoneの設定-プライバシー−カメラを選択し、カメラの使用を許可してください";
+"Prompt.NeedMicrophone.Title" = "録音できません";
+"Prompt.NeedMicrophone"     = "iphoneの設定-プライバシー−マイクを選択し、マイクの使用を許可してください";
+"Prompt.Sure"               = "よろしいです";
+"Prompt.NeedCameraNeedMicrophone" = "iphoneの設定-プライバシーを選択し、カメラとマイクの使用を許可してください";
+
+
+"Action.Title"       = "写真撮影アップロード";
+"Action.TakePhoto"   = "写真撮影";
+"Action.ChoosePhoto" = "写真選択";
+"Button.UploadPhoto" = "写真撮影←？　写真のアップロード";
+//老师端 上传图片
+"UploadPhoto.TakePhoto" = "写真撮影アップロード　121に同じ英語ありますが、中国語が違います。121が英語と日本語正しい";
+"UploadPhoto.FromGallery" = "アルバムアップロード";
+"UploadPhoto.Error" = "画像アップロードエラー";
+"Prompt.enterBackGround" = "バックグラウンドになりました";
+"Prompt.enterForeGround" = "正常に回復しました";
+"Prompt.NetworkException" = "ネットワークに問題があります。ウィルス対策ソフトもしくはファイアフォールを閉じた後、再起動してください。";
+"Prompt.HaveEnterBackground" = "バックグラウンドモードになりました";
+"Prompt.HaveBackForground" = "正常モードに戻りました";
+"Prompt.BackgroundCouldNotOnStage" = "プログラムはバックグラウンドで実行されています、ステージに入れません";
+"Prompt.NetworkChanged" = "ネットワークに問題が発生しました。ネット環境を確認してから、やり直してください";
+"Prompt.NetworkError" = "ただ今インターネットに接続されていません。確認後、再度接続してくだい。";
+"Prompt.ServerRequst" = "ただ今サーバーを初期化しています。しばらくお待ちください。";
+
+"Prompt.StudentUdpError" = "該当学生とサーバー間のUDP通信が確立できないため、ステージに入れません";
+"Prompt.StudentTcpError" = "サーバーとの通信に問題があるため、ステージに入れません。";
+"Prompt.StudentNetworkOccuredError" = "該当ユーザーとサーバー間のUDP通信を確立できないため、ステージに入れません";
+"Prompt.StudentUdpOnStageError" = "ファイアフォールの原因で、該当ユーザーとサーバー間のUDP通信を確立できないためステージに入れません";
+"Prompt.NotRepeatChat" = "チャット欄に書き込みしないでください";
+"Prompt.AbnormalityReport" = "改善のために、問題を報告をしますか。";
+"Prompt.BanChat" = "チャット禁止";
+"Prompt.BanChatInView" = "全員チャット禁止";
+"Prompt.CancelBanChatInView" = "全体の禁言を取り消す";
+
+"Prompt.TimeError" = "デバイスの時間が不正確のため、サーバーと接続の確立ができません。確認してください。";
+
+"Title.PublicDocuments"       = "公共フォルダ";
+"Title.ClassroomDocuments"    = "教室フォルダ";
+
+"Label.Equipment" = "デバイス";
+"Label.UserNickname" = "ユーザーニックネーム";
+"Label.StepUpAndDown" = "ステップアップとステップダウン";
+"Label.Camera" = "カメラ";
+"Label.Microphone" = "マイク";
+"Label.Authorized" = "権限承認";
+"Label.RaisingHands" = "挙手";
+"Label.Ban" = "発言禁止";
+"Label.Remove" = "削除";
+"Label.choiceIdentity" = "識別情報を選択する";
+"Label.roomid" = "教室番号";
+"Label.roomPlaceholder" = "教室番号を入力してください";
+"Label.nicknamePlaceholder" = "ニックネームを入力してください";
+"Label.messageBoard" = "伝言板";
+"Menu.Copy" = "コピー";
+
+"Label.addFile" = "ファイルを追加";
+"Label.handsup_tips" = "手をあげる";
+
+"Res.btn.start" = "始まる";
+"Res.btn.get"   = "既に奪い合い";
+"Res.btn.noget"   = "再スタート";
+"Res.btn.getting" = "アンコール中";
+"Res.btn.t.get"   = "人がいる";
+"Res.readyget"    = "割り引きの準備";
+"Res.unStarted"    = "未开始";
+
+"Res.lab.start" = "クリックして答え";
+"Res.lab.iget"  = "奪い合い";
+"Res.lab.noget"   = "誰も答えない";
+"Res.lab.getting" = "アンコール中";
+
+"netstate.excellent" = "優";
+"netstate.medium" = "中";
+"netstate.bad" = "差";
+"netstate.RoomID" = "部屋番号: ";
+"netstate.Packet" = "仕切り率: ";
+"netstate.Ping" = "遅延: ";
+
+
+//小工具
+"tool.datiqiqi"   = "しけん器";
+"tool.zhuanpan"   = "ダイヤル";
+"tool.jishiqi"   = "タイマー";
+"tool.qiangdaqi"   = "スクーター";
+"tool.xiaobaiban"   = "小白板";
+
+"tool.fabudati"   = "発表";
+"tool.tianjia"   = "答えをつける";
+"tool.shanchu"   = "答えを削除する";
+"tool.zhengquedaan"   = "正解";
+"tool.datirenshu"   = "問題数";
+"tool.ren"   = "人";
+"tool.time"   = "まで";
+"tool.detail"   = "详细 >";
+"tool.tongji"   = "統計 >";
+
+"tool.end"   = "問題を解く";
+"tool.nodata"   = "データがない！";
+"tool.publish"   = "答えを出す";
+"tool.didpublish"   = "発表";
+"tool.restart"   = "再出発";
+"tool.submit"   = "提出する";
+"tool.modify"   = "修正する";
+"tool.wodedaan"   = "私の答え";
+"tool.choose"   = "選ぶ";
+"tool.leastanswer"   = "正解を少なくとも1つ設定してください";
+
+"tool.start"   = "から";
+
+
+"MiniWB.Dispense"   = "配ります";
+"MiniWB.Recycle"    = "回収します";
+"MiniWB.Redispense" = "再度配ります";
+"MiniWB.Prepare"    = "準備";
+
+"TKPreload.downloading" = "正在加载课件";
+"TKPreload.unzipping"   = "正在解压缩课件";
+"TKPreload.skip"        = "跳过";

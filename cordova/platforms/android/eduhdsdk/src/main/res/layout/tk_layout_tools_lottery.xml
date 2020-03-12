@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <ImageView
+        android:id="@+id/iv_tools_table"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/tk_tools_table" />
+
+    <ImageView
+        android:id="@+id/iv_tools_start"
+        android:layout_width="60px"
+        android:layout_height="60px"
+        android:layout_gravity="center"
+        android:src="@drawable/tk_tools_start" />
+
+    <ImageView
+        android:id="@+id/iv_tools_close"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_gravity="right"
+        android:src="@drawable/tk_tools_close" />
+
+</FrameLayout>

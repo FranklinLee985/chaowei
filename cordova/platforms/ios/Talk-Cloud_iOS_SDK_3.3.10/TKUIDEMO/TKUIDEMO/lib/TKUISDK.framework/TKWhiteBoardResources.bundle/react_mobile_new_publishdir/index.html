@@ -1,0 +1,29 @@
+<!DOCTYPE html><html lang="en" style="font-size: 100px;" id="all_root" data-appversions="3.2.7.0" data-packtime="2020-1-15 15:36:28" data-new-mobile="true"><head><title>TalkCloud</title><meta charset="UTF-8"><meta name="author" content="talk,http://www.talk-cloud.com"><meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-touch-fullscreen" content="yes"><meta name="full-screen" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="format-detection" content="telephone=no"><meta name="format-detection" content="address=no"><meta http-equiv="Cache-Control" content="no-siteapp"><meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"><link href="./js/plugs/literally/css/tkwhiteboardsdk.min.css?versions=2018011014" rel="stylesheet"></head><body class="normal" style="overflow: hidden; position: absolute;width: 100%;height: 100%;"><section id="tk_app" class="add-position-absolute-top0-left0" style="width: 100%;height: 100%;"></section><script type="text/javascript" charset="UTF-8" src="./libs/js/jq/jquery.min.js"></script><script type="text/javascript" charset="UTF-8" src="./libs/js/utils/tkCustomUtils.min.js?versions=2018011014"></script><div id="loadJs" style="display:none;"></div><script>;(function () {
+        window.GLOBAL = window.GLOBAL || {} ;
+        window.__SDKDEV__  = ( "false" === 'true' );
+        window.__APPVERSIONS__  = "3.2.7.0" ;
+        window.__APPVERSIONSTIME__  =  "2019060511"  ;
+        window.__SDKVERSIONS__  = "3.2.0"  ;
+        window.__SDKVERSIONSTIME__  = "2018121710" ;
+        var serverUpdateVersion = window.GLOBAL.getUrlParams('version');
+
+        //加载css
+        var tkMainStyleUrl = "./css/tkMain.css?appVersions=3.2.7.0&appVersionsTime=2019060511&forceUpdateTime=1579073788411"+(serverUpdateVersion?"&serverUpdateVersions="+serverUpdateVersion : "") ;
+        window.GLOBAL.loadStyle(tkMainStyleUrl);
+        
+        //加载js
+        var sdkUrl = "./libs/js/tk/tksdk_fake.js?sdkVersions=3.2.0&sdkVersionsTime=2018121710&forceUpdateTime=1579073788411"+(serverUpdateVersion?"&serverUpdateVersions="+serverUpdateVersion : "") ;
+        window.GLOBAL.loadScript(sdkUrl);
+
+        var lcUrl = "./js/plugs/literally/js/tkwhiteboardsdk.min.js?versions=2018011014" ;
+        window.GLOBAL.loadScript(lcUrl);
+
+        var webpackAssetsUrl = "./js/webpackAssets.js?appVersions=3.2.7.0&appVersionsTime=2019060511&forceUpdateTime=1579073788411"+(serverUpdateVersion?"&serverUpdateVersions="+serverUpdateVersion : "")  ;
+        window.GLOBAL.loadScript(webpackAssetsUrl);
+
+        var commonUrl = "./js/common.js?appVersions=3.2.7.0&appVersionsTime=2019060511&forceUpdateTime=1579073788411"+(serverUpdateVersion?"&serverUpdateVersions="+serverUpdateVersion : "")  ;
+        window.GLOBAL.loadScript(commonUrl);
+
+        var tkMainUrl = "./js/tkMain.js?appVersions=3.2.7.0&appVersionsTime=2019060511&forceUpdateTime=1579073788411"+(serverUpdateVersion?"&serverUpdateVersions="+serverUpdateVersion : "") ;
+        window.GLOBAL.loadScript(tkMainUrl);
+    })();</script></body></html>

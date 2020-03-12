@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tk_one_to_one_bg">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/tk_action_bar_one" />
+
+    <RelativeLayout
+        android:id="@+id/rl_web"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title_bar">
+
+        <RelativeLayout
+            android:id="@+id/ll_video_whiteboard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!--白板-->
+            <RelativeLayout
+                android:id="@+id/ll_wb_container"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@color/three_vidios_bg">
+
+                <FrameLayout
+                    android:id="@+id/wb_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true" />
+
+                <FrameLayout
+                    android:id="@+id/wb_protogenesis"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true" />
+
+                <!--画笔工具布局布局-->
+                <include
+                    android:id="@+id/tools_include"
+                    layout="@layout/tk_item_tools"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5px"
+                    android:layout_marginRight="5px" />
+
+                <!--PPT备注布局-->
+                <com.eduhdsdk.ui.LongToucherLinearLayout
+                    android:id="@+id/remark_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/tk_remark_bg"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/remark_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="6dp"
+                        android:scrollbars="vertical|none"
+                        android:textColor="@color/remark_txt"
+                        android:textSize="8sp" />
+
+                </com.eduhdsdk.ui.LongToucherLinearLayout>
+
+                <!--翻业布局-->
+                <com.eduhdsdk.ui.LongToucherLinearLayout
+                    android:id="@+id/pages_include_ll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true">
+
+                    <include
+                        android:id="@+id/pages_include"
+                        layout="@layout/tk_item_pages"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </com.eduhdsdk.ui.LongToucherLinearLayout>
+
+            </RelativeLayout>
+
+            <!--老师和学生的视频框布局-->
+
+            <RelativeLayout
+                android:id="@+id/lin_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"></RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_video_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:visibility="gone">
+            <!--视频布局 视频交互按钮-->
+            <ImageView
+                android:id="@+id/iv_video_change"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tk_change" />
+        </RelativeLayout>
+
+        <!--MP3播放 底部聊天 层-->
+        <RelativeLayout
+            android:id="@+id/rel_control_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:paddingTop="10px"
+            android:paddingBottom="10px">
+
+            <!--MP3播放界面-->
+            <include
+                android:id="@+id/lin_audio_control"
+                layout="@layout/tk_layout_mp3_play_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible" />
+
+            <!--底部聊天界面-->
+            <include
+                android:id="@+id/lin_bottom_chat"
+                layout="@layout/tk_layout_chat_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <!--播放界面-->
+    <FrameLayout
+        android:id="@+id/video_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone" />
+
+    <!--白板全屏右下角视频界面-->
+    <include
+        android:id="@+id/rel_fullscreen_videoitem"
+        layout="@layout/tk_fullscreen_videoitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <!--laoding界面-->
+    <include
+        android:id="@+id/re_laoding"
+        layout="@layout/tk_layout_loading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <!--回放界面-->
+    <ViewStub
+        android:id="@+id/vs_play_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout="@layout/tk_play_back_bar" />
+
+    <com.classroomsdk.viewUi.DownloadProgressView
+        android:id="@+id/fl_downloadprogress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

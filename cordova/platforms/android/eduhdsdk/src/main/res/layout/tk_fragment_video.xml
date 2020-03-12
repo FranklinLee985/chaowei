@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/lin_video_play"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/window_back_black"
+    android:clickable="true">
+
+    <org.tkwebrtc.SurfaceViewRenderer
+        android:id="@+id/suf_mp4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/re_laoding"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/loadingImageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerInParent="true"
+            android:scaleType="centerInside" />
+
+    </RelativeLayout>
+
+    <!--下层展示画板-->
+    <com.classroomsdk.common.VideoPaint
+        android:id="@+id/videoPaint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+    <!--上层绘制画板-->
+    <com.classroomsdk.common.VideoPaint
+        android:id="@+id/videoPaintTop"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center" />
+
+    <!--白板全屏右下角视频界面-->
+    <include
+        android:id="@+id/rel_fullscreen_mp4videoitem"
+        layout="@layout/tk_fullscreen_videoitem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone" />
+
+    <include
+        android:id="@+id/lin_video_control"
+        layout="@layout/tk_layout_media_control"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_toLeftOf="@+id/rel_fullscreen_mp4videoitem" />
+
+    <ImageView
+        android:id="@+id/img_close_mp4"
+        android:layout_width="50px"
+        android:layout_height="50px"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tk_btn_closed_normal" />
+
+    <include
+        android:id="@+id/tools_include"
+        layout="@layout/tk_video_item_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:visibility="invisible" />
+
+</RelativeLayout>
+

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="sure">sure</string>
+
+    <string name="whiteboard_text">Please enter content</string>
+
+    <string name="jump_over">jump over</string>
+
+
+</resources>

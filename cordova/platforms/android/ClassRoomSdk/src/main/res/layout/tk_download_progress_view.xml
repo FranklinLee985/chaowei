@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/download_progress_view_bg">
+
+    <ProgressBar
+        android:id="@+id/tk_dp_progress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="180px"
+        android:layout_height="11px"
+        android:layout_centerInParent="true"
+        android:max="100"
+        android:progressDrawable="@drawable/tk_download_progressbar_bg" />
+
+    <TextView
+        android:layout_marginTop="8px"
+        android:id="@+id/tk_dp_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tk_dp_progress"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="11px"
+        tools:text="课件加载中 80%" />
+
+    <Button
+        android:id="@+id/but_jump_over"
+        android:layout_marginTop="13px"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/tk_dp_text"
+        android:layout_width="63px"
+        android:layout_height="25px"
+        android:background="@drawable/tk_progress_but"
+        android:text="@string/jump_over"
+        android:textColor="@color/white"
+        android:textSize="12px"
+        />
+
+</RelativeLayout>

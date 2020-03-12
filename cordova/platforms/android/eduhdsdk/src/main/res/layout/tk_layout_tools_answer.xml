@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/tk_popup_window_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/answer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="17px"
+            android:layout_marginBottom="17px"
+            android:text="@string/answer_panel"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/tools_img_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:layout_marginRight="20px"
+            android:paddingLeft="20px"
+            android:paddingTop="20px"
+            android:paddingRight="20px"
+            android:paddingBottom="20px"
+            android:src="@drawable/tk_close_fork" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="7px"
+        android:layout_marginRight="7px"
+        android:layout_marginBottom="8px"
+        android:background="@drawable/tk_popup_window_content_bg"
+        android:orientation="vertical">
+
+        <!-- 选择答案-->
+        <include
+            android:id="@+id/answer_one"
+            layout="@layout/tk_tools_answer_one"
+            android:visibility="visible" />
+
+        <!-- 答题统计-->
+        <include
+            android:id="@+id/answer_two"
+            layout="@layout/tk_tools_answer_two"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rl_commit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="11px"
+            android:layout_marginBottom="30px">
+
+            <TextView
+                android:id="@+id/answer_my"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/answer_right"
+                android:text="@string/answer_my"
+                android:textColor="@color/tools_answer_right_text"
+                android:textSize="8sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/answer_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28px"
+                android:text="@string/answer_correct"
+                android:textColor="@color/tools_answer_right_text"
+                android:textSize="8sp" />
+
+            <TextView
+                android:id="@+id/answer_public"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28px"
+                android:layout_toRightOf="@+id/answer_right"
+                android:background="@drawable/tk_popup_window_text_bg"
+                android:paddingLeft="10px"
+                android:paddingTop="5px"
+                android:paddingRight="10px"
+                android:paddingBottom="5px"
+                android:text="@string/answer_publish"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/answer_btn"
+                android:layout_width="150px"
+                android:layout_height="60px"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30px"
+                android:background="@drawable/tk_tools_btn"
+                android:gravity="center"
+                android:text="@string/answer_start"
+                android:textColor="@color/white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/answer_stu_btn"
+                android:layout_width="150px"
+                android:layout_height="60px"
+                android:layout_centerHorizontal="true"
+                android:layout_marginRight="30px"
+                android:background="@drawable/tk_tools_btn"
+                android:gravity="center"
+                android:text="@string/answer_commit"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

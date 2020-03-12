@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="afterDescendants"
+    android:orientation="horizontal"
+    android:padding="20px">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="3"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_file_type"
+            android:layout_width="35px"
+            android:layout_height="35px"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tk_icon_whiteboard" />
+
+        <TextView
+            android:id="@+id/txt_file_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15px"
+            android:layout_marginRight="15px"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="16px" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/img_eye"
+            android:layout_width="25px"
+            android:layout_height="25px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="63px"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tk_closeeyes" />
+
+        <ImageView
+            android:id="@+id/img_delete"
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginLeft="22px"
+            android:layout_marginRight="21px"
+            android:scaleType="fitXY"
+            android:src="@drawable/tk_delete" />
+    </FrameLayout>
+</LinearLayout>

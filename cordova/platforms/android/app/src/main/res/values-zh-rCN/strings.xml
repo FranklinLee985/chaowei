@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">拓课云Plus</string>
+    <string name="crash_dialog_negative_button">取消</string>
+    <string name="crash_dialog_positive_button">发送</string>
+    <string name="crash_dialog_title">异常报告</string>
+    <string name="update_dialog_title">已有新版本可用</string>
+    <string name="update_dialog_negative_button">忽略</string>
+    <string name="update_dialog_positive_button">显示</string>
+    <string name="nickname_not_empty">昵称不能为空</string>
+
+    <string name="find_new_version">为了达到最佳使用体验，建议您立即完成版本升级</string>
+    <string name="find_new_version_fouce">为了获得完整的学习体验，请您立即完成版本升级</string>
+    <string name="login_version_name">版本号</string>
+    <string name="et_default_nick_name">请输入您的昵称</string>
+    <string name="permissions_prompt">获取相关权限失败,功能将无法正常使用，需要到设置页面手动授权</string>
+    <string name="login_choose_user_role">请选择身份</string>
+    <string name="login_choose_user_room">请选择房间模式</string>
+    <string name="password_not_empty">密码不能为空</string>
+</resources>

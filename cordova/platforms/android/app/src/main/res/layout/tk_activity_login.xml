@@ -1,0 +1,134 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/re_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="235dp"
+            android:layout_height="103dp"
+            android:src="@drawable/tk_login_logo" />
+
+        <EditText
+            android:id="@+id/edt_meetingid"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="100dp"
+            android:background="@drawable/tk_rounded_edittext"
+            android:drawableRight="@drawable/tk_icon_room_number"
+            android:hint="@string/et_default_teach_room_number"
+            android:inputType="number"
+            android:lines="1"
+            android:nextFocusDown="@+id/edt_nickname"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/login_et_text_color"
+            android:textColorHint="@color/login_et_hint_color"
+            android:textCursorDrawable="@drawable/tk_shape_login_edittext_cursor_color"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edt_nickname"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/tk_rounded_edittext"
+            android:drawableRight="@drawable/tk_login_nick_name_icon"
+            android:hint="@string/et_default_nick_name"
+            android:lines="1"
+            android:maxLength="16"
+            android:nextFocusDown="@+id/txt_joinmeeting"
+            android:nextFocusUp="@+id/edt_meetingid"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingRight="10dp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/login_et_text_color"
+            android:textColorHint="@color/login_et_hint_color"
+            android:textCursorDrawable="@drawable/tk_shape_login_edittext_cursor_color"
+            android:textSize="14sp" />
+
+        <RelativeLayout
+            android:id="@+id/re_role"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/tk_rounded_edittext">
+
+            <TextView
+                android:id="@+id/tv_role"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:paddingLeft="20dp"
+                android:textColor="@color/login_choose_user_role_color"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:id="@+id/temp_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:src="@drawable/tk_login_right_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="40dp"
+                android:text="@string/login_choose_user_role"
+                android:textColor="@color/login_choose_user_role_hint_color"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/txt_joinmeeting"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/tk_selector_bt_join_room"
+            android:focusable="true"
+            android:gravity="center"
+            android:nextFocusDown="@+id/edt_meetingid"
+            android:text="@string/enter_classroom"
+            android:textColor="@color/login_join_room_color"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txt_version_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/login_version_name"
+        android:textColor="@color/login_version_text_color"
+        android:textSize="13sp" />
+
+    <include
+        android:id="@+id/loading_gif"
+        layout="@layout/tk_layout_load"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</RelativeLayout>
+
+

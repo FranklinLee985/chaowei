@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_put"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_small_input_edit_bg"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="20px"
+            android:layout_marginTop="10px"
+            android:layout_weight="8"
+            android:background="@drawable/tk_round_chat_input_back"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/lin_input_chat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/iv_broad"
+                        android:layout_width="25px"
+                        android:layout_height="25px"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="12px"
+                        android:src="@drawable/tk_icon_keyboard"
+                        android:gravity="center"
+                        android:scaleType="fitXY"
+                        android:visibility="gone" />
+
+                    <EditText
+                        android:id="@+id/edt_input_chat"
+                        android:layout_width="match_parent"
+                        android:layout_height="48px"
+                        android:layout_marginRight="60px"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/whiteboard_text"
+                        android:imeOptions="flagNoExtractUi"
+                        android:lines="1"
+                        android:paddingLeft="20px"
+                        android:textColor="@color/three_color_chat_input"
+                        android:textColorHint="@color/three_color_chat_input_hint"
+                        android:textSize="18px" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20px"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/txt_send"
+                android:layout_width="95px"
+                android:layout_height="44px"
+                android:layout_centerInParent="true"
+                android:background="@drawable/tk_selector_bt_send_message"
+                android:gravity="center"
+                android:text="@string/sure"
+                android:textColor="@color/white"
+                android:textSize="16px" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+

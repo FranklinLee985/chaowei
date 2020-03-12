@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_item_tools"
+    android:layout_width="124px"
+    android:layout_height="595px"
+    android:background="@drawable/tk_tools_backgrouad"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/tools_top"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="55"
+        android:background="@drawable/tk_tools_backgrouad_top"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/tools_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/tk_wb_tools" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_tools_all"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_below="@+id/tools_top"
+        android:layout_weight="485"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/tool_default"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tk_tools_mouse_selected" />
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/tools_pen"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tk_tools_pen_default" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/view4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/tools_font"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tk_tools_text_default" />
+
+        <View
+            android:id="@+id/view5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/view6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/tools_form"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tk_tools_juxing_default" />
+
+        <View
+            android:id="@+id/view7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:id="@+id/view8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/tools_eraser"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:src="@drawable/tk_tools_xiangpi_default" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/tools_bottom_line"
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/tools_bottom_line" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_top_arrows"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="55"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tk_tools_jiantou_top" />
+
+</LinearLayout>

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/lin_audio_seek"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@drawable/tk_shape_media_mp3_play_bg"
+        android:visibility="invisible">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!--媒体名称和时间-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/txt_media_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2px"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/color_mp4_file_name"
+                    android:textSize="13px" />
+
+                <TextView
+                    android:id="@+id/txt_media_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right|center_vertical"
+                    android:layout_marginRight="25px"
+                    android:text="00:00/00:00"
+                    android:textColor="@color/color_mp4_play_time"
+                    android:textSize="12px" />
+
+            </LinearLayout>
+
+            <!--媒体播放进度条-->
+            <SeekBar
+                android:id="@+id/sek_media"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3px"
+                android:maxHeight="4.0dip"
+                android:minHeight="2.0dip"
+                android:progressDrawable="@drawable/tk_po_seekbar_white"
+                android:thumb="@drawable/tk_shape_media_player_seekbar_progress_bg" />
+
+            <!--音量控制-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3px"
+                android:gravity="center_vertical">
+
+                <ImageView
+                    android:id="@+id/img_media_voice"
+                    android:layout_width="15px"
+                    android:layout_height="17px"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/tk_common_icon_voice" />
+
+                <SeekBar
+                    android:id="@+id/sek_media_voice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5px"
+                    android:layout_weight="1"
+                    android:maxHeight="3.0dip"
+                    android:minHeight="2.0dip"
+                    android:progressDrawable="@drawable/tk_po_seekbar_white"
+                    android:thumb="@drawable/tk_shape_media_player_seekbar_progress_bg" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_close_mp3"
+            android:layout_width="wrap_content"
+            android:layout_height="58px"
+            android:layout_gravity="center_vertical"
+            android:padding="20px"
+            android:scaleType="centerInside"
+            android:src="@drawable/tk_mp3player_close" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/fl_play_disk"
+        android:layout_width="75px"
+        android:layout_height="75px"
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible">
+        <!--MP3图标-->
+        <pl.droidsonroids.gif.GifImageView
+            android:id="@+id/img_disk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/tk_mp3player_icon_gif"
+            android:visibility="visible" />
+
+        <ImageView
+            android:id="@+id/img_play"
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:layout_gravity="center"
+            android:scaleType="centerInside"
+            android:src="@drawable/tk_play" />
+    </FrameLayout>
+</FrameLayout>

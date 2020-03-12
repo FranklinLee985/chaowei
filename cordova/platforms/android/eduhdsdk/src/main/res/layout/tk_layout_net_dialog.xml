@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tk_popup_window_bg"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/rl_temp1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/remind"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+        <ImageView
+            android:id="@+id/iv_close_popup"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/tk_close"
+            android:visibility="gone" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_temp1"
+        android:layout_margin="7px"
+        android:background="@drawable/tk_popup_window_bg_centent_white">
+
+        <TextView
+            android:id="@+id/tv_exit_dialog_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="15dp"
+            android:layout_marginLeft="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/exit_dialog_message_textcolor"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/bt_ok_dialog"
+            android:layout_width="80dp"
+            android:layout_height="32dp"
+            android:layout_marginBottom="20dp"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@drawable/tk_button_ok_default"
+            android:gravity="center"
+            android:text="@string/OK"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+
+    </FrameLayout>
+
+</LinearLayout>

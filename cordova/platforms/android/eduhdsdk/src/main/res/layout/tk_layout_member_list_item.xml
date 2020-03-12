@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="afterDescendants"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:paddingTop="10px"
+    android:paddingBottom="10px">
+
+    <ImageView
+        android:id="@+id/im_type"
+        android:layout_width="0dp"
+        android:layout_height="30px"
+        android:layout_marginLeft="10px"
+        android:layout_weight="1"
+        android:src="@drawable/tk_icon_user" />
+
+    <TextView
+        android:id="@+id/txt_user_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:lines="1"
+        android:textColor="@color/three_popup_student_name_color"
+        android:textSize="16px" />
+
+    <!--  设置不可见的view起到占位作用  -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="1px"
+        android:layout_weight="1" />
+
+    <!--  上下台  -->
+    <ImageView
+        android:id="@+id/img_up_sd"
+        android:layout_width="0dp"
+        android:layout_height="25px"
+        android:layout_weight="1.5"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tk_button_xiajiangtai" />
+
+
+    <ImageView
+        android:id="@+id/img_video"
+        android:layout_width="0dp"
+        android:layout_height="25px"
+        android:layout_weight="1.5"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tk_button_close_video" />
+
+    <ImageView
+        android:id="@+id/img_audio"
+        android:layout_width="0dp"
+        android:layout_height="25px"
+        android:layout_weight="1.5"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tk_button_close_audio" />
+
+    <ImageView
+        android:id="@+id/img_draw"
+        android:layout_width="0dp"
+        android:layout_height="25px"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tk_button_close_draw" />
+
+    <!--  举手  -->
+    <ImageView
+        android:id="@+id/img_hand_up"
+        android:layout_width="0dp"
+        android:layout_height="25px"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tk_icon_handup_member" />
+
+    <!--  禁言  -->
+    <ImageView
+        android:id="@+id/iv_no_speak"
+        android:layout_width="0dp"
+        android:layout_height="25px"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tk_button_open_speak" />
+
+    <!--  移除  -->
+    <ImageView
+        android:id="@+id/iv_out_room"
+        android:layout_width="0dp"
+        android:layout_height="25px"
+        android:layout_weight="1"
+        android:scaleType="fitCenter"
+        android:src="@drawable/tk_button_remove" />
+
+</LinearLayout>

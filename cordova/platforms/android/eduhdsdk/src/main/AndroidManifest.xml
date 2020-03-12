@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.eduhdsdk">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <!-- 允许访问摄像头进行拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 允许程序录制音频 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 修改声音设置信息 -->
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取网络信息状态，如当前的网络连接是否有效 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问Wi-Fi网络状态信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许使用PowerManager的 WakeLocks保持进程在休眠时从屏幕消失 -->
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- 允许程序读取底层系统日志文件 -->
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- sd卡文件夹创建和删除 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+
+    <application
+        android:allowBackup="true"
+        android:supportsRtl="true">
+
+        <activity
+            android:name=".ui.OneToManyActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".ui.OneToOneActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme"
+            android:windowSoftInputMode="adjustNothing" />
+
+        <activity
+            android:name=".ui.TKBaseActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/FullScreenTheme" />
+
+        <service
+            android:name=".tools.MonitorService"
+            android:enabled="true"
+            android:exported="true" />
+    </application>
+
+</manifest>

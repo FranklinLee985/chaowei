@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/tk_popup_window_bg"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/rl_temp1"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="@string/remind"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rl_temp1"
+        android:layout_margin="7px"
+        android:background="@drawable/tk_popup_window_bg_centent_white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_room_need_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:gravity="top"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/is_send_crash_message"
+            android:textColor="@color/exit_dialog_message_textcolor"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="20dp">
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/bt_cancel_crash_message"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/tk_btn_crash_cancel"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/crash_cancel_color"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0px"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/bt_send_crash_message"
+                    android:layout_width="80dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/tk_selector_login_popup_ok_button"
+                    android:gravity="center"
+                    android:text="@string/OK"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

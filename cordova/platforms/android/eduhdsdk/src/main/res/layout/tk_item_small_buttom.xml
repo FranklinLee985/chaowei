@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <Button
+        android:id="@+id/small_user_but"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="1.5dp"
+        android:background="@drawable/tk_item_small_top_buttom"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="老师"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+</FrameLayout>

@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">TalkCloud+</string>
+    <!--<string name="update_view_source_failed">The equipment is not set up to allow the installation
+        of applications from unknown sources, please allow this option in the Settings > security.</string>-->
+    <string name="crash_dialog_negative_button">Dismiss</string>
+    <string name="crash_dialog_positive_button">Send</string>
+    <string name="crash_dialog_title">Crash Data</string>
+    <string name="update_dialog_title">found new versions</string>
+    <string name="update_dialog_negative_button">Dismiss</string>
+    <string name="update_dialog_positive_button">Show</string>
+
+    <string name="password_not_empty">Password cannot be empty</string>
+    <string name="nickname_not_empty">Nicknames cannot be empty</string>
+    <string name="find_new_version">A new version is available, and for the best use experience, it is recommended that you complete the version upgrade immediately.</string>
+    <string name="find_new_version_fouce">The new version is available, so to get the full learning experience, please do your version upgrade immediately.</string>
+    <string name="et_default_nick_name">Please input your nickname</string>
+    <string name="login_choose_user_role">Please choose your role</string>
+    <string name="login_version_name">Version</string>
+    <string name="permissions_prompt">Failure to get related permissions will not function properly.
+        Manual authorization is required on settings page</string>
+
+    <string name="login_choose_user_room">Please choose your room</string>
+</resources>

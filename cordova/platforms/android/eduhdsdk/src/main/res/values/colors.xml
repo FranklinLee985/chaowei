@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="time_yel">#FCD000</color>
+    <color name="time_red">#F30606</color>
+    <color name="window_back_black">#000000</color>
+    <color name="manybackgcolor">#332361</color>
+    <color name="white">#FFFFFF</color>
+    <color name="crash_cancel_color">#FFFFFF</color>
+    <color name="member_page_not">#B3ffffff</color>
+    <color name="white_p30">#4DFFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_p50">#80000000</color>
+    <color name="color_181139_p50">#80181139</color>
+    <color name="nothing">#00000000</color>
+    <color name="color_hands_up">#EB4852</color>
+    <color name="popup_title_color">#FFFFFF</color>
+    <color name="tk_gift_popup_title_color">#FFFFFF</color>
+    <color name="popup_role_title_color">#F8F8FA</color>
+
+    <color name="popup_course_media_title_color">#913706</color>
+
+    <color name="color_chat_nickname">#0077FF</color>
+
+    <color name="popup_window_choose_photo_color">#F9DD6C</color>
+    <color name="color_bar_background">#503A8F</color>
+    <color name="color_below_bar_background">#3C257C</color>
+
+    <color name="color_media_play_seek_bar_no_play">#4Dffffff</color>
+    <color name="color_media_play_seek_bar_have_play">#FFDC54</color>
+    <color name="msg_nickname_color">#FFDC54</color>
+
+    <color name="color_mp4_file_name">#FFFFFF</color>
+    <color name="color_mp4_play_time">#FFFFFF</color>
+    <color name="color_media_play_bg">#991f1e21</color>
+    <color name="color_play_speed_bg">#57387F</color>
+
+    <color name="color_teacher_video_popup_bg">#FF6B58</color>
+    <color name="color_student_video_popup_bg">#FF6B58</color>
+
+
+    <color name="color_play_speed">#FFFFFF</color>
+    <color name="color_student_press_home_button">#B3291B4F</color>
+    <color name="color_small_input_edit_bg">#F4F4F4</color>
+    <color name="color_no_read_chat_message_bg">#FF3811</color>
+
+    <color name="color_course_popup_text_select">#FFFFFF</color>
+    <color name="color_course_popup_text_default">#913706</color>
+
+    <color name="color_chat_pop_send_text">#FFFFFF</color>
+    <color name="tv_exit_dialog_message">#913705</color>
+    <color name="txt_gift_num">#616161</color>
+    <color name="color_re_loading_bg">#70000000</color>
+
+    <color name="color_memberlist_item_bg">#FFE99E</color>
+
+    <color name="color_course_pop_line">#913706</color>
+
+    <color name="color_file_pressed_background">#913706</color>
+    <color name="old_color_file_pressed_background">#212123</color>
+
+    <color name="color_seekbar_point">#FFFFFF</color>
+    <color name="color_choose_role_stroke">#0077FF</color>
+    <color name="color_choose_role_no_checked">#0077FF</color>
+
+    <color name="color_dialog_input_pwd">#FFFDCA</color>
+    <color name="color_dialog_input_pwd_stroke">#913705</color>
+
+    <color name="color_round_back_blue_5dp">#4468D0</color>
+    <color name="color_round_back_handing_up_5dp">#FF9B41</color>
+    <color name="edit_input_cursor_color">#FFFFFF</color>
+
+
+    <color name="color_chose_edit">#913705</color>
+
+    <color name="color_chat_send">#FFFFFF</color>
+
+    <color name="color_input_solid">#FFE99E</color>
+
+
+    <color name="chat_txt_ch_msg_link_color">#795cbf</color>
+
+    <color name="color_send_crash_text">#795CBF</color>
+
+
+    <!--以下紫色模板-->
+    <color name="three_purper">#4F3D84</color>
+    <color name="three_one_outclass">#A34D23</color>
+
+    <color name="three_color_chose_number">#795CBF</color>
+    <color name="three_popup_student_name_title_color">#C1B3E7</color>
+    <color name="three_popup_student_name_color">#ffffff</color>
+    <color name="three_color_chat_input_hint">#C6C0D7</color>
+    <color name="three_color_chat_input">#503A8F</color>
+    <color name="three_color_chat_time">#C6BBE6</color>
+    <color name="three_color_chat_list_item_line">#E1D6FF</color>
+    <color name="three_color_system_chat_time">#A291D3</color>
+    <color name="three_bg_video_back">#E3E5F1</color>
+    <color name="three_bg_video_t">#DCDCDC</color>
+    <color name="teacher_video_bg">#E8E9F0</color>
+    <color name="student_video_bg">#E3E5F1</color>
+    <color name="three_bg_video_s">#D8D6D6</color>
+    <color name="one_to_many_videolayout_bg">#000000</color>
+    <color name="color_D2A6FF">#FFE5D0FA</color>
+
+    <color name="three_vidios_bg">#4D070117</color>
+    <color name="three_gift_num_bg">#99FFFFFF</color>
+
+
+    <color name="three_popup_title_bg">#f9382966</color>
+    <color name="three_popup_center_bg">#f4281c4e</color>
+
+    <color name="course_white">#FFFFFF</color>
+    <color name="popup_window_bg_action">#F535295E</color>
+    <color name="exit_dialog_message_textcolor">#795CBF</color>
+    <color name="three_video_name_color">#F3F4FF</color>
+    <color name="selectphoto_line_color">#7963BB</color>
+    <color name="chat_message_line_color">#E0D3FF</color>
+
+    <color name="hand_txt_color">#FF3f3f</color>
+    <color name="color_ban_red">#FF341F</color>
+    <color name="color_ban_cancle">#C3C3C3</color>
+
+    <color name="unselect_action">#FF9C85E1</color>
+
+
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colourless">#00000000</color>
+    <color name="tools_answer_bg">#FFFFFF</color>
+    <color name="tools_answer_num">#795CBF</color>
+    <color name="tools_answer_seebar_default">#F7F4FF</color>
+    <color name="tools_answer_seebar">#A291D3</color>
+
+    <color name="public_black_9">#999999</color>
+    <color name="tools_timer_select">#FFA291D3</color>
+    <color name="tools_timer_unselect">#53a291d3</color>
+    <color name="tools_timer_line">#FFE3E1EB</color>
+    <color name="tools_answer_text">#795CBF</color>
+    <color name="tools_answer_details_text">#795CBF</color>
+    <color name="tools_answer_details_page_text">#795CBF</color>
+    <color name="tools_answer_right_text">#795CBF</color>
+    <color name="tools_responder_text">#795CBF</color>
+
+    <color name="wifi_you">#90e6a7</color>
+    <color name="wifi_zhong">#f2ab58</color>
+    <color name="wifi_cha">#e85a5f</color>
+
+    <color name="button_green">#75D592</color>
+    <color name="button_gray">#dedede</color>
+    <color name="color_7F59C5">#7F59C5</color>
+    <color name="color_221746">#221746</color>
+    <color name="color_503A8F">#503A8F</color>
+    <color name="color_0077FF">#0077FF</color>
+    <color name="all_action_audio_text">#FFCC28</color>
+
+    <color name="tk_tools_btn_select">#D0C2FA</color>
+    <color name="tk_tools_btn_text_select_color">#7F59C5</color>
+
+    <color name="tk_chat_name_color">#FFFFFF</color>
+    <color name="tk_page_num_select">#FFCC28</color>
+    <color name="tk_one_2_many_video_bg">#332361</color>
+    <color name="color_33FF7A00">#33FF7A00</color>
+
+</resources>

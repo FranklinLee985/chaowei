@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <org.tkwebrtc.SurfaceViewRenderer
+        android:id="@+id/fullscreen_sf_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerInParent="true" />
+
+    <RelativeLayout
+        android:id="@+id/re_suf_background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/color_student_press_home_button"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_inback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@color/nothing"
+            android:gravity="center"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="5sp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fullscreen_bg_video_back"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/three_bg_video_back"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/fullscreen_img_video_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/tk_zhanwei_student"
+        android:visibility="gone" />
+
+</RelativeLayout>

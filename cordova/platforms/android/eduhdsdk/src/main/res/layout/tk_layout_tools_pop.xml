@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="135px">
+
+    <ImageView
+        android:id="@+id/up_arr"
+        android:layout_width="20px"
+        android:layout_height="20px"
+        android:src="@drawable/tk_up_arr_selectphoto"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/up_arr"
+        android:background="@drawable/tk_popup_window_bg_centent"
+        android:orientation="horizontal"
+        android:paddingLeft="11px"
+        android:paddingRight="11px">
+
+        <LinearLayout
+            android:id="@+id/ll_tools_datiqi"
+            android:layout_width="82px"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/cb_tools_datiqi"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_marginTop="19px"
+                android:background="@drawable/tk_selector_tools_datiqi"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/answer_panel"
+                android:textColor="@color/white"
+                android:textSize="14px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tools_zhuanpan"
+            android:layout_width="82px"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/cb_tools_zhuanpan"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_marginTop="19px"
+                android:background="@drawable/tk_selector_tools_zhuanpan"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/turntable"
+                android:textColor="@color/white"
+                android:textSize="14px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tools_jishiqi"
+            android:layout_width="82px"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/cb_tools_jishiqi"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_marginTop="19px"
+                android:background="@drawable/tk_selector_tools_jishiqi"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/timer"
+                android:textColor="@color/white"
+                android:textSize="14px" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_tools_qiangda"
+            android:layout_width="82px"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/cb_tools_qiangda"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_marginTop="19px"
+                android:background="@drawable/tk_selector_tools_qiangda"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/responder"
+                android:textColor="@color/white"
+                android:textSize="14px" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_tools_xiaobaiban"
+            android:layout_width="82px"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:clickable="false"
+                android:id="@+id/cb_tools_xiaobaiban"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_marginTop="19px"
+                android:background="@drawable/tk_selector_tools_xiaobaiban"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="19px"
+                android:layout_marginTop="10px"
+                android:gravity="center"
+                android:maxLines="1"
+                android:text="@string/small_whiteboard"
+                android:textColor="@color/white"
+                android:textSize="14px" />
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

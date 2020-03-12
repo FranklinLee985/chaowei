@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:orientation="vertical">-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="40dp"
+    android:layout_height="130dp"
+    android:background="@drawable/tk_tools_backgrouad_frame">
+
+    <ListView
+        android:id="@+id/page_listview"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:paddingTop="2dp"
+        android:scrollbars="none" />
+</RelativeLayout>

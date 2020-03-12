@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="42px"
+    android:background="@drawable/tk_file_type_name_bg">
+
+    <TextView
+        android:id="@+id/txt_file_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="42px"
+        android:layout_marginLeft="15px"
+        android:gravity="center"
+        android:text="@string/admin_file_group"
+        android:textColor="@color/white"
+        android:textSize="14px" />
+
+    <ImageView
+        android:id="@+id/img_file_item_switch"
+        android:layout_width="15px"
+        android:layout_height="15px"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="15px"
+        android:layout_marginRight="18px"
+        android:scaleType="fitXY"
+        android:src="@drawable/tk_popup_file_item_open" />
+
+</RelativeLayout>

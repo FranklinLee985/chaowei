@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/three_popup_center_bg"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/popup_file_title_layout"
+        layout="@layout/tk_popup_course_media_title_layout" />
+
+    <ExpandableListView
+        android:id="@+id/lv_course_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16px"
+        android:layout_marginTop="15px"
+        android:layout_marginRight="20px"
+        android:layout_marginBottom="15px"
+        android:groupIndicator="@null"
+        android:scrollbars="none" />
+
+</LinearLayout>

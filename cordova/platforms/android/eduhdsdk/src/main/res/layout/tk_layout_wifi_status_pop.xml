@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/tk_wifi_jianjiao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/tk_wifi_jiantou" />
+
+    <LinearLayout
+        android:layout_width="180px"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tk_popup_window_bg_centent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_wifi_roomid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12px"
+            android:text="@string/wifi_roomid"
+            android:textColor="@color/white"
+            android:textSize="17px" />
+
+        <TextView
+            android:id="@+id/tv_wifi_page_lose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12px"
+            android:layout_marginBottom="12px"
+            android:text="@string/wifi_page_lose"
+            android:textColor="@color/white"
+            android:textSize="17px" />
+
+        <TextView
+            android:id="@+id/tv_wifi_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12px"
+            android:layout_marginBottom="12px"
+            android:text="@string/wifi_delay"
+            android:textColor="@color/white"
+            android:textSize="17px" />
+    </LinearLayout>
+
+</LinearLayout>

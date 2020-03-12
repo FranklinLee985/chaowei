@@ -1,0 +1,328 @@
+/* 
+  Localizable.strings
+  libMeetings
+
+  Created by miniMac on 16/2/24.
+  Copyright © 2016年 macmini. All rights reserved.
+*/
+
+"HUD.EnteringClass" = "Entering class";
+
+"Error.NoMeeting" = "The classroom doesn't exist.";
+
+"Error.NoLiving" = "Cannot find this Living";
+"Error.NotSupportThisType" = "Do't Support this Live's type,please use computer login";
+"Error.ServerExpired" = "Server has expired!";
+"Error.CheckmeetingFail" = "Check meeting fail";
+"Error.CheckserverInformationFail" = "Failed to get server information";
+"Error.CompanyFreeze" = "Account of the company has expired.";
+"Error.RoomDeletedOrExpired" = "The class has expired.";
+"Error.MemberOverRoomLimit" = "The number of students has exceeded limit.";
+"Error.NeedPwd" = "You need to be authenticated.Please enter password.";
+
+"Error.NeedPwd.teacher" = "Please enter teacher password.";
+
+"Error.NeedPwd.student" = "Please enter student password.";
+
+"Error.NeedPwd.tourCourse" = "Please enter tourCourse password.";
+
+"Error.pointOverRun" = "Enterprise point overrun";
+"Error.PwdError" = "Password input error, please re-enter.";
+"Error.AuthIncorrect" = "Authentication Failed";
+"Error.NSF" = "The balance of the package is insufficient. Please contact the administrator to recharge it.";
+"Error.WaitingForNetwork" = "Your network is temporarily unavailable, please try again later";
+//Prompt
+"Prompt.inputPlaceholder" = "Please input a password";
+
+"Prompt.ExceptionReport" = "Exception report";
+"Prompt.prompt" = "Prompt";
+"Prompt.kick" = "Please come into the classroom in three minutes";
+
+"Prompt.stuHasKicked" = "You have been invited to the classroom.please come back in three minutes.";
+
+"Prompt.inputPwd" = "A password is required for this rooom";
+"Prompt.OK" = "Confirm";
+"Prompt.Cancel" = "Cancel";
+"Prompt.Know" = "Yes,I know";
+"Prompt.Quite" = "Do you want to exit";
+"Prompt.nicknameNotNull" = "The nickName cannot be empty";
+"Prompt.onlyNumber" = "The RoomId only be number";
+
+"Prompt.RoomIDNotNull" = "The RoomId cannot be empty";
+
+"Prompt.devicetPrompt" = "The current device is low, providing only two video.";
+"Login.EnterRoom" = "Enter Classroom";
+
+"Login.RoomIdPlaceHolder"    = "Room ID";
+
+"Login.nickName"  = "Name";
+"Login.Role"      = "Role";
+// State
+"State.NoNetwork" = "No network connection";
+"State.connecting" = "connecting";
+"State.updating" = "updating";
+"State.Connecting" = "Connecting...";
+"State.Updating" = "Updating...";
+"State.WaitingForNetwork" = "Waiting for network";
+"State.ConnectFailure" = "Failed to connect";
+"State.ConnectException" = "Exception to connect";
+"State.ConnectLocked" = "Meeting room is locked";
+"State.Retry" = "Reconnect";
+"State.Reconnecting" = "Connecting to classroom";
+
+"KickOut.ChairmanKick" = "You have been kicked out of conference by chairman...";
+"KickOut.Repeat" = "User of the same identity has entered the room. You are blocked.";
+
+"KickOut.SentOutClassroom" = "You have been sent out of the classroom by the teacher";
+
+"State.isInBackGround" = "Student pressed home button";
+
+"State.teacherInBackGround" = "User pressed home button";
+//role
+"Role.Me" = "me";
+"Role.Teacher" = "teacher";
+
+"Role.Student" = "student";
+
+"Role.Patrol"  = "patrol";
+
+"Role.Assistant" = "assistant";
+//say
+"Say.say" = "say something";
+//button
+"Button.RefreshPage" = "refresh page";
+"Button.send" = "send";
+"Button.closed" = "closed";
+"Button.chat" = "chat";
+//Class.Begin
+"Class.Begin" = "Class is beginning";
+
+"Class.Over" = "Class is over";
+
+
+"Button.MuteAudio" = "Unmute All";
+"Button.MuteAll"   = "Mute All";
+"Button.Reward"    = "Grant Trophy to All";
+"Button.Reset"     = "Total reset";
+"Button.Audio" = "Audio";
+
+"Button.ShutUpAll" = "Chat banned";
+"Button.CancelShutUpAll" = "Allow chat";
+"Button.DefaultLayout" = "Default Layout";
+"Button.DoubleLayout" = "Double Layout";
+"Button.VideoLayout" = "Video Layout";
+
+"Button.ManyLayout.Top" = "Top";
+"Button.ManyLayout.Speaker" = "Speaker";
+"Button.ManyLayout.Free" = "Free";
+
+
+"Button.ClassBegin"    = "Start Class";
+
+"Button.ClassIsOver"    = "Finish Class";
+
+"Button.ClassBegin1"    = "Start Class";
+
+"Button.ClassIsOver1"    = "Finish Class";
+
+"Button.ClassEnd"      = "Class End";
+
+"Button.RaiseHand"     = "Raise Hand";
+"Button.RaiseHandCancle" = "Raising hand";
+"Button.CancleHandsup"= "Cancel your hands";
+
+"Button.OpenAudio"          = "Audio on";
+"Button.CloseAudio"         = "Audio off";
+"Button.OpenVideo"          = "Video on";
+"Button.CloseVideo"         = "Video off";
+"Button.UpPlatform"         = "On stage";
+"Button.DownPlatform"       = "Off stage";
+"Button.AllowDoodle"        = "Authorized";
+"Button.CancelDoodle"       = "Unauthorized";
+"Button.GiveCup"            = "Give Trophy";
+"Button.Speech"             = "Speech";
+"Button.RestoreAll"         = "Restore All";
+"Button.RestorePosition"    = "Restore Position";
+"Button.Recovery"           = "Restore";
+"Button.SwitchVideo"        = "Switch Video";
+"Button.nameSort" = " Name";
+"Button.typeSort" = " Type";
+"Button.timeSort" = " Time";
+
+"Button.playbackSpeed" = "Double speed";
+"Button.jump" = "Jump";
+
+"Action.EnterRoom"          = "Enter Classroom";
+
+"Action.ExitRoom"           = "Leave Classroom";
+
+"Prompt.EndClass1M"         = "There are 1 minute to finish class. Be remained.";
+
+"Prompt.RoomToBeClosed"     = "This  class is about to shut down. ";
+
+"Prompt.ClassToBegin"       = "The class will start in 1 minute.";
+
+"Prompt.timeoutStart.one"   = "You are ";
+"Prompt.timeoutStart.two"   = " minute late already. Time for Class!";
+
+"Prompt.timeoutReadyEnd.one" = "Your class is";
+"Prompt.timeoutReadyEnd.two" = "minutes overtime now. This  class will end automatically in";
+
+"Prompt.timeoutReadyEnd.three" = "minutes.";
+"Title.DocumentList"        = "Files";
+
+"Title.MediaList"           = "Media";
+"Title.ControlList"         = "Operation";
+"Title.TrophySend"          = "Send Cup";
+"Title.UserList"            = "Student List";
+
+"Title.UserList.two"        = "Student List (1)";
+
+"Title.AreaList"            = "Optimal server";
+"Button.remindKnow"         = "I got it.";
+"Prompt.timeoutEnd"         = "This class is about to shut down.";
+
+"Title.whiteBoard"          = "whiteboard";
+"Prompt.CanotOn"            = "The student's audio and video devices are unavailable. May be disabled. Please tell student to enable them.";
+
+"Prompt.FinishClass"        = "Are you sure you want to finish class？";
+
+"Prompt.KickOutStudent"     = "Are you sure you want to kick out the student?";
+
+"Prompt.delClassFile"       = "Are you sure you want to delete this file?";
+"Prompt.exceeds"            = "Attendants number is over limit.";
+"Prompt.ClassEnd"           = "The class is over!";
+
+"Prompt.leaveRoom"          = "Have entered a classroom, quit first!";
+"Prompt.ClassEndTime"       = "minutes from the end of the class.Please arrange the time.";
+
+"Prompt.ClassEndTimeseconds"= "seconds from the end of the class.Please arrange the time.";
+
+
+"Prompt.NeedCamera"         = "Please allow TalkCloud+ to access your device's camera in \"Settings\"->\"Privacy\"->\"Camera\".";
+"Prompt.NeedMicrophone.Title" = "Unable to record";
+"Prompt.NeedMicrophone"     = "Allow TalkCloud+ to access your microphone from device menu: \"Settings\"->\"Privacy\"->\"Microphone\".";
+"Prompt.Sure"                 = "OK";
+"Prompt.NeedCameraNeedMicrophone" = "Allow TalkCloud+ to access your camera and microphone on Settings-privacy on your iPhone";
+
+
+"Action.Title"       = "Take photo";
+"Action.TakePhoto"   = "Take Photo";
+"Action.ChoosePhoto" = "Choose Photo";
+"Button.UploadPhoto" = "Take Photo";
+//老师端 上传图片
+"UploadPhoto.TakePhoto" = "Photograph";
+"UploadPhoto.FromGallery" = "Album";
+"UploadPhoto.Error" = "Photo upload error";
+
+"Prompt.enterBackGround" = "enter backGround";
+"Prompt.enterForeGround" = "resume foreGround";
+"Prompt.NetworkException" = "Network exception. Please close the antivirus software or firewall and re-enter";
+"Prompt.HaveEnterBackground" = "Backstage mode";
+"Prompt.HaveBackForground" = "Back to normal mode";
+"Prompt.BackgroundCouldNotOnStage" = " is running at back-end.  Presence failed.";
+"Prompt.NetworkChanged" = "Network exception, check the network environment and re-enter";
+"Prompt.NetworkError" = "The network is not available. Please checking and restart the application.";
+"Prompt.ServerRequst" = "The server is initializing, please click later.";
+
+"Prompt.StudentUdpError" = "The student is unable to connect to server UDP port and can't on stage";
+
+"Prompt.StudentTcpError" = "Anomaly in server connection. Presence failed.";
+"Prompt.StudentNetworkOccuredError" = "Anomalous UDP communication occurs between the user and the server. Opening video failed.";
+"Prompt.StudentUdpOnStageError" = "Due to the firewall intervention,the user is unable to carry out UDP connection with the server.  Opening video failed.";
+
+"Prompt.NotRepeatChat" = "Do not repeat in the chat area";
+
+"Prompt.AbnormalityReport" = "Does sending an exception report help us do better?";
+"Prompt.BanChat" = "you have been banned to chat";
+
+"Prompt.BanChatInView" = "All prohibition to chat";
+"Prompt.CancelBanChatInView" = "All permissiion to chat";
+
+"Prompt.TimeError" = "The time of your equipment is wrong，can not connect to the server，please check it";
+
+"Title.PublicDocuments"       = "public files";
+"Title.ClassroomDocuments"      = "room files";
+
+
+"Label.Equipment" = "equipment";
+"Label.UserNickname" = "User's Nickname";
+"Label.StepUpAndDown" = "Step up and down";
+"Label.Camera" = "camera";
+"Label.Microphone" = "microphone";
+"Label.Authorized" = "Authorized";
+"Label.RaisingHands" = "Raising hands";
+"Label.Ban" = "Ban";
+"Label.Remove" = "Remove";
+
+"Label.choiceIdentity" = "Select identity";
+
+"Label.roomid" = "room id";
+"Label.roomPlaceholder" = "Please enter your room number";
+"Label.nicknamePlaceholder" = "Please enter your nickname";
+"Label.messageBoard" = "message board";
+"Menu.Copy" = "copy";
+
+"Label.addFile" = "AddFile";
+
+"Label.handsup_tips" = "someone hands up";
+
+"Res.btn.start" = "Start";
+"Res.btn.get"   = "grabbed";
+"Res.btn.noget"   = "restart";
+"Res.btn.getting" = "rushing";
+"Res.btn.t.get"   = "someone";
+"Res.readyget"    = "Ready";
+"Res.unStarted"    = "Not started";
+
+"Res.lab.start" = "click start";
+"Res.lab.iget"  = "winning";
+"Res.lab.noget"   = "no rushes";
+"Res.lab.getting" = "rushing";
+
+"netstate.excellent" = "excellent";
+"netstate.medium" = "medium";
+"netstate.bad" = "bad";
+"netstate.RoomID" = "RoomID: ";
+
+"netstate.Packet" = "Packet: ";
+"netstate.Ping"   = "Ping: ";
+
+//小工具
+"tool.datiqiqi"   = "Answer";
+"tool.zhuanpan"   = "Rotary";
+"tool.jishiqi"   = "Timer";
+"tool.qiangdaqi"   = "Vies";
+"tool.xiaobaiban"   = "Whiteboard";
+
+"tool.fabudati"   = "Release";
+"tool.tianjia"   = "Add";
+"tool.shanchu"   = "Delete";
+"tool.zhengquedaan"   = "Correct";
+"tool.datirenshu"   = "Num";
+"tool.ren"   = "";
+"tool.time"   = "Cost";
+"tool.detail"   = "Detail >";
+"tool.tongji"   = "statistical >";
+
+"tool.end"   = "End";
+"tool.nodata"   = "No Data！";
+"tool.publish"   = "Publish";
+"tool.didpublish"   = "Published";
+"tool.restart"   = "Restart";
+"tool.submit"   = "Submit";
+"tool.modify"   = "Modify";
+"tool.wodedaan"   = "My Answer";
+"tool.choose"   = "Choose";
+"tool.leastanswer"   = "Please set at least 1 correct answer!";
+
+"tool.start"   = "Start";
+
+"MiniWB.Dispense"   = "Dispense";
+"MiniWB.Recycle"    = "Recycle";
+"MiniWB.Redispense" = "Redispense";
+"MiniWB.Prepare"    = "Prepare";
+
+"TKPreload.downloading" = "file downloading";
+"TKPreload.unzipping"   = "unzipping the file";
+"TKPreload.skip"        = "skip";
