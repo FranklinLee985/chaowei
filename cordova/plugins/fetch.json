@@ -54,5 +54,13 @@
     },
     "is_top_level": true,
     "variables": {}
+  },
+  "cordova-plugin-cocoapod-support": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-cocoapod-support"
+    },
+    "is_top_level": true,
+    "variables": {}
   }
 }
