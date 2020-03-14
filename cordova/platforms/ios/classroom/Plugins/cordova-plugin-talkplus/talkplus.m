@@ -3,7 +3,7 @@
 #import <Cordova/CDV.h>
 #import <UIKit/UIViewController.h>
 #import <UIKit/UIKit.h>
-#import "../../../TKEduClass 3.3.7/EduClass/eduVideoSDK/handle/TKEduClassRoom.h"
+//#import "../../../TKEduClass 3.3.7/EduClass/eduVideoSDK/handle/TKEduClassRoom.h"
 
 //.//cordova/platforms/ios/classroom/Plugins/cordova-plugin-talkplus/talkplus.m
 //.//cordova/platforms/ios/TKEduClass 3.3.7/EduClass/eduVideoSDK/handle/TKEduClassRoom.h
@@ -46,7 +46,7 @@
     NSString* echo = [command.arguments objectAtIndex:0];
 
     if (echo != nil && [echo length] > 0) {
-	 [[TKEduClassRoom shareInstance] joinRoomWithUrl:echo];
+//	 [[TKEduClassRoom shareInstance] joinRoomWithUrl:echo];
 	
         pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
     } else {

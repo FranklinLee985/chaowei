@@ -1,0 +1,6 @@
+framework module TKWhiteBoard {
+  umbrella header "TKWhiteBoard.h"
+
+  export *
+  module * { export * }
+}
