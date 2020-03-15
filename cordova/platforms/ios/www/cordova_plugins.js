@@ -80,6 +80,7 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-wkwebview-engine": "1.2.1",
     "cordova-plugin-wkwebview-file-xhr": "2.1.1",
     "cordova-plugin-whitelist": "1.3.4",
-    "cordova-plugin-talkplus": "1.0.0"
+    "cordova-plugin-talkplus": "1.0.0",
+    "cordova-plugin-cocoapod-support": "1.6.2"
   };
 });

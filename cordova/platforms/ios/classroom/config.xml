@@ -38,7 +38,7 @@
         <param name="onload" value="true" />
     </feature>
     <feature name="talkplus">
-        <param name="ios-package" value="CLTalkClientPlugins" />
+        <param name="ios-package" value="talkplus" />
     </feature>
     <name>classroom</name>
     <description>
