@@ -33,3 +33,9 @@ export const LOGOUT = 'LOGOUT'
 
 // 主机地址
 export const HOST = 'http://classroom.chaoweiclass.com/'
+
+//用户角色
+export const UPDATE_USER_ROLE = 'UPDATE_USER_ROLE'
+
+
+

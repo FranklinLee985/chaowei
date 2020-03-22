@@ -206,7 +206,8 @@ const baseFun = {
   },
   // 从服务器获取用户信息，并下载头像。
   ajaxUserInfoExt(param) {
-    if (stores.getters.fileCacheReady) {
+    //if (stores.getters.fileCacheReady) {
+    if (true){
       let uid = param.uid
       let user = param.user
       let password = param.password
@@ -223,7 +224,7 @@ const baseFun = {
           // 保存用户信息数据到全局store。
           let data = response.data
           let userInfo = {
-           // userNickname: (typeof data.field_nickname[0] != "undefined") ? data.field_nickname[0].value : '',
+            userNickname: (typeof data.field_nickname[0] != "undefined") ? data.field_nickname[0].value : '',
             userPicture: (typeof data.user_picture[0] != "undefined") ? data.user_picture[0].url : '',
            // userBirthday: (typeof data.field_birthday[0] != "undefined") ? data.field_birthday[0].value : '',
             //userSex: (typeof data.field_sex[0] != "undefined") ? data.field_sex[0].value : '',
@@ -547,7 +548,34 @@ const baseFun = {
       },
       showLoading: true,
       success: (response) => {
+        stores.commit('UPDATE_USER_ROLE',  response.data.access[1])
         success(response)
+
+      },
+      error: error
+    })
+  },
+
+
+  ajaxUserGetClassbook(param) {
+    let uid = param.uid
+    //let user = param.user
+    //let password = param.password
+    let success = param.success
+    let error = param.error
+
+    baseAjax({
+      //url: '/api/v1.0/classbook/' + uid + '?_format=json',
+      url: '/api/v1.0/classbook/0/?_format=json',
+      //  url: '/api/v1.0/access?_format=json',
+      type: 'get',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      showLoading: true,
+      success: (response) => {
+        success(response)
+
       },
       error: error
     })
