@@ -61,7 +61,8 @@ public class AutoUpdateUtil {
             PackageManager manager = activity.getPackageManager();
             PackageInfo info = manager.getPackageInfo(activity.getPackageName(), 0);
             params.put("type", 9);//type代表Android手机
-            params.put("version", "2019110500");//版本升级日期
+            params.put("version", "2020021900");//版本升级日期
+            params.put("companydomain", "www");//公司域名
         } catch (Exception e) {
             e.printStackTrace();
         }

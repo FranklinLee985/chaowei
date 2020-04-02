@@ -245,16 +245,16 @@ public class WBFragment extends Fragment implements NotificationCenter.Notificat
     /**
      * 白板加载结束发送信令
      */
-    public void sendXinLing(){
+    public void sendXinLing() {
         JSONObject jsobj = new JSONObject();
         try {
-            jsobj.put("action","nativeUpdateDoc");
-            WhiteBoardFinshBean whiteBoardFinshBean=new WhiteBoardFinshBean(WBSession.host,WBSession.DocServerAddrBackup,WBSession.port+"");
-            jsobj.put("docAddress",whiteBoardFinshBean);
+            jsobj.put("action", "nativeUpdateDoc");
+            WhiteBoardFinshBean whiteBoardFinshBean = new WhiteBoardFinshBean(WBSession.host, WBSession.DocServerAddrBackup, WBSession.port + "");
+            jsobj.put("docAddress", whiteBoardFinshBean);
         } catch (JSONException e) {
             e.printStackTrace();
         }
-        TKRoomManager.getInstance().pubMsg("RemoteControl","RemoteControl",TKRoomManager.getInstance().getMySelf().peerId,jsobj.toString(),false,null,null);
+        TKRoomManager.getInstance().pubMsg("RemoteControl", "RemoteControl", TKRoomManager.getInstance().getMySelf().peerId, jsobj.toString(), false, null, null);
     }
 
     /**
@@ -1143,7 +1143,8 @@ public class WBFragment extends Fragment implements NotificationCenter.Notificat
                         String strdata = (String) data;
                         jsmdata = new JSONObject(strdata);
                     }
-                    WhiteBoradManager.getInstance().getmBlankShareDoc().setPagenum(jsmdata.optInt("totalPage"));
+                    if (WhiteBoradManager.getInstance().getmBlankShareDoc() != null)
+                        WhiteBoradManager.getInstance().getmBlankShareDoc().setPagenum(jsmdata.optInt("totalPage"));
                 }
             } catch (JSONException e) {
                 e.printStackTrace();

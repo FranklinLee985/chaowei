@@ -497,6 +497,8 @@ public class TimerPopupWindw implements View.OnClickListener, MovePopupwindowTou
                     Integer.parseInt(sutdentTimerArry.get(2).toString()) * 10 + Integer.parseInt(sutdentTimerArry.get(3).toString());
         } catch (JSONException e) {
             e.printStackTrace();
+        }catch (NumberFormatException e){
+            e.printStackTrace();
         }
 
 

@@ -235,6 +235,8 @@ public class FileDownLoad {
         new Thread(new Runnable() {
             @Override
             public void run() {
+                if (!cacheFileFinal.exists())
+                    cacheFileFinal.getParentFile().mkdirs();
                 AsyncHandler handler = new AsyncHandler(cacheFileFinal);
                 handler.setKey(key);
                 handler.setCurrentShareDoc(mCurrentShareDoc);
@@ -257,6 +259,8 @@ public class FileDownLoad {
         new Thread(new Runnable() {
             @Override
             public void run() {
+                if (!cacheFileFinal.exists())
+                    cacheFileFinal.getParentFile().mkdirs();
                 AsyncHandler handler = new AsyncHandler(cacheFileFinal);
                 handler.setCaptureImg(captureImg);
                 request = client.get(httpUrl, handler);

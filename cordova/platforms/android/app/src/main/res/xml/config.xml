@@ -18,7 +18,7 @@
     <feature name="talkplus">
         <param name="android-package" value="org.apache.cordova.talkplus.talkplus" />
     </feature>
-    <name>classroom</name>
+    <name>Tutor@home</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>

@@ -253,14 +253,11 @@ public class ScreenShotPopWindow implements EditTextInputControl {
 
         int nScale = imageHeight * imageWidth / (1920 * 1080);
 
-        if (nScale > 1) {
+      /*  if (nScale > 1) {
             opts.inSampleSize = nScale;
-        }
-
+        }*/
         opts.inPreferredConfig = Bitmap.Config.RGB_565;
-
         opts.inJustDecodeBounds = false;
-
         if (btImage != null) {
             btImage.recycle();
             System.gc();

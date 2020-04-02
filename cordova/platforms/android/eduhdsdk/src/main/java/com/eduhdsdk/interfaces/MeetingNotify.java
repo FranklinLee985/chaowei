@@ -9,4 +9,5 @@ public interface MeetingNotify {
     void onWarning(int code);
     void onClassBegin();
     void onClassDismiss();
+    void onLeaveRoom();
 }
