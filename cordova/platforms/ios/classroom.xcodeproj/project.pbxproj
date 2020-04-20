@@ -1813,7 +1813,6 @@
 				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = T43ND3A6B7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2234,7 +2233,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.0.3;
-				DEVELOPMENT_TEAM = T43ND3A6B7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/eduVideoSDK/libs",
@@ -2249,7 +2248,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chaowei.classroom.hinnes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaowei.classroom;
 				PRODUCT_NAME = "Tutor@Home";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2268,7 +2267,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.3;
-				DEVELOPMENT_TEAM = T43ND3A6B7;
+				DEVELOPMENT_TEAM = "";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/eduVideoSDK/libs",
@@ -2281,7 +2280,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chaowei.classroom.hinnes;
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaowei.classroom;
 				PRODUCT_NAME = "Tutor@Home";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
