@@ -12,6 +12,7 @@ import {
   LOGOUT,
   HOST,
   UPDATE_USER_ROLE,
+  UPDATE_LOGIN_SCREEN_STATUS
 } from './data'
 
 import Vue from 'vue'
@@ -47,7 +48,8 @@ const state = {
   userEmail: localStorage.getItem('userEmail'), // 电邮
   userTimezone: localStorage.getItem('userTimezone'), // 时区
   userLangcode: localStorage.getItem('userLangcode'),// 语言
-  userRole: localStorage.getItem('userRole') // Role
+  userRole: localStorage.getItem('userRole'), // Role
+  loginScreenStatus: false //登录窗口不打开
 }
 
 const mutations = {
@@ -194,7 +196,14 @@ const mutations = {
     state.userRole = role
     // 保存到永久存储
     localStorage.setItem('userRole', state.userRole)
-  }
+  },
+
+
+  [UPDATE_LOGIN_SCREEN_STATUS] (state, data) {
+    state.loginScreenStatus = data
+  },
+
+
 }
 
 
@@ -251,7 +260,10 @@ const getters = {
   },
   host(state) {
     return state.host
-  }
+  },
+  loginScreenStatus (state) {
+    return state.loginScreenStatus
+  },
 }
 
 export default {

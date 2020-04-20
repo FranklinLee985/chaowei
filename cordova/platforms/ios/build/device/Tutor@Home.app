@@ -1,0 +1,1 @@
+/Users/hinnes/Library/Developer/Xcode/DerivedData/classroom-daoevczpckybpxexiiexwwdbjjby/Build/Intermediates.noindex/ArchiveIntermediates/classroom/InstallationBuildProductsLocation/Applications/Tutor@Home.app

@@ -22,13 +22,14 @@
 		A945155E09224FF5B79E62C5 /* CDVWKWebViewUIDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 542D03E4380A4C5A9DF88F06 /* CDVWKWebViewUIDelegate.m */; };
 		BAC8BDC7219E6337F20521AB /* libPods-classroom.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1319B6ADFDE5D6A2D14C0E9 /* libPods-classroom.a */; };
 		C10DD73009024831AAF52C1C /* CDVKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = B44814E520D94E469D4F3459 /* CDVKeyboard.m */; };
+		D0679A6F244DFF9300804100 /* TKRoomSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D09AB253244DF901005AF289 /* TKRoomSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D09AB254244DF901005AF289 /* TKRoomSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AB253244DF901005AF289 /* TKRoomSDK.framework */; };
+		D09AB256244DFBA2005AF289 /* TKWhiteBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D09AB255244DFBA2005AF289 /* TKWhiteBoard.framework */; };
 		D7DF3815C53B4CC1B886305E /* CDVWKWebViewEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = F734F491EBC948C2BD80FAB4 /* CDVWKWebViewEngine.m */; };
 		D82A856E7D4F4F6CBF4D1B89 /* CDVWKProcessPoolFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = F6508F9990054546832D000D /* CDVWKProcessPoolFactory.m */; };
 		EB1E70F8241CE4FA008383ED /* TKEduSessionHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E6F2B241CE4F9008383ED /* TKEduSessionHandle.m */; };
 		EB1E70F9241CE4FA008383ED /* TKEduClassRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E6F2E241CE4F9008383ED /* TKEduClassRoom.m */; };
 		EB1E70FA241CE4FA008383ED /* TKEduNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E6F2F241CE4F9008383ED /* TKEduNetManager.m */; };
-		EB1E70FB241CE4FA008383ED /* TKRoomSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1E6F32241CE4F9008383ED /* TKRoomSDK.framework */; };
-		EB1E70FC241CE4FA008383ED /* TKWhiteBoard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1E6F33241CE4F9008383ED /* TKWhiteBoard.framework */; };
 		EB1E70FD241CE4FA008383ED /* UIControl+TKClickedOnce.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E6F38241CE4F9008383ED /* UIControl+TKClickedOnce.m */; };
 		EB1E70FE241CE4FA008383ED /* NSAttributedString+TKEmoji.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E6F39241CE4F9008383ED /* NSAttributedString+TKEmoji.m */; };
 		EB1E70FF241CE4FA008383ED /* UIImageView+TKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E6F3A241CE4F9008383ED /* UIImageView+TKExtension.m */; };
@@ -209,7 +210,6 @@
 		EB1E71AE241CE4FA008383ED /* FLAnimatedImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E70F1241CE4FA008383ED /* FLAnimatedImageView+WebCache.m */; };
 		EB1E71AF241CE4FA008383ED /* FLAnimatedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E70F2241CE4FA008383ED /* FLAnimatedImage.m */; };
 		EB1E71B0241CE4FA008383ED /* FLAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = EB1E70F3241CE4FA008383ED /* FLAnimatedImageView.m */; };
-		EB1E71B2241CE51F008383ED /* TKRoomSDK.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = EB1E6F32241CE4F9008383ED /* TKRoomSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		EB1E71BB241CE535008383ED /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1E71B7241CE535008383ED /* libc++.tbd */; };
 		EB1E71BC241CE535008383ED /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1E71B5241CE535008383ED /* libicucore.tbd */; };
 		EB1E71BD241CE535008383ED /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = EB1E71B8241CE535008383ED /* libz.tbd */; };
@@ -248,7 +248,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				EB1E71B2241CE51F008383ED /* TKRoomSDK.framework in CopyFiles */,
+				D0679A6F244DFF9300804100 /* TKRoomSDK.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +284,8 @@
 		B1319B6ADFDE5D6A2D14C0E9 /* libPods-classroom.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-classroom.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B44814E520D94E469D4F3459 /* CDVKeyboard.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = CDVKeyboard.m; path = "cordova-plugin-keyboard/CDVKeyboard.m"; sourceTree = "<group>"; };
 		C6A1034CE61E4BBCAD4F17CD /* CDVKeyboard.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVKeyboard.h; path = "cordova-plugin-keyboard/CDVKeyboard.h"; sourceTree = "<group>"; };
+		D09AB253244DF901005AF289 /* TKRoomSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TKRoomSDK.framework; sourceTree = "<group>"; };
+		D09AB255244DFBA2005AF289 /* TKWhiteBoard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TKWhiteBoard.framework; sourceTree = "<group>"; };
 		D81DE6AB53354B9499748548 /* CDVWKWebViewEngine.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = CDVWKWebViewEngine.h; path = "cordova-plugin-wkwebview-engine/CDVWKWebViewEngine.h"; sourceTree = "<group>"; };
 		DD6A308171B2449794CBE01C /* CDVViewController+SplashScreen.m */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.objc; name = "CDVViewController+SplashScreen.m"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.m"; sourceTree = "<group>"; };
 		E17E6C6CE00748A99BC1323C /* WebKit.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
@@ -294,8 +296,6 @@
 		EB1E6F2E241CE4F9008383ED /* TKEduClassRoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKEduClassRoom.m; sourceTree = "<group>"; };
 		EB1E6F2F241CE4F9008383ED /* TKEduNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TKEduNetManager.m; sourceTree = "<group>"; };
 		EB1E6F30241CE4F9008383ED /* TKEduSessionHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKEduSessionHandle.h; sourceTree = "<group>"; };
-		EB1E6F32241CE4F9008383ED /* TKRoomSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TKRoomSDK.framework; sourceTree = "<group>"; };
-		EB1E6F33241CE4F9008383ED /* TKWhiteBoard.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TKWhiteBoard.framework; sourceTree = "<group>"; };
 		EB1E6F36241CE4F9008383ED /* TKPrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TKPrefixHeader.pch; sourceTree = "<group>"; };
 		EB1E6F38241CE4F9008383ED /* UIControl+TKClickedOnce.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+TKClickedOnce.m"; sourceTree = "<group>"; };
 		EB1E6F39241CE4F9008383ED /* NSAttributedString+TKEmoji.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+TKEmoji.m"; sourceTree = "<group>"; };
@@ -707,14 +707,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09AB254244DF901005AF289 /* TKRoomSDK.framework in Frameworks */,
 				EB1E71BC241CE535008383ED /* libicucore.tbd in Frameworks */,
+				D09AB256244DFBA2005AF289 /* TKWhiteBoard.framework in Frameworks */,
 				EB1E71BD241CE535008383ED /* libz.tbd in Frameworks */,
 				EB1E71BB241CE535008383ED /* libc++.tbd in Frameworks */,
 				301BF552109A68D80062928A /* libCordova.a in Frameworks */,
-				EB1E70FB241CE4FA008383ED /* TKRoomSDK.framework in Frameworks */,
 				81AB9F65E4F045E3BA417D77 /* WebKit.framework in Frameworks */,
 				BAC8BDC7219E6337F20521AB /* libPods-classroom.a in Frameworks */,
-				EB1E70FC241CE4FA008383ED /* TKWhiteBoard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -887,8 +887,8 @@
 		EB1E6F31241CE4F9008383ED /* libs */ = {
 			isa = PBXGroup;
 			children = (
-				EB1E6F32241CE4F9008383ED /* TKRoomSDK.framework */,
-				EB1E6F33241CE4F9008383ED /* TKWhiteBoard.framework */,
+				D09AB255244DFBA2005AF289 /* TKWhiteBoard.framework */,
+				D09AB253244DF901005AF289 /* TKRoomSDK.framework */,
 			);
 			path = libs;
 			sourceTree = "<group>";
@@ -1813,7 +1813,7 @@
 				LastUpgradeCheck = 510;
 				TargetAttributes = {
 					1D6058900D05DD3D006BFB54 = {
-						DevelopmentTeam = SXHQU4U366;
+						DevelopmentTeam = T43ND3A6B7;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -2234,7 +2234,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1.0.3;
-				DEVELOPMENT_TEAM = SXHQU4U366;
+				DEVELOPMENT_TEAM = T43ND3A6B7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/eduVideoSDK/libs",
@@ -2249,7 +2249,45 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chaowei.classroom;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MBProgressHUD\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"SSZipArchive\"",
+					"-l\"SakuraKit\"",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"HockeySDK\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"QuickLook\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TKRoomSDK\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaowei.classroom.hinnes;
 				PRODUCT_NAME = "Tutor@Home";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -2268,7 +2306,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1.0.3;
-				DEVELOPMENT_TEAM = SXHQU4U366;
+				DEVELOPMENT_TEAM = T43ND3A6B7;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/eduVideoSDK/libs",
@@ -2281,7 +2319,45 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				MARKETING_VERSION = 1.0.3;
-				PRODUCT_BUNDLE_IDENTIFIER = com.chaowei.classroom;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"MBProgressHUD\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"SSZipArchive\"",
+					"-l\"SakuraKit\"",
+					"-l\"c++\"",
+					"-l\"z\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"CoreText\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"HockeySDK\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"QuickLook\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"TKRoomSDK\"",
+					"-framework",
+					"\"UIKit\"",
+					"-all_load",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.chaowei.classroom.hinnes;
 				PRODUCT_NAME = "Tutor@Home";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

@@ -8,7 +8,7 @@ import Framework7 from 'framework7/framework7-lite.esm.bundle.js';
 import Framework7Vue from 'framework7-vue/framework7-vue.esm.bundle.js';
 
 // Import Framework7 Styles
-import 'framework7/css/framework7.bundle-chaowei.css';
+import '../css/framework7.bundle-chaowei.css';
 
 // Import Icons and App Custom Styles
 import '../css/icons.css';

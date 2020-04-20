@@ -41,7 +41,7 @@ public class talkplus extends CordovaPlugin {
 	private void joinRoom(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
 			//Toast.makeText(cordova.getContext(),message,Toast.LENGTH_SHORT).show();
-			Toast.makeText(cordova.getContext(),message,Toast.LENGTH_SHORT).show();
+			//Toast.makeText(cordova.getContext(),message,Toast.LENGTH_SHORT).show();
 			Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(message));
 		   //Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("chaoweiclass://?host=global.talk-cloud.net&password=5678&serial=545718172&nickname=kenny&userrole=2"));
            cordova.getActivity().startActivity(intent);

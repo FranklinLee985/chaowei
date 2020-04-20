@@ -50,7 +50,7 @@
   "cordova-plugin-talkplus": {
     "source": {
       "type": "local",
-      "path": "/Users/franklinlee/Desktop/webappclassroom/cordova/node_modules/talkplus"
+	  "id": "cordova-plugin-talkplus"
     },
     "is_top_level": true,
     "variables": {}

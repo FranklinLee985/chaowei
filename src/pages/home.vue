@@ -1,95 +1,76 @@
 <template>
-  <f7-page name="home">
+
+  <f7-page pull-to-refresh @ptr:refresh="refreshClass" name="home">
+
+
     <!-- Top Navbar -->
-    <f7-navbar :sliding="false" large>
-      <f7-button  ref="loginlogout" @click="processLoginLogout">{{(isLogin?"登出":"登入")}}</f7-button>
+    <f7-navbar  title="我的課堂"　:sliding="false" >
+
+        <div class="navbar-inner">
+
+
+            <div class="left">
+
+
+            </div>
+            <div class = "middle">
+
+            </div>
+
+            <div class="right">
+
+                <div class="user-gravatar32">
+                    <a @click="getClassList">
+
+                        <div class="gravatar-wrapper-32">
+                            <svg height="16pt" viewBox="0 0 512 512" width="16pt" xmlns="http://www.w3.org/2000/svg"><path d="m61.496094 279.609375c-.988282-8.234375-1.496094-16.414063-1.496094-23.609375 0-107.402344 88.597656-196 196-196 50.097656 0 97 20.199219 131.5 51.699219l-17.300781 17.601562c-3.898438 3.898438-5.398438 9.597657-3.898438 15 1.800781 5.097657 6 9 11.398438 10.199219 3.019531.605469 102.214843 32.570312 95.898437 31.300781 8.035156 2.675781 19.917969-5.894531 17.703125-17.699219-.609375-3.023437-22.570312-113.214843-21.300781-106.902343-1.199219-5.398438-5.101562-9.898438-10.5-11.398438-5.097656-1.5-10.800781 0-14.699219 3.898438l-14.699219 14.398437c-45.300781-42.296875-107.503906-68.097656-174.101562-68.097656-140.699219 0-256 115.300781-256 256v.597656c0 8.457032.386719 14.992188.835938 19.992188.597656 6.625 5.480468 12.050781 12.003906 13.359375l30.816406 6.160156c10.03125 2.007813 19.050781-6.402344 17.839844-16.5zm0 0" fill='#ffffff'/><path d="m499.25 222.027344-30.90625-6.296875c-10.042969-2.046875-19.125 6.371093-17.890625 16.515625 1.070313 8.753906 1.546875 17.265625 1.546875 23.753906 0 107.398438-88.597656 196-196 196-50.097656 0-97-20.199219-131.5-52l17.300781-17.300781c3.898438-3.898438 5.398438-9.597657 3.898438-15-1.800781-5.101563-6-9-11.398438-10.199219-3.019531-.609375-102.214843-32.570312-95.898437-31.300781-5.101563-.898438-10.203125.601562-13.5 4.199219-3.601563 3.300781-5.101563 8.699218-4.203125 13.5.609375 3.019531 22.574219 112.210937 21.304687 105.898437 1.195313 5.402344 5.097656 9.902344 10.496094 11.398437 6.261719 1.570313 11.488281-.328124 14.699219-3.898437l14.402343-14.398437c45.296876 42.300781 107.5 69.101562 174.398438 69.101562 140.699219 0 256-115.300781 256-256v-.902344c0-6.648437-.242188-13.175781-.796875-19.664062-.570313-6.628906-5.433594-12.074219-11.953125-13.40625zm0 0" fill='#ffffff'/></svg>
+
+                        </div>
+                    </a>
+                </div>
+
+
+            </div>
+
+        </div>
 
         <!--<f7-button  ref="toastDemo" @click="toastDemo">"Toast"</f7-button> -->
-        <span style="font-size: large; color:#FE6714">{{isLogin? userInfo.user:''}}</span>
 
-      <f7-button  ref="getclassbook" @click="getClassList" round>刷新</f7-button>
+
+
+
+
     <!--
       <f7-nav-right>
         <f7-link icon-ios="f7:menu" icon-aurora="f7:menu" icon-md="material:menu" panel-open="right"></f7-link>
       </f7-nav-right>
       -->
-      <f7-nav-title-large sliding>Tutor@home</f7-nav-title-large>
+
     </f7-navbar>
 
 
-      <f7-login-screen id="my-login-screen"  :opened="loginScreenOpened" @loginscreen:closed="loginScreenOpened = false">
-      <f7-view>
-        <f7-page login-screen>
-
-          <f7-login-screen-title>用戶登錄</f7-login-screen-title>
-
-          <f7-list simple-list>
-            <f7-list-item  style="color:#FF0000" v-if="showError" title="">{{errorMessage}}</f7-list-item>
-            <f7-list-item  style="color:#0BB20C" v-if="showSuccess" title="">{{errorMessage}}</f7-list-item>
-
-          </f7-list>
-
-          <f7-list form>
-            <f7-list-input
-                    type="text"
-                    name="username"
-                    placeholder="請輸入用戶名"
-                    :value="username"
-                    @input="username = $event.target.value"
-            ></f7-list-input>
-            <f7-list-input
-                    type="password"
-                    name="password"
-                    placeholder="請輸入密碼"
-                    :value="password"
-                    @input="password = $event.target.value"
-            ></f7-list-input>
-          </f7-list>
-          <f7-list>
-            <f7-list-button title="登錄" @click="processLoginButton"></f7-list-button>
-            <f7-list-button title="取消" @click="processCancelButton"></f7-list-button>
-            <f7-block-footer>
-                請輸入用戶名和密碼登錄
-            </f7-block-footer>
-          </f7-list>
-        </f7-page>
-      </f7-view>
-    </f7-login-screen>
-
-      
-      <f7-toolbar tabbar top-md>
-        <f7-link tab-link="#tab-1" tab-link-active>未上課堂</f7-link>
-        <f7-link tab-link="#tab-2">已結束</f7-link>
-
-      </f7-toolbar>
-    
-      <f7-tabs>
-        
-        <f7-tab id="tab-1" class="page-content-new" tab-active>
-    
-          <div class="data-table">
-            <table>
-              <thead>
-              <tr>
-                <th class="label-cell">日期</th>
-                <th class="numeric-cell">時間</th>
-                <th class="label-cell">課程</th>
-              </tr>
-              </thead>
-              <tbody>
-
-              <tr v-for="item in this.classesPending" v-bind:class="'id-' + item.id">
-                <td class="label-cell">{{ item.date }}</td>
-
-                <td class="numeric-cell">{{ item.time }}</td>
-                <td class="label-cell">{{ item.title }}</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-          <f7-button  ref="joinroom" @click="joinRoom" round>上課</f7-button>
 
 
+            <f7-list media-list>
+
+
+
+
+                    <f7-list-item v-for="item in this.classesPending"
+                                  :title = "item.title"
+                                  :subtitle = "item.subtitle"
+                                  :text = "item.datetime"
+                                  :after="item.prompt"
+                                  v-bind:key="item.id">
+                        <f7-button slot="media" ref="joinroom" @click="joinRoomWithItem(item)"   fill  :color="item.color"　round >&nbsp&nbsp&nbsp{{(userInfo.userRole == 'administrator')?'巡課':'上課'}}&nbsp&nbsp&nbsp</f7-button>
+                    </f7-list-item>
+
+            </f7-list>
+
+      <f7-block>
+
+      <i class="f7-icons">home</i>
+      </f7-block>
           <f7-block>
             <f7-row>
               <f7-col>
@@ -100,38 +81,7 @@
               </f7-col>
             </f7-row>
           </f7-block>
-		  
-        </f7-tab>
 
-
-        <f7-tab id="tab-2" class="page-content-new">
-
-
-
-          <div class="data-table">
-            <table>
-              <thead>
-              <tr>
-                <th class="label-cell">日期</th>
-                <th class="numeric-cell">時間</th>
-                <th class="label-cell">課程</th>
-              </tr>
-              </thead>
-              <tbody>
-
-              <tr v-for="item in this.classesFinish" v-bind:class="'id-' + item.id">
-                <td class="label-cell">{{ item.date }}</td>
-
-                <td class="numeric-cell">{{ item.time }}</td>
-                <td class="label-cell">{{ item.title }}</td>
-              </tr>
-              </tbody>
-            </table>
-          </div>
-
-        </f7-tab>
-
-      </f7-tabs>
 
 
 
@@ -140,23 +90,59 @@
 </template>
 
 <style>
+
+  .gravatar-wrapper-32, .gravatar-wrapper-32 img {
+      padding-top: 8px;
+    width: 64px;
+    height: 32px;
+  }
+  .user-info .user-gravatar32 {
+    float: left;
+    width: 64px;
+    height: 32px;
+    border-radius: 1px;
+  }
+
+
   .hiddenlink{
     position: absolute;
     top: 0;
     left: -100%;
   }
-  .page-content-new {
+  .page-content {
     overflow: auto;
     -webkit-overflow-scrolling: touch;
     box-sizing: border-box;
     height: 100%;
     position: relative;
     z-index: 1;
-    padding-top: 1px;
-    padding-bottom: 1px;
+    padding-top: 30px;
+    padding-bottom: 5px;
   }
-
-
+	.list .item-title {
+	  min-width: 0;
+	  flex-shrink: 1;
+	  white-space: var(--f7-list-item-title-white-space);
+	  position: relative;
+	  overflow: hidden;
+	  text-overflow: ellipsis;
+	  max-width: 100%;
+	  font-size: var(--f7-list-item-title-font-size);
+	  font-weight: var(--f7-list-item-title-font-weight);
+	
+	  color: var(--f7-list-item-title-text-color);
+	  line-height: var(--f7-list-item-title-line-height);
+	}
+  .list .item-after {
+      white-space: nowrap;
+      flex-shrink: 0;
+      display: flex;
+      font-size: var(--f7-list-item-after-font-size);
+      font-weight: var(--f7-list-item-after-font-weight);
+      color: #FE6714;
+      line-height: var(--f7-list-item-after-line-height);
+      margin-left: auto;
+  }
 </style>
 
 <script>
@@ -166,12 +152,12 @@
   import {mapGetters} from 'vuex'
 
   export default {
+
     computed: {
 
       // 计算属性的 getter
       ...mapGetters([
-        'loading',
-        'fileCacheReady',
+        'loading',        'fileCacheReady',
         'userInfo',
         'headShow',
         'isLogin'
@@ -205,143 +191,38 @@
             androidOverlaysWebView: false,
           },
         },
-        // Login screen data
-        username: '',
-        password: '',
 
-        //jarong add
-        pwdType: 'password',
-        // 提示数据是否有效
-        showInvalid: false,
-        // 提示登录成功
-        showSuccess: false,
-        // 提示出错
-        showError: false,
-        errorMessage: '',
 
-        loginScreenOpened: false,
-        classbook:[],
+
         classesPending: [],
-		
-        classesFinish: [],
+      classesFinish: [],
           
         // Login screen data
         username: '',
         password: '',
         userid:'',
-          dispuser:'',
-        //jarong add
-        pwdType: 'password',
-        // 提示数据是否有效
-        showInvalid: false,
-        // 提示登录成功
-        showSuccess: false,
-        // 提示出错
-        showError: false,
-        errorMessage: '',
+        dispuser:'',
+
         loginStr:'Login',
-          adminLogined:false
+        adminLogined:false,
+        lastMsFrom1970: 0,
+
+          timer: null,
+         // lessonStr:'上課'
         //jarong add end
       }
     },
     methods: {
       alertMessage(message)
       {
+          talkplus.showToast(message)
+          /*
         this.$f7.dialog.alert(message, () => {
 
         })
+          */
       },
-      processCancelButton () {
-        //this.$f7.loginScreen.close();
-        this.$f7.loginScreen.close();
-        // this.$refs.gotoHome.$el.click();
-        // this.$emit('cancel',this.value)
-      },
-      processLoginButton () {
-        let myThis = this
-        myThis.baseFun.ajaxUserLogin({
-          user: myThis.username,
-          password: myThis.password,
-          success: (response) => {
-            // 登录成功。
-           // alert("登录成功#");
-            console.log('login success:', JSON.stringify(response.data))
-              myThis.dispuser = myThis.username
-            myThis.showSuccess = false
-            myThis.showError = false
-            myThis.userId = response.data.current_user.uid
-            // 获取用户信息，包括用户头像。
-            myThis.baseFun.ajaxUserInfoExt({
-              uid: response.data.current_user.uid,
-              user: response.data.current_user.name,
-              password: myThis.password,
-              success: (response) => {
 
-              },
-              error: (response) => {
-                // 登录成功后，回首页
-                  myThis.dispuser = ''
-              }
-            })
-
-
-            myThis.baseFun.ajaxUserGetRole({
-              uid: myThis.userInfo.uid,
-              user:  myThis.userInfo.user,
-              password: myThis.userInfo.password,
-              success: (response) => {
-                // 登录成功后，回首页
-                console.log('get role success:', JSON.stringify(response.data))
-
-
-                myThis.getClassList()
-
-              },
-              error: (response) => {
-                // 登录成功后，回首页
-                console.log('get role failed:')
-
-              }
-            })
-
-
-            //myThis.showSuccess = false
-            //myThis.errorMessage = '登錄成功'
-            myThis.$f7.loginScreen.close();
-
-          },
-          error: (response) => {
-           // alert("登录失败#");
-              this.adminLogined = false
-            console.log('login fail.')
-            myThis.showSuccess = false
-
-            myThis.showError = false
-            if (response.response) {
-              // 显示服务器反馈的错误信息
-              let message = response.response.data.message
-              if (message.indexOf('anonymous') > -1) {
-                // This route can only be accessed by anonymous users.
-                //myThis.errorMessage = 'Already login.'
-                myThis.errorMessage = '已經登錄'
-              } else {
-                myThis.errorMessage = '用戶名或密碼錯誤'
-                //myThis.errorMessage = 'Sorry, unrecognized username or password.'
-              }
-
-              myThis.showError = true
-            }
-            else {
-              // 网络错误
-              // myThis.errorMessage = response.message
-              myThis.errorMessage = '網絡錯誤'
-              myThis.showError = true
-            }
-            //myThis.alertLoginResult('login fail',false)
-          }
-
-        })
-      },
 
 
         sortClass(a,b) {  //排序函数
@@ -350,12 +231,13 @@
         sortClasses()
         {
             this.classesPending.sort(this.sortClass);
-           // this.classesFinish.sort(this.sortClass);
+            this.classesFinish.sort(this.sortClass);
         },
 
 		joinRoomTeacher()
 		{
 			talkplus.joinRoom("chaoweiclass://?host=global.talk-cloud.net&password=1234&serial=601509809&nickname=teacher&userrole=0");
+            //talkplus.joinRoom("chaoweiclass://?host=global.talk-cloud.net&password=9999&serial=601509809&nickname=teacher&userrole=1");
 		},
 		joinRoomStudent()
 		{
@@ -377,15 +259,19 @@
         findLastestClass()
         {
             let myDate = new Date();
-            let datetime =   this.getDatetimeValue(myDate)
-             let foundItem = null
+            // let datetime =   this.getDatetimeValue(myDate)
+            let datetime = myDate.getTime()
+            let foundItem = null
             for (let item in this.classesPending)
             {
                 let beginTime = new Date(this.classesPending[item].begintime)
                 let endTime = new Date(this.classesPending[item].endtime)
-                let beginVal = this.getDatetimeValue(beginTime)
-                let endVal = this.getDatetimeValue(endTime)
-                beginVal = beginVal - 15
+                let beginVal = beginTime.getTime()
+                let endVal = endTime.getTime()
+
+                //let beginVal = this.getDatetimeValue(beginTime)
+                ///let endVal = this.getDatetimeValue(endTime)
+                beginVal = beginVal - 15*60*1000
                 if (datetime >= beginVal && datetime <= endVal)
                 {
                     foundItem = this.classesPending[item]
@@ -397,6 +283,184 @@
             return foundItem
 
         },
+        colorLevelToString(level)
+        {
+            let str = ''
+            switch(level)
+            {
+                case 1:
+                    str  = 'orange'
+                    break
+                case 2:
+                    str  = 'yellow'
+                    break
+                case 3:
+                    str = 'green'
+                    break
+                default:
+                    str = 'gray'
+                    break
+
+            }
+            return str
+        },
+        checkItemColorLevel(classBegin, classEnd)
+        {
+            let myDate = new Date();
+            let datetime = myDate.getTime()
+
+            let beginTime = new Date(classBegin)
+            let endTime = new Date(classEnd)
+            let beginVal = beginTime.getTime()
+            let endVal = endTime.getTime()
+            let checkVal = beginVal
+            let level = 0 //gray
+
+
+            if (datetime >= checkVal && datetime <= endVal)
+            {
+                level = 3 //green
+            }
+            else
+            {
+                checkVal = beginVal -  10*60*1000
+                if (datetime >= checkVal && datetime <= endVal)
+                    level = 2 //orange
+                else
+                {
+                    checkVal = beginVal -  15*60*1000
+                    if (datetime >= checkVal && datetime <= endVal)
+                        level = 1 // yellow
+                }
+            }
+            return level
+        },
+        checkIfClassCommingSoon(item)
+        {
+            let myDate = new Date();
+             let datetime = myDate.getTime()
+
+                let beginTime = new Date(item.begintime)
+                let endTime = new Date(item.endtime)
+                let beginVal = beginTime.getTime()
+                let endVal = endTime.getTime()
+
+                beginVal = beginVal - 15*60*1000
+                if (datetime >= beginVal && datetime <= endVal)
+                {
+                    return true
+                }
+                else return false
+
+        },
+        promptClass(classBegin, classEnd)
+        {
+            let myDate = new Date();
+            let datetime = myDate.getTime()
+
+            let beginTime = new Date(classBegin)
+            let endTime = new Date(classEnd)
+            let beginVal = beginTime.getTime()
+            let endVal = endTime.getTime()
+            let checkVal = beginVal
+            let prompt = ''
+
+
+            if (datetime >= checkVal && datetime <= endVal)
+            {
+                prompt = '上課中'
+            }
+            else
+            {
+                checkVal = beginVal -  30*60*1000
+                if (datetime >= checkVal && datetime <= endVal) {
+                    let diff =  (beginVal - datetime)/60/1000
+                    diff = parseInt(diff)
+                    if (diff >0)
+                        prompt = diff + '分鍾後上課'
+                    else
+                        prompt = '馬上上課'
+                }
+                else
+                {
+                    prompt = ''
+                }
+            }
+            return prompt
+        },
+        joinRoomWithItem(item)
+        {
+            let datetime
+            var lastestClass
+            var str =''
+            var role = -1
+            var nickname=this.userInfo.userNickname
+            if (nickname == '')
+                nickname = this.userInfo.user
+
+            if (this.isLogin == false)
+            {
+                this.alertMessage('請先登陸.')
+                return
+            }
+            if (this.userInfo.userRole == null)
+            {
+                this.alertMessage('無法獲得用戶的身份.')
+                return
+            }
+
+            if (this.userInfo.userRole.indexOf("student") != -1)
+                role = 2
+            else if (this.userInfo.userRole.indexOf("teacher")!= -1)
+                role = 0
+            else if (this.userInfo.userRole.indexOf("administrator")!= -1)
+                role = 4
+
+            if (role == -1)
+            {
+                this.alertMessage('該用戶身份不能進入房間.')
+                return
+            }
+
+
+            if (this.checkIfClassCommingSoon(item) == false)
+            {
+               // talkplus.showToast("上課時間沒到");
+                this.alertMessage('未到上課時間.')
+                return
+            }
+
+
+
+                str = 'chaoweiclass://?host=global.talk-cloud.net'
+                if (role == 0) //teacher need a default password
+                {
+                    if (item.password =='')
+                    {
+                        item.password ='1234'
+
+                    }
+                    str+='&password='+item.password
+                }
+                else if (role == 4)
+                {
+                    item.password ='abcd'
+                    str+='&password='+item.password
+                }
+
+                str += '&serial='+item.roomid
+                str += '&nickname='+nickname
+                str += '&userrole='+role
+                //str += '&nickname=tom&userrole=2'
+                //  talkplus.joinRoom("chaoweiclass://?host=global.talk-cloud.net&password=56789&serail=1346975754&nickname=tom&userrole=2");
+                //talkplus.showToast(str);
+               // this.alertMessage(str)
+                talkplus.joinRoom(str);
+
+                //  talkplus.joinRoom("chaoweiclass://?host=global.talk-cloud.net&password=1234&serial=545718172&nickname=teacher&userrole=0");
+
+        },
+
         joinRoom()
         {
             let datetime
@@ -414,7 +478,7 @@
             }
             if (this.userInfo.userRole == null)
             {
-              this.alertMessage('无法获得用户的身份.')
+              this.alertMessage('無法獲得用戶的身份.')
               return
             }
 
@@ -432,7 +496,6 @@
 
 
             this.sortClasses()
-           // this.findLastestClass()
             lastestClass = this.findLastestClass()
             if (lastestClass != null)
             {
@@ -452,14 +515,12 @@
               str += '&userrole='+role
               //str += '&nickname=tom&userrole=2'
             //  talkplus.joinRoom("chaoweiclass://?host=global.talk-cloud.net&password=56789&serail=1346975754&nickname=tom&userrole=2");
-              //talkplus.showToast(str);
-              //this.alertMessage(str)
               talkplus.joinRoom(str);
 
             //  talkplus.joinRoom("chaoweiclass://?host=global.talk-cloud.net&password=1234&serial=545718172&nickname=teacher&userrole=0");
             }
             else
-              talkplus.showToast("上課時間沒到");
+              this.alertMessage("未到上課時間");
         },
 		toastDemo()
 		{
@@ -493,9 +554,19 @@
             clock += mm
             return clock
         },
+       refreshClass()
+       {
+         this.getClassList()
+     //    this.sortClasses()
+       },
         getClassList()
         {
             let myThis = this
+            let isTeacher= false
+
+            if (this.userInfo.userRole == "teacher")
+                isTeacher = true
+
           if (myThis.userInfo.csrfToken == null) //not login
           {
             return
@@ -507,7 +578,7 @@
                     console.log('get class success:', JSON.stringify(response.data))
                   let myDate = new Date();
                   let nowtime =   this.getDatetimeValue(myDate)
-                  this.classbook = []
+
                   this.classesPending = []
                   this.classesFinish = []
                     if (response.data.data.length >0)
@@ -518,14 +589,19 @@
                           let endTime = new Date(theitem.end)
                           let endVal = this.getDatetimeValue(endTime)
                           let classStatus = nowtime > endVal ? 0 : 1;
-                          //let showdate = beginTime.toLocaleDateString()
                            let showdate = this.getDateStrFromDateObject(beginTime)
-
                             let showtime = this.getTimeStrFromDateObject(beginTime)
-                          //let showtime = beginTime.toLocaleTimeString()
-
+                            let showdatetime = showdate +' ' + showtime
+                            let substitleStr = ''
+                            if (isTeacher)
+                            {
+                                substitleStr = theitem.name
+                            }
                           if (classStatus == 1) {
-                            this.classesPending.push({
+                              let colorlevel =  this.checkItemColorLevel(beginTime,endTime)
+                              let colorstr = this.colorLevelToString(colorlevel)
+                              let promptstr =  this.promptClass(beginTime,endTime)
+                              this.classesPending.push({
                               roomid:  theitem.rID,
                               password: '',
                               title: theitem.course_title,
@@ -533,6 +609,10 @@
                               endtime: theitem.end,
                               date:showdate,
                               time:showtime,
+                                datetime:showdatetime,
+                               color:colorstr,
+                                  prompt:promptstr,
+                               subtitle:  substitleStr,
                               status: 1
                             })
                           }
@@ -545,6 +625,7 @@
                               endtime: theitem.end,
                               date:showdate,
                               time:showtime,
+                                datetime:showdatetime,
                               status: 0
                             })
 
@@ -552,7 +633,7 @@
                         }
                     }
 
-
+                  this.sortClasses()
 
 
                 },
@@ -571,54 +652,13 @@
           this.processLogoutButton()
           myThis.loginStr = "登入"
         } else {
-
-          this.loginScreenOpened = true
-          /*
-          if (myThis.userInfo.csrfToken!= null) //login already
-          {
-            myThis.loginStr = "登入"
-          }
-          else
-            myThis.loginStr = "登出"
-        }
-        */
+          this.$store.commit('UPDATE_LOGIN_SCREEN_STATUS', true)
+          //this.loginScreenOpened = true
 
         }
           this.adminLogined = false
       },
-      processGetRoleButton () {
-        // 发起登录请求
-        let myThis = this
 
-
-          myThis.baseFun.ajaxUserGetRole({
-          uid: myThis.userInfo.uid,
-          user:  myThis.userInfo.user,
-          password: myThis.userInfo.password,
-          success: (response) => {
-            // 登录成功后，回首页
-            console.log('get role success:', JSON.stringify(response.data))
-            //myThis.routes.push('/') //jarong modify
-            //myThis.alertLoginResult('login success',true)
-          //  let theRoleData = JSON.parse(response.data)
-          //  JSON.to resonse.data.
-            if (response.data.access != null)
-            {
-                return response.data.access[1]
-            }
-
-          },
-          error: (response) => {
-            // 登录成功后，回首页
-            console.log('get role failed:')
-            // myThis.routes.push('/')//jarong modify
-            //myThis.alertLoginResult('login success',true)
-
-            return ''
-          }
-        })
-
-      },
       processLogoutButton () {
         // 发起登录请求
         let myThis = this
@@ -630,6 +670,7 @@
             // 登出成功。
             console.log('logout success:', JSON.stringify(response.data))
 
+              this.$store.commit('UPDATE_LOGIN_SCREEN_STATUS', true)
             // 登出成功后，回首页。
            // myThis.showSuccess = true
             // myThis.$router.push('/')
@@ -655,25 +696,97 @@
             }
           }
         })
-      }
+      },
+ processDialogs()
+      {
+        var f7 =  this.$f7;
+        const $ = f7.$;
+       // if (f7.device.electron) return true;
 
+        if ($('.actions-modal.modal-in').length) {
+          f7.actions.close('.actions-modal.modal-in');
+        //  e.preventDefault();
+          return true;
+        }
+        if ($('.dialog.modal-in').length) {
+          f7.dialog.close('.dialog.modal-in');
+        //  e.preventDefault();
+          return true;
+        }
+        if ($('.sheet-modal.modal-in').length) {
+          f7.sheet.close('.sheet-modal.modal-in');
+         // e.preventDefault();
+          return true;
+        }
+        if ($('.popover.modal-in').length) {
+          f7.popover.close('.popover.modal-in');
+        //  e.preventDefault();
+          return true;
+        }
+        if ($('.popup.modal-in').length) {
+          if ($('.popup.modal-in>.view').length) {
+            const currentView = f7.views.get('.popup.modal-in>.view');
+            if (currentView && currentView.router && currentView.router.history.length > 1) {
+              currentView.router.back();
+            //  e.preventDefault();
+              return true;
+            }
+          }
+          f7.popup.close('.popup.modal-in');
+         // e.preventDefault();
+          return true;
+        }
+        if ($('.login-screen.modal-in').length) {
+          f7.loginScreen.close('.login-screen.modal-in');
+        //  e.preventDefault();
+            this.exitApp();
+          return true;
+        }
+
+        if($('.searchbar-enabled').length){
+          f7.searchbar.disable();
+       //   e.preventDefault();
+          return true;
+        }
+
+        const currentView = f7.views.current;
+        if (currentView && currentView.router && currentView.router.history.length > 1) {
+          currentView.router.back();
+        //  e.preventDefault();
+          return true;
+        }
+
+
+        if ($('.panel.panel-in').length) {
+          f7.panel.close('.panel.panel-in');
+        //  e.preventDefault();
+          return true;
+        }
+        return false
     },
-    onBackKeyDown() {
-      alertMessage('再點擊一次退出!')
-      //talkplus.showToast('再点击一次退出!');
 
-      window.removeEventListener("backbutton", this.onBackKeyDown); // 注销返回键
-      window.addEventListener("backbutton", this.exitApp); // 返回键
-    // 3秒后重新注册
-    var intervalID = window.setInterval(function() {
-      window.clearInterval(intervalID);
-      window.removeEventListener("backbutton", this.exitApp); // 注销返回键
-      window.addEventListener("backbutton", this.onBackKeyDown); // 返回键
-    }, 3000);
-  },
+  onBackKeyDown() {
+    if (this.processDialogs() == true)
+      return
+  var d = new Date()
+  var nowMsFrom1970 =  d.getTime()
+  let diff = nowMsFrom1970 - this.lastMsFrom1970
+  if (diff > 2000) {
+    this.lastMsFrom1970 = nowMsFrom1970
+    talkplus.showToast('再點擊一次退出!')
+  }
+  else
+    this.exitApp()
+},
    exitApp(){
     navigator.app.exitApp();
-  },
+	},
+	},
+      destroyed () {
+          // 每次离开当前界面时，清除定时器
+          clearInterval(this.timer)
+          this.timer = null
+      },
 
     mounted() {
       let myThis = this
@@ -682,13 +795,24 @@
         this.loginStr = "登出"
          // this.dispuser = myThis.userInfo.user
         this.getClassList()
+      //  this.sortClasses()
       }
       else {
           this.loginStr = "登入"
           //this.dispuser = ''
       }
 
-        window.addEventListener('backbutton', this.onBackKeyDown)
+      document.addEventListener('backbutton', this.onBackKeyDown, false)
+      document.addEventListener('refreshClass', this.refreshClass, false)
+
+        if (this.timer)
+            clearInterval(this.timer)
+        else
+            {
+                this.timer = setInterval(()=>{
+                    this.refreshClass();
+                },30000)
+            }
 
     }
   }

@@ -229,7 +229,7 @@ const baseFun = {
            // userBirthday: (typeof data.field_birthday[0] != "undefined") ? data.field_birthday[0].value : '',
             //userSex: (typeof data.field_sex[0] != "undefined") ? data.field_sex[0].value : '',
             //userCity: (typeof data.field_city[0] != "undefined") ? data.field_city[0].value : '',
-            userEmail: (typeof data.mail[0] != "undefined") ? data.mail[0].value : '',
+            userEmail: (typeof  data.mail[0] != "undefined") ? data.mail[0].value : '',
             userTimezone: (typeof data.timezone[0] != "undefined") ? data.timezone[0].value : '',
             userLangcode: (typeof data.langcode[0] != "undefined") ? data.langcode[0].value : ''
           };
@@ -299,6 +299,32 @@ const baseFun = {
         }
       })
     }
+  },
+
+  ajaxUserForceLogout(param) {
+    let success = param.success
+    let error = param.error
+    baseAjax({
+      url: '/user/logout',
+
+      type: 'get',
+
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      showLoading: true,
+      success: (response) => {
+        // 退出登录。
+        stores.commit('LOGOUT')
+        success(response)
+      },
+      error: (response) => {
+
+          stores.commit('LOGOUT')
+
+        error(response)
+      }
+    })
   },
   // 从服务器退出登录
   ajaxUserLogout(param) {
@@ -526,18 +552,41 @@ const baseFun = {
     })
   },
 
-
-
-  ajaxUserGetRole(param) {
-    let uid = param.uid
-    let user = param.user
-    let password = param.password
+  ajaxUserGetLoginState(param) {
     let success = param.success
     let error = param.error
 
     baseAjax({
       url: '/api/v1.0/access?_format=json',
-     //  url: '/api/v1.0/access?_format=json',
+
+      type: 'get',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      showLoading: true,
+      success: (response) => {
+        if (response.data.access[0] == 'anonymous') {
+          stores.commit('LOGOUT')
+        }
+        if (response.data.access[0] == 'authenticated') {
+          if (response.data.access[1] != null)
+            stores.commit('UPDATE_USER_ROLE',  response.data.access[1])
+        }
+        success(response)
+
+      },
+      error: error
+    })
+  },
+
+  ajaxUserGetRole(param) {
+
+    let success = param.success
+    let error = param.error
+
+    baseAjax({
+      url: '/api/v1.0/access?_format=json',
+
       type: 'get',
       headers: {
         'Content-Type': 'application/json'

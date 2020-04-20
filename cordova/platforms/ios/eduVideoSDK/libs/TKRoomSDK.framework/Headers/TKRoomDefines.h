@@ -156,6 +156,7 @@ typedef NS_ENUM(NSInteger, TKRoomErrorCode) {
     TKErrorCode_CheckRoom_NeedPassword           = 4110,    //该房间需要密码，请输入密码
     TKErrorCode_CheckRoom_RoomPointOverrun       = 4112,    //企业点数超限
     TKErrorCode_CheckRoom_RoomNSF				 = 4113,    //余额不足
+    TKErrorCode_CheckRoom_RoomCancelled			 = 4020, 	//课程已取消
 };
 
 
