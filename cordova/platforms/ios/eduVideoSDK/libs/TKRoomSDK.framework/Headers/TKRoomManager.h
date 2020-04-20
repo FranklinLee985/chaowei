@@ -501,28 +501,6 @@ extensionData:(NSDictionary * _Nullable)extensionData
 - (int)startServerRecord:(TKRecordType)recordType convert:(NSInteger)convert layout:(NSInteger)layout expiresabs:(NSInteger)expiresabs expires:(NSInteger)expires;
 
 /**
-开始服务器录制
-
-@param spec 录制参数
- 「
- 1、@"recordType" : 录制类型  默认0
- 2、@"convert" :  录制件数据格式， 默认0
- 只有在recordtype = 0与1的情况下起作用。
-    0: 表示不转换(mkv格式）
-    1：表示webm(recordtype其他值时，固定状态)
-    2：表示 mp4
- 3、@"layout" : 只有在recordtype = 3的情况下起作用。 0：横屏，1：竖屏 ， 默认0；
- 4、其他布局参数（视频布局设置）
- 」
-@param expiresabs expiresabs 录制时长
-@param expires expires 结束录制时的时间戳
-@return 0表示调用成功，非0表示调用失败
-*/
-- (int)startServerRecord:(NSDictionary<NSString *, id> *)spec
-              expiresabs:(NSInteger)expiresabs
-                 expires:(NSInteger)expires;
-
-/**
  停止服务器录制
  @return 0表示调用成功，非0表示调用失败
  */
