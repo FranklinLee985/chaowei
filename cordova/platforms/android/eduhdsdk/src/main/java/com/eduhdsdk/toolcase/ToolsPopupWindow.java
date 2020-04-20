@@ -58,6 +58,8 @@ public class ToolsPopupWindow implements View.OnClickListener {
     }
 
     public void initPopupWindow() {
+        if (mContext == null)
+            return;
         contentView = LayoutInflater.from(mContext).inflate(R.layout.tk_layout_tools_pop, null);
 
         ScreenScale.scaleView(contentView, "AllActionUtils");
@@ -110,6 +112,8 @@ public class ToolsPopupWindow implements View.OnClickListener {
     }
 
     public void showPopupWindow(View rootView) {
+        if (contentView == null)
+            return;
         if (toolsPopupWindow == null) {
             initPopupWindow();
         }

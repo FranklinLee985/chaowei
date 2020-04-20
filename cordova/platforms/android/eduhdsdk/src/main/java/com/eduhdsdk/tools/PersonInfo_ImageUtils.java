@@ -40,8 +40,8 @@ public class PersonInfo_ImageUtils {
                 InputStream in = new FileInputStream(strPath);
                 int size = in.available();
                 BitmapFactory.Options opts = new BitmapFactory.Options();
-                if (size > 1024 * 1024)
-                    opts.inSampleSize = 2;
+              /*  if (size > 1024 * 1024)
+                    opts.inSampleSize = 2;*/
                 try {
                     bitmap = BitmapFactory.decodeStream(in, null, opts);
                 } catch (OutOfMemoryError e) {

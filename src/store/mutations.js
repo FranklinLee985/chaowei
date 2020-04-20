@@ -10,7 +10,8 @@ import {
   UPDATE_PEN_STATUS,
   LOGIN,
   LOGOUT,
-  HOST
+  HOST,
+  UPDATE_USER_ROLE,
 } from './data'
 
 import Vue from 'vue'
@@ -45,7 +46,8 @@ const state = {
   userCity: localStorage.getItem('userCity'), // 城市
   userEmail: localStorage.getItem('userEmail'), // 电邮
   userTimezone: localStorage.getItem('userTimezone'), // 时区
-  userLangcode: localStorage.getItem('userLangcode') // 语言
+  userLangcode: localStorage.getItem('userLangcode'),// 语言
+  userRole: localStorage.getItem('userRole') // Role
 }
 
 const mutations = {
@@ -168,7 +170,7 @@ const mutations = {
     state.userEmail = null
     state.userTimezone = null
     state.userLangcode = null
-
+    state.userRole = null
     // 从永久存储中清除
     localStorage.removeItem('uid')
     localStorage.removeItem('user')
@@ -185,8 +187,16 @@ const mutations = {
     localStorage.removeItem('userEmail')
     localStorage.removeItem('userTimezone')
     localStorage.removeItem('userLangcode')
+    localStorage.removeItem('userRole')
+  },
+  [UPDATE_USER_ROLE] (state, role)
+  {
+    state.userRole = role
+    // 保存到永久存储
+    localStorage.setItem('userRole', state.userRole)
   }
 }
+
 
 // 获取全局数据
 const getters = {
@@ -223,7 +233,8 @@ const getters = {
       'userCity': state.userCity,
       'userEmail': state.userEmail,
       'userTimezone': state.userTimezone,
-      'userLangcode': state.userLangcode
+      'userLangcode': state.userLangcode,
+      'userRole':state.userRole
     }
   },
   penConnected (state) {

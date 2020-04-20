@@ -152,7 +152,7 @@ public class VideoFragment extends TKBaseFragment {
 
         lin_video_play = (RelativeLayout) view.findViewById(R.id.lin_video_play);
         suf_mp4 = (SurfaceViewRenderer) view.findViewById(R.id.suf_mp4);
-        suf_mp4.init(EglBase.create().getEglBaseContext(), null);
+
 
         re_laoding = (RelativeLayout) view.findViewById(R.id.re_laoding);
         loadingImageView = (ImageView) view.findViewById(R.id.loadingImageView);
@@ -176,8 +176,11 @@ public class VideoFragment extends TKBaseFragment {
         fullscreen_sf_video = (SurfaceViewRenderer) rel_fullscreen_mp4videoitem.findViewById(R.id.fullscreen_sf_video);
         try {
             EglBase eglBase = RoomClient.getInstance().getPreEgl();
+            EglBase eglBase1 = RoomClient.getInstance().getPreEgl();
+            suf_mp4.init(eglBase1.getEglBaseContext(), null);
             fullscreen_sf_video.init(eglBase.getEglBaseContext(), null);
             RoomClient.getInstance().setPreEglMap(eglBase, true);
+            RoomClient.getInstance().setPreEglMap(eglBase1, true);
         } catch (RuntimeException e) {
             if (BuildConfig.DEBUG)
                 Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
@@ -195,12 +198,13 @@ public class VideoFragment extends TKBaseFragment {
 
         ScreenScale.scaleView(view, "VideoFragment");
         //白板全屏右下角界面大小
-        if (fullscreen_sf_video != null)
-            fullscreen_sf_video.setLayoutParams(fullscreen_video_param);
-        fullscreen_bg_video_back.setLayoutParams(fullscreen_video_param);
-        fullscreen_img_video_back.setLayoutParams(fullscreen_video_param);
-        fullscreen_inback_rel.setLayoutParams(fullscreen_video_param);
-
+        if (fullscreen_video_param != null) {
+            if (fullscreen_sf_video != null)
+                fullscreen_sf_video.setLayoutParams(fullscreen_video_param);
+            fullscreen_bg_video_back.setLayoutParams(fullscreen_video_param);
+            fullscreen_img_video_back.setLayoutParams(fullscreen_video_param);
+            fullscreen_inback_rel.setLayoutParams(fullscreen_video_param);
+        }
         //初始
         DisplayMetrics dm = new DisplayMetrics();
         getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);

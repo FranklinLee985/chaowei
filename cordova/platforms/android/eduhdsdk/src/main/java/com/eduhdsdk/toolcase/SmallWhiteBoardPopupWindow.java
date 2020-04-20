@@ -430,7 +430,7 @@ public class SmallWhiteBoardPopupWindow implements SmallBoardInterface, EditText
         if (SharePadMgr.getInstance().mTeacherUser != null) {
             adapterlist.clear();
             adapterlist.add(bean);
-            if (adapter != null) {
+            if (adapter != null && adapterlist.size() > 0) {
                 adapter.SetData(adapterlist);
             }
         }

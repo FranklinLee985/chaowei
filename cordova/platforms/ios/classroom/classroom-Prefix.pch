@@ -23,4 +23,32 @@
 #ifdef __OBJC__
     #import <Foundation/Foundation.h>
     #import <UIKit/UIKit.h>
+    #import <TKRoomSDK/TKRoomSDK.h>
+    #import <TKWhiteBoard/TKWhiteBoard.h>
+
+    #import "TKUtil.h"
+    #import "TKHelperUtil.h"
+    #import "TKTheme.h"
+
+    #import "TKMacro.h"
+    #import "TKEnumHeader.h"
+
+    #import "TKAlertView.h"
+
+    #import "TKEduNetManager.h"
+    #import "TKEduSessionHandle.h"
+
+    #import "TXSakuraKit.h"
+
+    #import "UIView+TKExtension.h"
+    #import "UIImageView+TKExtension.h"
+    #import "UIImage+TKExtension.h"
+    #import "UIView+TKRedDot.h"
+    #import "UIControl+TKClickedOnce.h"
+    #import "TKModelToJson.h"
+    #import "TKSortTool.h"
+    #import "TKNotificationHeader.h"
+    #import <SDWebImage/UIImageView+WebCache.h>
+    #import "Masonry.h"
+    #import "TKRoomJsonModel.h"
 #endif

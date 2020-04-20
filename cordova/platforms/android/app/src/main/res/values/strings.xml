@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">classroom</string>
+    <string name="app_name">Tutor@home</string>
     <string name="launcher_name">@string/app_name</string>
     <string name="activity_name">@string/launcher_name</string>
     <string name="crash_dialog_negative_button">Dismiss</string>
@@ -19,4 +19,6 @@
     <string name="permissions_prompt">Failure to get related permissions will not function properly.
         Manual authorization is required on settings page</string>
     <string name="login_choose_user_room">Please choose your room</string>
+    <string name="leave_classroom">Leave</string>
+    <string name="no_network">Network is not available, please try again later.</string>
 </resources>

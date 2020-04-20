@@ -2,28 +2,36 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>APP_STORE_ID</key>
+	<integer>1418488484</integer>
 	<key>CFBundleAllowMixedLocalizations</key>
 	<true/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en_US</string>
 	<key>CFBundleDisplayName</key>
-	<string>classroom</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+		<string>zh_TW</string>
+		<string>zh_CN</string>
+		<string>en</string>
+	</array>
 	<key>CFBundleName</key>
 	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0.0</string>
+	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -31,10 +39,24 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>教室中需要进行视频通话以及拍摄您是否允许打开相机</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>教室中需要通过您的地理位置信息获取您周边的位置相关数据您是否允许开启位置</string>
 	<key>NSMainNibFile</key>
 	<string></string>
 	<key>NSMainNibFile~ipad</key>
 	<string></string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>教室中需要发送语音消息及发言您是否允许打开麦克风</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>教室中需要上传图片您是否允许添加图片</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>教室中需要选择本地图片您是否允许访问相册</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>CDVLaunchScreen</string>
 	<key>UIRequiresFullScreen</key>

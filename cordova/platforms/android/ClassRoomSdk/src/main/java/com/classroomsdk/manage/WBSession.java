@@ -363,7 +363,7 @@ public class WBSession implements TKNotificationCenter.NotificationCenterDelegat
                         String strdata = (String) data;
                         jsmdata = new JSONObject(strdata);
                     }
-                    if (WhiteBoradManager.getInstance() != null)
+                    if (WhiteBoradManager.getInstance().getmBlankShareDoc() != null)
                         WhiteBoradManager.getInstance().getmBlankShareDoc().setPagenum(jsmdata.optInt("totalPage"));
                 }
             } catch (JSONException e) {

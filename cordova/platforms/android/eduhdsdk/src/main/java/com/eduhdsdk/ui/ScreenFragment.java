@@ -5,8 +5,11 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.eduhdsdk.BuildConfig;
 import com.eduhdsdk.R;
+import com.eduhdsdk.room.RoomClient;
 import com.talkcloud.room.TKRoomManager;
 
 import org.tkwebrtc.EglBase;
@@ -50,7 +53,14 @@ public class ScreenFragment extends Fragment {
             fragmentView = inflater.inflate(R.layout.tk_fragment_screen, null);
             fragmentView.bringToFront();
             suf_mp4 = (SurfaceViewRenderer) fragmentView.findViewById(R.id.suf_mp4);
-            suf_mp4.init(EglBase.create().getEglBaseContext(), null);
+            try {
+                EglBase eglBase1 = RoomClient.getInstance().getPreEgl();
+                suf_mp4.init(eglBase1.getEglBaseContext(), null);
+                RoomClient.getInstance().setPreEglMap(eglBase1, true);
+            } catch (RuntimeException e) {
+                if (BuildConfig.DEBUG)
+                    Toast.makeText(getActivity(), e.getMessage(), Toast.LENGTH_LONG).show();
+            }
 //            suf_mp4.setZOrderOnTop(true);
             suf_mp4.setZOrderMediaOverlay(true);
 
@@ -81,7 +91,7 @@ public class ScreenFragment extends Fragment {
 
     @Override
     public void onDestroyView() {
-        if(suf_mp4!=null){
+        if (suf_mp4 != null) {
             suf_mp4.release();
             suf_mp4 = null;
         }

@@ -39,6 +39,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import android.util.Log;
 
 /**
  * Main class for interacting with a Cordova webview. Manages plugins, events, and a CordovaWebViewEngine.
@@ -349,6 +350,7 @@ public class CordovaWebViewImpl implements CordovaWebView {
             LOG.w(TAG, "Unable to fire event without existing plugin");
             return;
         }
+		LOG.w(TAG, "appPlugin.fireJavascriptEvent "+ event);
         appPlugin.fireJavascriptEvent(event);
     }
 
@@ -555,8 +557,10 @@ public class CordovaWebViewImpl implements CordovaWebView {
 
         @Override
         public Boolean onDispatchKeyEvent(KeyEvent event) {
+			
             int keyCode = event.getKeyCode();
-            boolean isBackButton = keyCode == KeyEvent.KEYCODE_BACK;
+			LOG.i(TAG, "onDispatchKeyEvent "+ keyCode);
+             boolean isBackButton = keyCode == KeyEvent.KEYCODE_BACK;
             if (event.getAction() == KeyEvent.ACTION_DOWN) {
                 if (isBackButton && mCustomView != null) {
                     return true;

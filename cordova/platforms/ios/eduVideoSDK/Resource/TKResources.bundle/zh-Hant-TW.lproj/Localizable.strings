@@ -1,0 +1,280 @@
+/*
+ Meetings.strings
+ Meetings
+ 
+ Created by macmini on 15/2/3.
+ Copyright (c) 2015年 macmini. All rights reserved.
+ */
+
+"HUD.EnteringClass" = "正在進入教室";
+
+"Error.NoMeeting" = "會議不存在";
+"Error.NoLiving" = "直播不存在";
+"Error.NotSupportThisType" = "不支持這種直播類型，請用電腦端登錄";
+"Error.ServerExpired" = "服務器過期";
+"Error.CheckmeetingFail" = "檢查會議失敗";
+"Error.CheckserverInformationFail" = "獲取伺服器信息失敗";
+"Error.CompanyFreeze" = "公司被凍結";
+"Error.RoomDeletedOrExpired" = "教室不存在";
+"Error.MemberOverRoomLimit" = "教室人數超過限制";
+"Error.NeedPwd" = "該教室需要密碼，請輸入密碼";
+"Error.NeedPwd.teacher" = "請輸入教師密碼";
+"Error.NeedPwd.student" = "請輸入學生密碼";
+"Error.NeedPwd.tourCourse" = "請輸巡課入密碼";
+"Error.pointOverRun" = "企業點數超限";
+"Error.PwdError" = "密碼輸入錯誤，請重新輸入";
+"Error.AuthIncorrect" = "Auth不正確";
+"Error.NSF" = "套餐余额不足，请联系管理员充值";
+"Error.WaitingForNetwork" = "您的網絡暫時不可用，請稍後重試";
+//Prompt
+"Prompt.inputPlaceholder" = "請輸入教室密碼";
+"Prompt.ExceptionReport" = "異常報告";
+"Prompt.prompt" = "提示";
+"Prompt.kick" = "請您三分鐘以後進入教室";
+"Prompt.stuHasKicked" = "您已被請出教室，請三分鐘之後再進入教室!";
+"Prompt.inputPwd" = "請輸入密碼";
+"Prompt.OK" = "確定";
+"Prompt.Cancel" = "取消";
+"Prompt.Know" = "知道啦";
+"Prompt.Quite" = "您確定退出嗎?";
+"Prompt.nicknameNotNull" = "昵稱不能為空";
+"Prompt.RoomIDNotNull" = "教室號不能為空";
+"Prompt.devicetPrompt" = "當前的設備配置較低，僅提供兩路視頻";
+"Prompt.onlyNumber" = "教室號只能是數字";
+"Prompt.underPlatformTime" = "點擊過於頻繁";
+//login
+"Login.EnterRoom" = "進入教室";
+"Login.nickName"  = "昵稱";
+"Login.Role"      = "角色";
+// State
+"State.connecting" = "連接中";
+"State.updating" = "更新數據";
+"State.Connecting" = "連接中...";
+"State.Updating" = "更新數據...";
+"State.WaitingForNetwork" = "註銷";
+"State.ConnectFailure" = "連接失敗！";
+"State.ConnectException" = "網路异常！";
+"State.ConnectLocked" = "會議室鎖死！";
+
+"State.Retry" = "重連";
+"State.Reconnecting" = "正在連接教室";
+"KickOut.ChairmanKick" = "您已被主席請出會議...";
+"KickOut.Repeat" = "有相同身份的用戶進入，您已經離開房間";
+"KickOut.SentOutClassroom" = "您已被老師請出教室！";
+"State.isInBackGround" = "該學生按home鍵啦";
+"State.teacherInBackGround" = "該用戶按home鍵啦";
+//role
+"Role.Me" = "我";
+"Role.Teacher" = "老師";
+"Role.Student" = "學生";
+"Role.Patrol"  = "巡課";
+"Role.Assistant" = "助教";
+//say
+"Say.say" = "說點什麼吧";
+//button
+"Button.send" = "發送";
+"Button.closed" = "關閉";
+"Button.chat" = "聊天";
+//Class.Begin
+"Class.Begin" = "上課啦";
+"Class.Over" = "下課啦";
+//Button
+"Button.MuteAudio"     = "全體靜音";
+"Button.MuteAll"       = "全體發言";
+"Button.Reward"        = "全體獎勵";
+"Button.Reset"         = "全體復位";
+"Button.Audio" = "音頻授課";
+"Button.ShutUpAll" = "全體禁言";
+"Button.CancelShutUpAll" = "關閉禁言";
+"Button.DefaultLayout" = "默認佈局";
+"Button.DoubleLayout" = "雙師佈局";
+"Button.VideoLayout" = "視頻佈局";
+
+"Button.ManyLayout.Top" = "視頻置頂";
+"Button.ManyLayout.Speaker" = "主講視頻";
+"Button.ManyLayout.Free" = "自由視頻";
+
+
+"Button.ClassBegin"    = "上課";
+"Button.ClassIsOver"   = "下課";
+"Button.ClassBegin1"    = "上  課";
+"Button.ClassIsOver1"   = "下  課";
+"Button.ClassEnd"      = "課程結束";
+"Button.RaiseHand"     = "舉手";
+"Button.RaiseHandCancle"= "舉手中";
+"Button.CancleHandsup"= "取消舉手";
+
+"Button.OpenAudio"          = "音頻開啟";
+"Button.CloseAudio"         = "音頻關閉";
+"Button.OpenVideo"          = "視頻開啟";
+"Button.CloseVideo"         = "視頻關閉";
+"Button.UpPlatform"         = "已上發言席";
+"Button.DownPlatform"       = "未上發言席";
+"Button.AllowDoodle"        = "已授權";
+"Button.CancelDoodle"       = "未授權";
+"Button.GiveCup"            = "發送獎杯";
+"Button.Speech"             = "演講";
+"Button.RestoreAll"         = "全部恢復";
+"Button.RestorePosition"    = "恢復位置";
+"Button.Recovery"           = "恢復";
+"Button.SwitchVideo"        = "切換視頻";
+
+"Button.nameSort" = " 名稱";
+"Button.typeSort" = " 類型";
+"Button.timeSort" = " 時間";
+
+"Button.playbackSpeed" = "倍速";
+"Button.jump" = "跳轉";
+
+"Action.EnterRoom"          = "加入教室!";
+"Action.ExitRoom"           = "離開教室!";
+"Prompt.EndClass1M"         = "距離下課還剩1分鐘，請合理安排時間哦~";
+"Prompt.RoomToBeClosed"     = "教室即將關閉。";
+"Prompt.ClassToBegin"       = "距離上課時間還有1分鐘，請做好準備。";
+"Prompt.timeoutStart.one"   = "已逾時";
+"Prompt.timeoutStart.two"   = "分鐘，請抓緊時間開始上課";
+"Prompt.timeoutReadyEnd.one" = "您已超時";
+"Prompt.timeoutReadyEnd.two" = "分鐘，教室將於";
+"Prompt.timeoutReadyEnd.three" = "分鐘之後自動關閉！";
+"Title.DocumentList"        = "課件庫";
+"Title.MediaList"           = "媒體庫";
+"Title.ControlList"         = "操作";
+"Title.TrophySend"          = "發送獎杯";
+"Title.UserList"            = "花名册";
+"Title.UserList.two"        = "花名册 (1)";
+"Title.AreaList"            = "優選網路";
+"Button.remindKnow"         = "我知道了";
+
+"Prompt.timeoutEnd"         = "教室即將關閉";
+"Title.whiteBoard"          = "白板";
+"Prompt.CanotOn"            = "該學生的音視頻設備不可用。有可能是自行禁用了設備。請提醒學生啟用設備。";
+"Prompt.FinishClass"        = "您確定要下課嗎?";
+"Prompt.delClassFile"       = "您確定要刪除該文件嗎";
+"Prompt.KickOutStudent"     = "您確定要踢出該學生嗎?";
+"Prompt.exceeds"            = "教室發言席人數超過限制";
+"Prompt.ClassEnd"           = "本次課程已經結束!";
+"Prompt.ClassEndTimeBefore" = "分鐘後課堂結束，請合理安排時間哦";
+"Prompt.ClassEndTimeseconds"= "秒後課堂結束，請合理安排時間哦";
+
+"Prompt.NeedCamera"         = "請在iPhone的\"設置-隱私-相機\"選項中，允許拓課雲Plus訪問妳的相機。";
+"Prompt.NeedMicrophone.Title" = "無法錄音";
+"Prompt.NeedMicrophone"     = "請在iPhone的\"設置-隱私-相機\"選項中，允許拓課雲Plus訪問妳的手機麥克風。";
+"Prompt.Sure"               = "好";
+"Prompt.NeedCameraNeedMicrophone" = "請在iPhone的\"設置-隱私\"選項中，允許拓課雲Plus訪問妳的攝像頭和麥克風。";
+
+"Action.Title"     = "拍攝上傳";
+"Action.TakePhoto" = "拍攝照片";
+"Action.ChoosePhoto" = "選擇照片";
+"Button.UploadPhoto" = "拍照";
+//老师端 上传图片
+"UploadPhoto.TakePhoto" = "拍攝上傳";
+"UploadPhoto.FromGallery" = "相冊上傳";
+"UploadPhoto.Error" = "圖片上傳錯誤";
+"Prompt.enterBackGround" = "進入後臺";
+"Prompt.enterForeGround" = "恢復前臺";
+"Prompt.NetworkException" = "網絡出現異常，請關閉殺毒軟體或防火牆後，重新進入";
+"Prompt.HaveEnterBackground" = "進入了後臺模式";
+"Prompt.HaveBackForground" = "返回了正常模式";
+"Prompt.BackgroundCouldNotOnStage" = "的應用程序在後臺運行，無法上臺";
+"Prompt.NetworkChanged" = "網絡出現異常，請檢查網路環境，重新進入";
+"Prompt.NetworkError" = "當前網路不可用，請檢查後重啓應用";
+"Prompt.ServerRequst" = "伺服器正在初始化，請稍後點擊";
+
+"Prompt.StudentUdpError" = "該學生與伺服器UDP通訊不通，無法上臺";
+"Prompt.StudentTcpError" = "與伺服器之間的通訊异常，無法上臺";
+"Prompt.StudentNetworkOccuredError" = "該用戶與伺服器之間的UDP通訊异常，無法上臺";
+"Prompt.StudentUdpOnStageError" = "由於防火牆原因，該用戶與伺服器之間的UDP通訊無法建立，無法上臺";
+"Prompt.NotRepeatChat" = "請勿在聊天區刷屏";
+"Prompt.AbnormalityReport" = "是否發送異常報告，幫助我們做的更好?";
+
+"Prompt.BanChat" = "您已被禁言";
+"Prompt.BanChatInView" = "全體禁言";
+"Prompt.CancelBanChatInView" = "取消全體禁言";
+
+"Prompt.TimeError" = "您設備的時間不正確，無法與服務器建立連接，請檢查。";
+
+"Title.PublicDocuments"         = "公用文件";
+"Title.ClassroomDocuments"      = "教室文件";
+
+
+"Label.Equipment" = "設備";
+"Label.UserNickname" = "用戶昵稱";
+"Label.StepUpAndDown" = "上下臺";
+"Label.Camera" = "攝像頭";
+"Label.Microphone" = "麥克風";
+"Label.Authorized" = "授權";
+"Label.RaisingHands" = "舉手";
+"Label.Ban" = "禁言";
+"Label.Remove" = "移除";
+
+"Label.choiceIdentity" = "選擇身份";
+
+"Label.roomid" = "房間號";
+"Label.roomPlaceholder" = "請輸入您的房間號";
+"Label.nicknamePlaceholder" = "請輸入您的昵稱";
+"Label.messageBoard" = "留言板";
+"Menu.Copy" = "復制";
+
+"Label.addFile" = "添加課件";
+"Label.handsup_tips" = "有人舉手";
+
+"Res.btn.start" = "開始搶答";
+"Res.btn.get" = "已搶中";
+"Res.btn.noget" = "重新開始";
+"Res.btn.getting" = "搶答中";
+"Res.btn.t.get" = "有人搶中";
+"Res.readyget" = "準備搶答";
+"Res.unStarted"    = "未開始";
+
+"Res.lab.start"="點擊按鈕開始搶答";
+"Res.lab.iget"="恭喜您已搶中";
+"Res.lab.noget"="無人搶答";
+"Res.lab.getting"="搶答中…";
+
+"netstate.excellent" = "優";
+"netstate.medium" = "中";
+"netstate.bad" = "差";
+"netstate.RoomID" = "房間號: ";
+"netstate.Packet" = "丟包率: ";
+"netstate.Ping" = "網路延遲: ";
+
+
+//小工具
+"tool.datiqiqi"   = "答題器";
+"tool.zhuanpan"   = "轉盤";
+"tool.jishiqi"   = "計時器";
+"tool.qiangdaqi"   = "搶答器";
+"tool.xiaobaiban"   = "小白板";
+
+"tool.fabudati"   = "發布答題";
+"tool.tianjia"   = "添加答案";
+"tool.shanchu"   = "刪除答案";
+"tool.zhengquedaan"   = "正確答案";
+"tool.datirenshu"   = "答題人數";
+"tool.ren"   = "人";
+"tool.time"   = "用時";
+"tool.detail"   = "詳情 >";
+"tool.tongji"   = "統計 >";
+
+"tool.end"   = "結束答題";
+"tool.nodata"   = "暫無數據！";
+"tool.publish"   = "公布答案";
+"tool.didpublish"   = "已公布";
+"tool.restart"   = "重新開始";
+"tool.submit"   = "提交答案";
+"tool.modify"   = "修改答案";
+"tool.wodedaan"   = "私の答え";
+"tool.choose"   = "選ぶ";
+"tool.leastanswer"   = "請至少設置1個正確答案!";
+
+"tool.start"   = "開始";
+
+
+"MiniWB.Dispense"   = "分發";
+"MiniWB.Recycle"    = "回收";
+"MiniWB.Redispense" = "再次分發";
+"MiniWB.Prepare"    = "準備";
+
+"TKPreload.downloading" = "正在加載課件";
+"TKPreload.unzipping"   = "正在解壓縮課件";
+"TKPreload.skip"        = "跳過";

@@ -1,0 +1,19 @@
+"A new version is available!" = "A new version is available!";
+
+"%@ %@ is now available. You have %@. Would you like to download(%@) it now?" = "%1$@ %2$@ is now available. You have %3$@. Would you like to download(%4$@) it now?";
+
+"Update" = "Update";
+
+"Skip This Version" = "Skip This Version";
+
+"Remind Me Later" = "Remind Me Later";
+
+"Release Notes" = "Release Notes";
+
+
+"Prompt.FoundNewVersions" = "found new versions:";
+
+"Prompt.ForcedToUpgrade" = "The new version is available, so to get the full learning experience, please do your version upgrade immediately.";
+
+"Prompt.ConditionsForTheUpgrade" = "A new version is available, and for the best use experience, it is recommended that you complete the version upgrade immediately.";
+

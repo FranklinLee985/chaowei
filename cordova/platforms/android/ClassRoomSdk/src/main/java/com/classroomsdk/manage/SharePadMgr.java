@@ -523,6 +523,8 @@ public class SharePadMgr implements FaceShareControl, WhitePadInterface, Notific
             if (!mPath.containsKey(key)) return null;
             String file = mPath.get(key);
             if (file == null) return null;
+            if (btpage == null)
+                btpage = "0";
             if (mCurrentShareDoc.getFiledata().getFileid().equals(btDoc) && mCurrentShareDoc.getFiledata().getCurrpage() == Integer.parseInt(btpage) && btcurrentImage != null) {
                 return btcurrentImage;
             }
@@ -539,9 +541,9 @@ public class SharePadMgr implements FaceShareControl, WhitePadInterface, Notific
             int imageHeight = opts.outHeight;
             int imageWidth = opts.outWidth;
             int nScale = imageHeight * imageWidth / (1920 * 1080);
-            if (nScale > 1) {
+           /* if (nScale > 1) {
                 opts.inSampleSize = nScale;
-            }
+            }*/
             opts.inPreferredConfig = Bitmap.Config.RGB_565;
             opts.inJustDecodeBounds = false;
 
@@ -757,7 +759,7 @@ public class SharePadMgr implements FaceShareControl, WhitePadInterface, Notific
                     break;
                 case ft_Text:  //文本
                     WB_TextBean wbTextBean = new WB_TextBean();
-                    wbTextBean.setX(action.points.get(0).x-action.nPenWidth);
+                    wbTextBean.setX(action.points.get(0).x - action.nPenWidth);
                     wbTextBean.setY(action.points.get(0).y);
                     wbTextBean.setText(action.sText);
                     wbTextBean.setColor(ColorUtils.toRGB(action.nPenColor));

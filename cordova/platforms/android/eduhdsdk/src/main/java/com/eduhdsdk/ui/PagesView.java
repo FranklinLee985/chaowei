@@ -535,7 +535,7 @@ public class PagesView implements PPTRemarkUtil.ChangePPtRemarkIF {
      * 刷新翻页和备注框大小位置
      */
     private void changePageAndRemark(int viewWidth, int viewHeight) {
-        if (viewHeight == 0 || viewWidth == 0)
+        if (this.viewHeight == 0 || this.viewWidth == 0)
             return;
         if (isPageViewChange) {
             RelativeLayout.LayoutParams ll_layoutParams = (RelativeLayout.LayoutParams) mRootHolder.pages_include_ll.getLayoutParams();

@@ -29,11 +29,25 @@ import android.webkit.WebViewClient;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.CordovaWebViewEngine;
+import android.util.Log;
+
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
+import android.view.Gravity;
+import android.view.KeyEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.webkit.WebChromeClient;
+import android.widget.FrameLayout;
+
 
 /**
  * Custom WebView subclass that enables us to capture events needed for Cordova.
  */
 public class SystemWebView extends WebView implements CordovaWebViewEngine.EngineView {
+	 public static final String TAG = "SystemWebView";
     private SystemWebViewClient viewClient;
     SystemWebChromeClient chromeClient;
     private SystemWebViewEngine parentEngine;
@@ -79,6 +93,8 @@ public class SystemWebView extends WebView implements CordovaWebViewEngine.Engin
 
     @Override
     public boolean dispatchKeyEvent(KeyEvent event) {
+		Log.w(TAG, "dispatchKeyEvent ");
+		
         Boolean ret = parentEngine.client.onDispatchKeyEvent(event);
         if (ret != null) {
             return ret.booleanValue();

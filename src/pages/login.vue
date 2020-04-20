@@ -147,7 +147,9 @@
 
       processCancelButton () {
         this.$f7.loginScreen.close();
-        this.$refs.gotoHome.$el.click();
+       // this.$refs.gotoHome.$el.click();
+         this.$refs.gotoHome.$emit('click')
+       // this.$emit('cancel',this.value)
       },
       processLoginButton () {
         let myThis = this
@@ -156,6 +158,7 @@
           password: myThis.password,
           success: (response) => {
             // 登录成功。
+              alert("登录成功#");
             console.log('login success:', JSON.stringify(response.data))
             myThis.showSuccess = false
             myThis.showError = false
@@ -166,26 +169,32 @@
               password: myThis.password,
               success: (response) => {
                 // 登录成功后，回首页
-                myThis.showSuccess = true
+                  alert("登录成功1！");
+                  myThis.showSuccess = true
                 myThis.errorMessage = '登录成功'
                 //myThis.routes.push('/') //jarong modify
                 //myThis.alertLoginResult('login success',true)
-                this.$f7.loginScreen.close();
-                this.$refs.gotoHome.$el.click();
+                  alert("loginScreen close");
+                  myThis.$f7.loginScreen.close();
+                  alert("loginScreen click");
+                  myThis.$refs.gotoHome.$emit('click')
               },
               error: (response) => {
                 // 登录成功后，回首页
                 myThis.showSuccess = true
+                  alert("登录成功2！");
                  myThis.errorMessage = '登录成功'
                 // myThis.routes.push('/')//jarong modify
                 //myThis.alertLoginResult('login success',true)
-
-                this.$f7.loginScreen.close();
-                this.$refs.gotoHome.$el.click();
+                  alert("loginScreen close");
+                  myThis.$f7.loginScreen.close();
+                  alert("loginScreen click");
+                  myThis.$refs.gotoHome.$emit('click')
               }
             })
           },
           error: (response) => {
+              alert("登录失败#");
             console.log('login fail.')
             myThis.showSuccess = false
 

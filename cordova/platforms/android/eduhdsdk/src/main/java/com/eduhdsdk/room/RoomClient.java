@@ -9,7 +9,6 @@ import android.net.Uri;
 import android.text.TextUtils;
 import android.util.ArrayMap;
 import android.widget.Toast;
-
 import com.classroomsdk.manage.WBSession;
 import com.eduhdsdk.R;
 import com.eduhdsdk.interfaces.JoinmeetingCallBack;
@@ -300,7 +299,7 @@ public class RoomClient {
      * @param code  checkroom 回调
      */
     public void joinRoomcallBack(int code) {
-        if (this.callBack != null) {
+        if (this.callBack != null && activity != null) {
             if (code == 0) {
                 Intent intent = null;
                 String name = SkinCompatManager.getInstance().getCurSkinName();
@@ -330,9 +329,7 @@ public class RoomClient {
                 } else {
                     intent = new Intent(activity, OneToManyActivity.class);
                 }
-                if (intent != null) {
-                    activity.startActivity(intent);
-                }
+                activity.startActivity(intent);
             }
             callBack.callBack(code);
         }
@@ -344,7 +341,7 @@ public class RoomClient {
      * @param response   回放获取 roomJosn回调
      */
     public void onPlayBackRoomJson(int code, String response) {
-        if (this.callBack != null) {
+        if (this.callBack != null && activity != null) {
             Intent intent = null;
             if (code == 0) {
                 joinPlayBackRoom();
@@ -374,9 +371,7 @@ public class RoomClient {
                 } else {
                     intent = new Intent(activity, OneToManyActivity.class);
                 }
-                if (intent != null) {
-                    activity.startActivity(intent);
-                }
+                activity.startActivity(intent);
             }
             callBack.callBack(code);
         }
@@ -457,6 +452,12 @@ public class RoomClient {
     public void onClassDismiss() {
         if (notify != null) {
             notify.onClassDismiss();
+        }
+    }
+
+    public void onLeaveRoom() {
+        if (notify != null) {
+            notify.onLeaveRoom();
         }
     }
 }

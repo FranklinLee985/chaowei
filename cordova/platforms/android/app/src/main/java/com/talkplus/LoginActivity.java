@@ -30,6 +30,10 @@ import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.os.Handler;
+import android.os.Build;
 
 import com.eduhdsdk.BuildVars;
 import com.classroomsdk.tools.ScreenScale;
@@ -49,6 +53,8 @@ import io.framework7.classroom.R;
 import com.talkcloud.room.TKRoomManager;
 import com.tencent.bugly.crashreport.CrashReport;
 
+import org.jsoup.helper.StringUtil;
+
 import java.util.HashMap;
 import java.util.Map;
 import android.util.Log;
@@ -58,6 +64,7 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
     private EditText edt_meetingid;
     private EditText edt_nickname;
     private Button txt_joinmeeting;
+    private Button txt_leavemeeting;
     private TextView txt_version, tv_role, tv_cancel;
     private String meetingid;
     private RelativeLayout re_role;
@@ -78,9 +85,14 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
     private String userRole = "2";
     private boolean playBackToast;
 	private static final String TAG="LoginActivity";  
+    private boolean isShowLog;
+    private boolean isUrlJoinRoom;
+    private Uri uri;
+    private String uriUrl;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-		Log.i(TAG, "onCreate Enter."); 
+	//	Log.i(TAG, "onCreate Enter."); 
         super.onCreate(savedInstanceState);
 
         this.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -114,16 +126,26 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
         linearLayout = (LinearLayout) findViewById(R.id.linearLayout);
 
         txt_joinmeeting.setOnClickListener(this);
+
+        txt_leavemeeting = (Button) findViewById(R.id.txt_leavemeeting);
+        txt_leavemeeting.setOnClickListener(this);
+
         re_role.setOnClickListener(this);
 
         edt_meetingid.setOnClickListener(this);
         edt_nickname.setOnClickListener(this);
         edt_meetingid.setOnFocusChangeListener(this);
         edt_nickname.setOnFocusChangeListener(this);
-		
-		Log.i(TAG, "before handleIntentemm ."); 
-        handleIntentemm(getIntent());
-		Log.i(TAG, "end handleIntentemm ."); 
+        
+       
+
+
+	//	Log.i(TAG, "before handleIntentemm ."); 
+        if (getIntent() != null && getIntent().getData() != null)
+        {
+			handleIntentemm(getIntent().getData().toString());
+		}
+	//	Log.i(TAG, "end handleIntentemm ."); 
         txt_version.setText(LoginUtils.getVersion());
 
         initNameAndPassWord();
@@ -139,8 +161,31 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
         CrashReport.initCrashReport(getApplicationContext(), "de6cb21afa", false);
         //权限检查
         PermissionTest.requestPermission(this, REQUEST_CODED);
-		Log.i(TAG, "onCreate end."); 
+//		Log.i(TAG, "onCreate end."); 
     }
+
+    /**
+     * 检测当的网络（WLAN、3G/2G）状态
+     *
+     * @param context Context
+     * @return true 表示网络可用
+     */
+    public boolean isNetworkAvailable(Context context) {
+        ConnectivityManager connectivity = (ConnectivityManager) context
+                .getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (connectivity != null) {
+            NetworkInfo info = connectivity.getActiveNetworkInfo();
+            if (info != null && info.isConnected()) {
+                // 当前网络是连接的
+                if (info.getState() == NetworkInfo.State.CONNECTED) {
+                    // 当前所连接的网络可用
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
 
     private void initNameAndPassWord() {
         SharedPreferences preferences = getSharedPreferences("RoomNuberAndNick", Context.MODE_PRIVATE);
@@ -178,12 +223,17 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
 
     @Override
     protected void onStart() {
+        isShowLog = true;
+        if (isUrlJoinRoom) {
+            handleIntentemm(uriUrl);
+        }
         super.onStart();
     }
 
     @Override
     protected void onStop() {
         super.onStop();
+        isShowLog = false;
         re_loading.setVisibility(View.GONE);
     }
 
@@ -195,7 +245,7 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
     @Override
     protected void onResume() {
         //自动更新检测
-        AutoUpdateUtil.getInstance().checkForUpdates(this);
+        //AutoUpdateUtil.getInstance().checkForUpdates(this);
         super.onResume();
     }
 
@@ -203,6 +253,8 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
     public void onClick(View v) {
 
         if (v.getId() == R.id.txt_joinmeeting) {
+				handleIntentemm(uriUrl);
+            /*
             if (!checkEmpty()) {
                 txt_joinmeeting.setClickable(false);
                 txt_joinmeeting.setSelected(true);
@@ -240,8 +292,12 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
 
                 saveRoomNumberAndNick();
                 RoomClient.getInstance().joinRoom(LoginActivity.this, map);
-            }
-        } else if (v.getId() == R.id.re_role) {
+            }*/
+        }
+        else if (v.getId() == R.id.txt_leavemeeting) {
+            finish();
+        }
+        else if (v.getId() == R.id.re_role) {
             KeyBoardUtil.hideInputMethod(this);
             AnimationUtil.getInstance(this).rolemoveUpView(linearLayout);
             showCoursePopupWindow();
@@ -328,7 +384,8 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
      */
     public void inputMeetingPassward(final Activity activity, int nTipID,
                                      final String mid, int type) {
-
+        if (!isShowLog)
+            return;
         View contentView = LayoutInflater.from(activity).inflate(R.layout.tk_meeting_password, null);
         error_popupWindow = new PopupWindow(activity);
 
@@ -426,7 +483,7 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
     public void errorTipDialog(final Activity activity, String errorTip) {
 
         boolean res = false;
-        if (activity == null) {
+        if (activity == null || !isShowLog) {
             res = false;
         } else {
             if (activity.isFinishing() || activity.isDestroyed()) {
@@ -440,7 +497,7 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
             if (error_tip_popupWindow != null && error_tip_popupWindow.isShowing()) {
                 return;
             }
-            View contentView = LayoutInflater.from(activity).inflate(R.layout.tk_layout_login_error_dialog, null);
+            final View contentView = LayoutInflater.from(activity).inflate(R.layout.tk_layout_login_error_dialog, null);
 
             if (error_tip_popupWindow == null) {
                 error_tip_popupWindow = new PopupWindow(activity);
@@ -474,8 +531,12 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
             if (activity.isFinishing() || activity.isDestroyed() || getWindow() == null) {
                 return;
             }
-
-            error_tip_popupWindow.showAtLocation(contentView, Gravity.CENTER, 0, 0);
+            txt_version.post(new Runnable() {
+                @Override
+                public void run() {
+                    error_tip_popupWindow.showAtLocation(contentView, Gravity.CENTER, 0, 0);
+                }
+            });
             //产生背景变暗效果
             WindowManager.LayoutParams lp = getWindow().getAttributes();
             lp.alpha = 0.4f;
@@ -530,9 +591,10 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
         } else {
             if (nRet == -1 || nRet == 3 || nRet == 11 || nRet == 1502) {
                 errorTipDialog(this, getString(R.string.WaitingForNetwork));
-
+                
             } else {
                 errorTipDialog(this, getString(R.string.WaitingForNetwork) + "(" + nRet + ")");
+                
             }
         }
 
@@ -548,10 +610,12 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
     public void onKickOut(int res) {
         if (res == RoomVariable.Kickout_Repeat) {
             Toast.makeText(this, getString(R.string.kick_out_tip), Toast.LENGTH_LONG).show();
+			finish();
         }
 
         if (res == RoomVariable.Kickout_ChairmanKickout) {
             Toast.makeText(this, getString(R.string.chairman_kick_out), Toast.LENGTH_LONG).show();
+			finish();
         }
     }
 
@@ -577,90 +641,94 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
     @Override
     public void onClassDismiss() {
         Toast.makeText(this, getString(R.string.class_closeed), Toast.LENGTH_LONG).show();
+		finish();
     }
 
-    private void handleIntentemm(Intent intent) {
-        if (intent != null) {
-            Uri uri = intent.getData();
-            if (uri != null) {
-				 Log.i(TAG, "handleIntentemm " + uri); 
-                String url = uri.toString();
-                if (url.startsWith("enterroomnew://")) {
-					 Toast.makeText(this, "enterroomnew", Toast.LENGTH_LONG).show();
-					
-                    String temp = url.substring(url.indexOf("?") + 1);
-                    String[] temps = temp.split("&");
-                    Map<String, Object> tempMap = new HashMap<String, Object>();
-                    for (int i = 0; i < temps.length; i++) {
-                        String[] t = temps[i].split("=");
-                        if (t.length > 1) {
-                            tempMap.put(t[0], t[1]);
-                        }
-                    }
-                    if (tempMap.containsKey("host")) {
-                        String servername = (String) tempMap.get("host");
-                        servername = servername.substring(0, servername.indexOf("."));
-                        tempMap.put("servername", servername);
-                        if (sp.contains("servername")) {
-                            tempMap.put("servername", sp.getString("servername", ""));
-                        }
-                    }
-                    if (tempMap.containsKey("path")) {
-                        String tempPath = "http://" + tempMap.get("path");
-                        tempMap.put("path", tempPath);
-						Log.i(TAG, "call joinPlayBackRoom "); 
-                        RoomClient.getInstance().joinPlayBackRoom(LoginActivity.this, temp);
-                        playBackToast = true;
-                    } else {
-                        tempMap.put("port", 80);
-						Log.i(TAG, "call joinRoom "); 
-                        RoomClient.getInstance().joinRoom(LoginActivity.this, temp);
-                    }
-                }
-				else
-                {
-                    if (url.startsWith("chaoweiclass://")) {
-                        Toast.makeText(this, "chaoweiclass", Toast.LENGTH_LONG).show();
-
-                        String temp = url.substring(url.indexOf("?") + 1);
-                        String[] temps = temp.split("&");
-                        Map<String, Object> tempMap = new HashMap<String, Object>();
-                        for (int i = 0; i < temps.length; i++) {
-                            String[] t = temps[i].split("=");
-                            if (t.length > 1) {
-                                tempMap.put(t[0], t[1]);
-                            }
-                        }
-                        if (tempMap.containsKey("host")) {
-                            String servername = (String) tempMap.get("host");
-                            servername = servername.substring(0, servername.indexOf("."));
-                            tempMap.put("servername", servername);
-                            if (sp.contains("servername")) {
-                                tempMap.put("servername", sp.getString("servername", ""));
-                            }
-                        }
-                        /*
-                        if (tempMap.containsKey("path")) {
-                            String tempPath = "http://" + tempMap.get("path");
-                            tempMap.put("path", tempPath);
-                            RoomClient.getInstance().joinPlayBackRoom(LoginActivity.this, temp);
-                            playBackToast = true;
-                        } else {
-                            tempMap.put("port", 80);
-                            RoomClient.getInstance().joinRoom(LoginActivity.this, temp);
-                        }*/
-						Log.i(TAG, "call joinRoomEx "); 
-                        RoomClient.getInstance().joinRoomEx(LoginActivity.this, temp);
-                    }
+    @Override
+    public void onLeaveRoom() {
+        Toast.makeText(this, getString(R.string.leave), Toast.LENGTH_LONG).show();
+        finish();
+    }
+    private void handleIntentemm(String url) {
+        uriUrl = url;
+		if (isNetworkAvailable(this) == false)
+		{
+			ToastUtils.showToast(this, getString(R.string.no_network));
+			return;
+		}
+        if (url.startsWith("enterroomnew://")) {
+            isUrlJoinRoom = true;
+            if (!isShowLog)
+                return;
+            String temp = url.substring(url.indexOf("?") + 1);
+            String[] temps = temp.split("&");
+            Map<String, Object> tempMap = new HashMap<String, Object>();
+            for (int i = 0; i < temps.length; i++) {
+                String[] t = temps[i].split("=");
+                if (t.length > 1) {
+                    tempMap.put(t[0], t[1]);
                 }
             }
+            if (tempMap.containsKey("host")) {
+                String servername = (String) tempMap.get("host");
+                servername = servername.substring(0, servername.indexOf("."));
+                tempMap.put("servername", servername);
+                if (sp != null && sp.contains("servername")) {
+                    tempMap.put("servername", sp.getString("servername", ""));
+                }
+            }
+            if (tempMap.containsKey("path")) {
+                String tempPath = "http://" + tempMap.get("path");
+                tempMap.put("path", tempPath);
+                RoomClient.getInstance().joinPlayBackRoom(LoginActivity.this, temp);
+                playBackToast = true;
+            } else {
+                tempMap.put("port", 80);
+                RoomClient.getInstance().joinRoom(LoginActivity.this, temp);
+            }
+            isUrlJoinRoom = false;
         }
+		else
+		{
+            isUrlJoinRoom = true;
+			if (url.startsWith("chaoweiclass://")) {
+				//Toast.makeText(this, "chaoweiclass New method", Toast.LENGTH_LONG).show();
+
+				String temp = url.substring(url.indexOf("?") + 1);
+				String[] temps = temp.split("&");
+				Map<String, Object> tempMap = new HashMap<String, Object>();
+				for (int i = 0; i < temps.length; i++) {
+					String[] t = temps[i].split("=");
+					if (t.length > 1) {
+						tempMap.put(t[0], t[1]);
+					}
+				}
+				if (tempMap.containsKey("host")) {
+					String servername = (String) tempMap.get("host");
+					servername = servername.substring(0, servername.indexOf("."));
+					tempMap.put("servername", servername);
+					if (sp.contains("servername")) {
+						tempMap.put("servername", sp.getString("servername", ""));
+					}
+				}
+                tempMap.put("port", 80);
+                //  1 PC   2 Android   3 IOS
+                tempMap.put("clientType", "2");
+
+				Log.i(TAG, "call joinRoom ");
+				RoomClient.getInstance().joinRoom(LoginActivity.this, temp);
+			}
+            isUrlJoinRoom = false;
+		}
     }
+	
+
 
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        handleIntentemm(intent);
+        if (intent != null && intent.getData() != null)
+            handleIntentemm(intent.getData().toString());
     }
 
     @Override
@@ -804,6 +872,8 @@ public class LoginActivity extends Activity implements OnClickListener, Joinmeet
         LogCrashesUtil.getInstance().resetInstance();
         RoomClient.getInstance().resetInstance();
         RoomSession.getInstance().resetInstance();
-        AutoUpdateUtil.getInstance().resetInstance();
+        //AutoUpdateUtil.getInstance().resetInstance();
     }
+	
+
 }

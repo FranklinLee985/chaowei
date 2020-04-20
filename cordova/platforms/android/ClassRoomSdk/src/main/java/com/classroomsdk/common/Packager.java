@@ -66,6 +66,8 @@ public class Packager {
 
 
     public static JSONObject pageSendData(ShareDoc doc) {
+        if (doc == null)
+            return new JSONObject();
         JSONObject jsdata = new JSONObject();
         JSONObject filedata = new JSONObject();
         try {
@@ -97,7 +99,7 @@ public class Packager {
 
             filedata.put("isContentDocument", doc.getIsContentDocument());
 
-           /* filedata.put("type", doc.getType());*/
+            /* filedata.put("type", doc.getType());*/
             if (doc.isDynamicPPT()) {
                 filedata.put("swfpath", doc.getDownloadpath() == null ? doc.getSwfpath() : doc.getDownloadpath());
             } else {

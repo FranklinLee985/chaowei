@@ -24,6 +24,9 @@
     },
     "cordova-plugin-talkplus": {
       "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
+    },
+    "cordova-plugin-cocoapod-support": {
+      "PACKAGE_NAME": "$(PRODUCT_BUNDLE_IDENTIFIER)"
     }
   },
   "dependent_plugins": {

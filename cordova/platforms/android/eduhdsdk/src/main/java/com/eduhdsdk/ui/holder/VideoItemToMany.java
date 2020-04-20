@@ -74,8 +74,7 @@ public class VideoItemToMany {
             sf_video.init(eglBase.getEglBaseContext(), null);
             RoomClient.getInstance().setPreEglMap(eglBase, true);
         } catch (RuntimeException e) {
-            if (BuildConfig.DEBUG)
-                Toast.makeText(activity, e.getMessage(), Toast.LENGTH_LONG).show();
+            Toast.makeText(activity, e.getMessage(), Toast.LENGTH_LONG).show();
         }
         sf_video.setZOrderMediaOverlay(true);
         sf_video.setScalingType(RendererCommon.ScalingType.SCALE_ASPECT_FIT);
