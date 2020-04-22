@@ -14,11 +14,11 @@
     <application
         android:name="com.talkplus.MyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/tk_logo"
+        android:icon="@drawable/tutor_logo"
         android:installLocation="auto"
         android:label="@string/app_name"
         android:largeHeap="true"
-        android:roundIcon="@drawable/tk_logo"
+        android:roundIcon="@drawable/tutor_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity

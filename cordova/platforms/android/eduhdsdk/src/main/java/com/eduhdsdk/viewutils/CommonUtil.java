@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.v4.graphics.drawable.DrawableCompat;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.eduhdsdk.room.RoomInfo;
 import com.eduhdsdk.ui.holder.OneToManyRootHolder;
@@ -18,10 +19,14 @@ public class CommonUtil {
 
 
     public static void changeBtimapColor(ImageView imageView, String color) {
-        Drawable drawable = imageView.getDrawable().mutate();
-        Drawable wrappedDrawable = DrawableCompat.wrap(drawable);
-        DrawableCompat.setTint(wrappedDrawable, Color.parseColor(color));
-        imageView.setImageDrawable(wrappedDrawable);
+        try {
+            Drawable drawable = imageView.getDrawable().mutate();
+            Drawable wrappedDrawable = DrawableCompat.wrap(drawable);
+            DrawableCompat.setTint(wrappedDrawable, Color.parseColor(color));
+            imageView.setImageDrawable(wrappedDrawable);
+        } catch (IllegalArgumentException e) {
+            e.printStackTrace();
+        }
     }
 
     public static void setTimeVisibility(TKBaseRootHolder mRootHolder, int visibility) {

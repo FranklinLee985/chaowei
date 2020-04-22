@@ -38,7 +38,7 @@
         <param name="onload" value="true" />
     </feature>
     <feature name="talkplus">
-        <param name="ios-package" value="talkplus" />
+        <param name="ios-package" value="CLTalkClientPlugins" />
     </feature>
     <name>classroom</name>
     <description>
@@ -58,6 +58,12 @@
     <allow-navigation href="*" />
     <allow-intent href="itms:*" />
     <allow-intent href="itms-apps:*" />
+    <pod name="SSZipArchive" spec="2.1.3" />
+    <pod name="SDWebImage" spec="5.1.1" />
+    <pod name="HockeySDK" spec="5.1.2" />
+    <pod name="Masonry" spec="1.1.0" />
+    <pod name="SakuraKit" spec="1.0.0" />
+    <pod name="MBProgressHUD" spec="1.1.0" />
     <config-file parent="CFBundleAllowMixedLocalizations" platform="ios" target="*-Info.plist">
         <true />
     </config-file>
@@ -101,5 +107,6 @@
     <preference name="SplashScreenDelay" value="0" />
     <preference name="Allow3DTouchLinkPreview" value="false" />
     <preference name="CordovaWebViewEngine" value="CDVWKWebViewEngine" />
+    <preference name="pods_ios_min_version" value="8.0" />
     <preference name="StatusBarOverlaysWebView" value="true" />
 </widget>

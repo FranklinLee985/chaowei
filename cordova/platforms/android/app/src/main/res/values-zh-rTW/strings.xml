@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">拓課雲Plus</string>
+    <string name="app_name">Tutor@home</string>
     <string name="crash_dialog_negative_button">取消</string>
     <string name="crash_dialog_positive_button">發送</string>
     <string name="crash_dialog_title">異常報告</string>
@@ -16,4 +16,6 @@
     <string name="password_not_empty">密碼不能為空</string>
 
     <string name="login_choose_user_room">請選擇房間模式</string>
+	<string name="leave_classroom">离开教室</string>
+	<string name="no_network">網絡暫時不可用,請稍後重試</string>
 </resources>

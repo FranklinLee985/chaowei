@@ -1,0 +1,6 @@
+framework module TKRoomSDK {
+  umbrella header "TKRoomSDK.h"
+
+  export *
+  module * { export * }
+}

@@ -15,6 +15,7 @@
   "dependencies": {
     "cordova-android": "^8.1.0",
     "cordova-ios": "^5.1.1",
+    "cordova-plugin-cocoapod-support": "1.6.2",
     "cordova-plugin-keyboard": "^1.2.0",
     "cordova-plugin-splashscreen": "^5.0.3",
     "cordova-plugin-statusbar": "^2.4.3",
@@ -29,7 +30,8 @@
       "cordova-plugin-splashscreen": {},
       "cordova-plugin-wkwebview-file-xhr": {},
       "cordova-plugin-whitelist": {},
-      "cordova-plugin-talkplus": {}
+      "cordova-plugin-talkplus": {},
+      "cordova-plugin-cocoapod-support": {}
     },
     "platforms": [
       "ios",

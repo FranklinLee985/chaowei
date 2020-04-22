@@ -1,0 +1,18 @@
+"A new version is available!" = "新的版本已经提供下载了！";
+
+"%@ %@ is now available. You have %@. Would you like to download(%@) it now?" = "%1$@ %2$@ 已经提供下载。您现在的版本是 %3$@。您要现在下载(%4$@)它吗？";
+
+"Update" = "更新";
+
+"Skip This Version" = "跳过这个版本";
+
+"Remind Me Later" = "以后再提醒我";
+
+"Release Notes" = "更新信息";
+
+"Prompt.FoundNewVersions" = "发现新版本：";
+
+"Prompt.ForcedToUpgrade" = "已有新版本可用，为了获得完整的学习体验，请您立即完成版本升级。";
+
+"Prompt.ConditionsForTheUpgrade" = "已有新版本可用，为了达到最佳使用体验，建议您立即完成版本升级。";
+

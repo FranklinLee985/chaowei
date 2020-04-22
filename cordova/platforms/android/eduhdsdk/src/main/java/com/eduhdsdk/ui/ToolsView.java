@@ -102,6 +102,10 @@ public class ToolsView {
         //当回放时 不显示工具条
         if (isShow && TKRoomManager.getInstance().getMySelf().role >= 0) {
             mRootHolder.tools_include.setVisibility(View.VISIBLE);
+            ViewGroup.LayoutParams layoutParams = (ViewGroup.LayoutParams) mRootHolder.tools_include.getLayoutParams();
+            layoutParams.height = (int) (viewHeight);
+            layoutParams.width = (int) (viewHeight* 0.152);
+            mRootHolder.tools_include.setLayoutParams(layoutParams);
             WhiteBoradConfig.getsInstance().setToolsType(mToolsType);
         } else {
             mRootHolder.tools_include.setVisibility(View.GONE);
@@ -217,8 +221,8 @@ public class ToolsView {
                     mRootHolder.tools_bottom_line.setVisibility(View.VISIBLE);
                     mRootHolder.iv_top_arrow.setImageResource(R.drawable.tk_tools_jiantou_top);
                     ViewGroup.LayoutParams layoutParams = (ViewGroup.LayoutParams) mRootHolder.tools_include.getLayoutParams();
-                    layoutParams.height = (int) (viewHeight * 0.8);
-                    layoutParams.width = (int) (viewHeight * 0.8 * 0.152);
+                    layoutParams.height = (int) (viewHeight);
+                    layoutParams.width = (int) (viewHeight* 0.152);
                     mRootHolder.tools_include.setLayoutParams(layoutParams);
                 } else {
                     isShow = false;
@@ -227,7 +231,7 @@ public class ToolsView {
                     mRootHolder.iv_top_arrow.setImageResource(R.drawable.tk_tools_jiantou_buttom);
                     ViewGroup.LayoutParams layoutParams = (ViewGroup.LayoutParams) mRootHolder.tools_include.getLayoutParams();
                     layoutParams.height = mRootHolder.tools_top.getMeasuredHeight() + mRootHolder.iv_top_arrow.getMeasuredHeight();
-                    layoutParams.width = (int) (viewHeight * 0.8 * 0.152);
+                    layoutParams.width = (int) (viewHeight  * 0.152);
                     mRootHolder.tools_include.setLayoutParams(layoutParams);
                 }
             }

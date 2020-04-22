@@ -613,8 +613,8 @@ public class RoomSession implements TKRoomManagerObserver, TKMediaFrameObserver,
      */
     @Override
     public void onKickedout(int reason) {
-        if (reason == 1) {
-            SharedPreferences preferences = context.getSharedPreferences("KickOutPersonInfo", Context.MODE_PRIVATE);
+        if (context!=null&&reason == 1) {
+                SharedPreferences preferences = context.getSharedPreferences("KickOutPersonInfo", Context.MODE_PRIVATE);
             SharedPreferences.Editor numberEditor = preferences.edit();
             numberEditor.putString("RoomNumber", RoomInfo.getInstance().getSerial());
             numberEditor.putLong("Time", System.currentTimeMillis());

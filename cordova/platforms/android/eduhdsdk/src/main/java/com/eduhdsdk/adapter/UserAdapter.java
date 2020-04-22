@@ -135,7 +135,7 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public void onBindViewHolder(RecyclerView.ViewHolder holder, final int position) {
         if (holder instanceof ViewHolderButtom) {
             ViewHolderButtom viewHolderButtom = (ViewHolderButtom) holder;
-            if (getmSall() != null && getmSall().getCurrentTapKey().equals(mList.get(position).getId())) {
+            if (getmSall() != null && mList.size() > 0 && getmSall().getCurrentTapKey().equals(mList.get(position).getId())) {
                 viewHolderButtom.butUser.setBackgroundResource(R.drawable.item_small_top_buttom_white);
                 viewHolderButtom.butUser.setTextAppearance(mContext, R.style.white_board_lord);
                 FrameLayout.LayoutParams layoutParams = (FrameLayout.LayoutParams) viewHolderButtom.butUser.getLayoutParams();
@@ -150,8 +150,8 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 viewHolderButtom.butUser.setTextAppearance(mContext, R.style.whiteboard);
                 viewHolderButtom.butUser.setBackgroundResource(R.drawable.tk_item_small_top_buttom);
             }
-
-            viewHolderButtom.butUser.setText(mList.get(position).getNickname());
+            if (mList.size() > 0)
+                viewHolderButtom.butUser.setText(mList.get(position).getNickname());
             if (TKRoomManager.getInstance().getMySelf().role == Constant.USERROLE_TEACHER) {
                 viewHolderButtom.butUser.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -161,7 +161,8 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                         //老师选中发信令
                         Map<String, Object> prepareing = new HashMap<>();
                         prepareing.put("blackBoardState", getmSall().getBlackBoardState());
-                        prepareing.put("currentTapKey", mList.get(position).getId());
+                        if (mList.size() > 0)
+                            prepareing.put("currentTapKey", mList.get(position).getId());
                         prepareing.put("currentTapPage", 1);
                         TKRoomManager.getInstance().pubMsg("BlackBoard_new", "BlackBoard_new", "__all", new JSONObject(prepareing).toString(), true, "ClassBegin", "");
                     }
@@ -338,7 +339,7 @@ public class UserAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         int endindex = 0;
 
         if (current % pagesize > 0) {
-            index = current / pagesize + 1;
+            index = count % pagesize > 0 ? count / pagesize + 1 : count / pagesize;
 
             int currentpage = index * pagesize;
             if (count >= currentpage) {

@@ -32,7 +32,7 @@ public class EyeProtectionUtil {
     public static WindowManager wm;
     public static WindowManager.LayoutParams params;
     public static View countDownView;
-    private static int sdkInt;
+    private static int sdkInt = Build.VERSION.SDK_INT;
 
     /**
      * 弹出权限的对话框
@@ -62,7 +62,6 @@ public class EyeProtectionUtil {
             public void onClick(View v) {
                 if (dialog != null && dialog.isShowing()) {
                     dialog.dismiss();
-                    sdkInt = Build.VERSION.SDK_INT;
                     if (sdkInt >= Build.VERSION_CODES.O) {//8.0以上
                         Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION);
                         intent.setData(Uri.fromParts("package", activity.getPackageName(), null));
@@ -97,16 +96,17 @@ public class EyeProtectionUtil {
         if (open) {
 
             if (countDownView != null) {
-                wm.removeView(countDownView);
+                try {
+                    wm.removeView(countDownView);
+                } catch (IllegalArgumentException e) {
+                    e.printStackTrace();
+                }
             }
             params = new WindowManager.LayoutParams();
             // 系统级别的窗口
-            // 系统级别的窗口
             if (sdkInt >= Build.VERSION_CODES.O) {//8.0以上
                 params.type = WindowManager.LayoutParams.TYPE_APPLICATION_OVERLAY;
-            }/*if (sdkInt >= Build.VERSION_CODES.M) {//6.0--8.0
-                params.type = WindowManager.LayoutParams.TYPE_PHONE;//降低系统级别优先级
-            }*/ else {
+            } else {
                 params.type = WindowManager.LayoutParams.TYPE_PHONE;//降低系统级别优先级
             }
             // 居中显示
@@ -122,7 +122,7 @@ public class EyeProtectionUtil {
             if (wm != null && !activity.isFinishing())
                 wm.addView(countDownView, params);
         } else {
-            if (wm != null) {
+            if (wm != null && countDownView != null) {
                 wm.removeView(countDownView);
                 countDownView = null;
             }

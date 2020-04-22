@@ -17,6 +17,9 @@ export default {
   UPDATE_PAGE_TITLE: ({commit}) => {
     commit(data.UPDATE_PAGE_TITLE)
   },
+  UPDATE_LOGIN_SCREEN_STATUS: ({commit}) => {
+    commit(data.UPDATE_LOGIN_SCREEN_STATUS)
+  }
 /*  UPDATE_PEN_CONNECTED: ({commit}) => {
     commit(data.UPDATE_CONNECTED_PEN)
   },

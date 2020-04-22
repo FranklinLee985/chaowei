@@ -28,70 +28,84 @@
   <!-- Views/Tabs container -->
   <f7-views tabs class="safe-areas">
     <!-- Tabbar for switching views-tabs -->
+
     <f7-toolbar tabbar labels bottom>
-      <f7-link tab-link="#view-home" tab-link-active icon-ios="f7:house_fill" icon-aurora="f7:house_fill" icon-md="material:home" text="上课"></f7-link>
- <!--     <f7-link tab-link="#view-catalog" icon-ios="f7:square_list_fill" icon-aurora="f7:square_list_fill" icon-md="material:view_list" text="上课"></f7-link> -->
-      <!--<f7-link tab-link="#view-settings" icon-ios="f7:gear" icon-aurora="f7:gear" icon-md="material:settings" text="个人中心"></f7-link>-->
+      <f7-link tab-link="#view-home" tab-link-active icon-ios="f7:book_fill" icon-aurora="f7:book_fill" icon-md="material:book" text="課堂"></f7-link>
+      <f7-link tab-link="#view-personal" icon-ios="f7:person_fill" icon-aurora="f7:person_fill" icon-md="material:person" text="個人"></f7-link>
+
+
     </f7-toolbar>
 
     <!-- Your main view/tab, should have "view-main" class. It also has "tab-active" class -->
-    <f7-view id="view-home" main tab tab-active url="/"></f7-view>
+
+
 
     <!-- Catalog View -->
  <!--   <f7-view id="view-catalog" name="catalog" tab url="/catalog/"></f7-view> -->
 
     <!-- Settings View -->
-   <!-- <f7-view id="view-settings" name="settings" tab url="/settings/"></f7-view>-->
+
+
+    <f7-view id="view-home" main tab tab-active url="/"></f7-view>
+
+    <f7-view id="view-personal" name="personal" tab url="/personal/"></f7-view>
+    <!-- Settings View -->
+
 
   </f7-views>
 
 
-  <!-- Popup -->
-  <f7-popup id="my-popup">
-    <f7-view>
-      <f7-page>
-        <f7-navbar title="Popup">
-          <f7-nav-right>
-            <f7-link popup-close>Close</f7-link>
-          </f7-nav-right>
-        </f7-navbar>
-        <f7-block>
-          <p>Popup content goes here.</p>
-        </f7-block>
-      </f7-page>
-    </f7-view>
-  </f7-popup>
 
-  <f7-login-screen id="my-login-screen">
+
+
+  <f7-login-screen id="my-login-screen"  :opened="loginScreenStatus" @loginscreen:closed="loginClose">
     <f7-view>
+
       <f7-page login-screen>
-        <f7-login-screen-title>Login</f7-login-screen-title>
+
+
+
+          <img :src='imgUrl.default' class="aligncenter" alt="">
+
+
+
+       <!-- <f7-login-screen-title>用戶登錄</f7-login-screen-title>-->
+
+        <f7-list simple-list>
+          <f7-list-item  style="color:#FF0000" v-if="showError" title="">{{errorMessage}}</f7-list-item>
+          <f7-list-item  style="color:#0BB20C" v-if="showSuccess" title="">{{errorMessage}}</f7-list-item>
+
+        </f7-list>
+
         <f7-list form>
           <f7-list-input
-            type="text"
-            name="username"
-            placeholder="Your username"
-            :value="username"
-            @input="username = $event.target.value"
+                  type="text"
+                  name="username"
+                  placeholder="請輸入用戶名"
+                  :value="username"
+                  @input="username = $event.target.value"
           ></f7-list-input>
           <f7-list-input
-            type="password"
-            name="password"
-            placeholder="Your password"
-            :value="password"
-            @input="password = $event.target.value"
+                  type="password"
+                  name="password"
+                  placeholder="請輸入密碼"
+                  :value="password"
+                  @input="password = $event.target.value"
           ></f7-list-input>
         </f7-list>
         <f7-list>
-          <f7-list-button title="Sign In" @click="processLoginButton"></f7-list-button>
+          <f7-list-button title="登入" @click=" processLoginButton"></f7-list-button>
+          <f7-list-button title="取消" @click="cancelLogin"></f7-list-button>
           <f7-block-footer>
-            Some text about login information.<br>Click "Sign In" to close Login Screen
+            請輸入用戶名和密碼登入
           </f7-block-footer>
         </f7-list>
       </f7-page>
     </f7-view>
   </f7-login-screen>
+
 </f7-app>
+
 </template>
 <style>
   .setPsd{
@@ -99,43 +113,58 @@
     top: 0;
     left: -100%;
   }
+
+  .aligncenter {
+    clear: both;
+    display: block;
+    margin: auto;
+  }
+
+  .user-portrait img{
+    font-size: 6rem;
+    position: absolute;
+    height: 6rem;
+    width: 6rem;
+    left: 50%;
+    top: 50%;
+    margin-left: -3rem;
+    margin-top: -3rem;
+    border: 3px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6rem;
+  }
+
 </style>
 <script>
   import { Device }  from 'framework7/framework7-lite.esm.bundle.js';
   import cordovaApp from '../js/cordova-app.js';
   import routes from '../js/routes.js';
+  import {mapGetters} from "vuex";
+  import stores from "../store/store";
 
   export default {
+
+    computed: {
+
+      // 计算属性的 getter
+      ...mapGetters([
+        'loading',
+        'fileCacheReady',
+        'userInfo',
+        'loginScreenStatus',
+        'isLogin'
+      ]),
+
+    },
     data() {
       return {
         // Framework7 Parameters
         f7params: {
           id: 'io.framework7.classroom', // App bundle ID
-          name: 'classroom', // App name
+          name: 'Tutor@home', // App name
           theme: 'auto', // Automatic theme detection
           // App root data
           data: function () {
-            return {
-
-              // Demo products for Catalog section
-              products: [
-                {
-                  id: '1',
-                  title: 'Apple iPhone 8',
-                  description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi tempora similique reiciendis, error nesciunt vero, blanditiis pariatur dolor, minima sed sapiente rerum, dolorem corrupti hic modi praesentium unde saepe perspiciatis.'
-                },
-                {
-                  id: '2',
-                  title: 'Apple iPhone 8 Plus',
-                  description: 'Velit odit autem modi saepe ratione totam minus, aperiam, labore quia provident temporibus quasi est ut aliquid blanditiis beatae suscipit odio vel! Nostrum porro sunt sint eveniet maiores, dolorem itaque!'
-                },
-                {
-                  id: '3',
-                  title: 'Apple iPhone X',
-                  description: 'Expedita sequi perferendis quod illum pariatur aliquam, alias laboriosam! Vero blanditiis placeat, mollitia necessitatibus reprehenderit. Labore dolores amet quos, accusamus earum asperiores officiis assumenda optio architecto quia neque, quae eum.'
-                },
-              ]
-            };
+            return {}
           },
 
           // App routes
@@ -157,7 +186,7 @@
         // Login screen data
         username: '',
         password: '',
-
+        userId:'',
         //jarong add
         pwdType: 'password',
         // 提示数据是否有效
@@ -166,76 +195,199 @@
         showSuccess: false,
         // 提示出错
         showError: false,
-        errorMessage: ''
+        errorMessage: '',
+        imgUrl:require("../assets/images/login.png"),
+       // loginScreenOpened: false,
         //jarong add end
       }
     },
     methods: {
-      alertLoginData() {
-        this.$f7.dialog.alert('Username: ' + this.username + '<br>Password: ' + this.password, () => {
-          this.$f7.loginScreen.close();
-
-        });
+      loginClose()
+      {
+        this.$store.commit('UPDATE_LOGIN_SCREEN_STATUS', false)
       },
-      alertLoginResult(result,close) {
-        this.$f7.dialog.alert(result, () => {
-          if (close == true)
-          this.$f7.loginScreen.close();
-        });
+
+       cancelLogin(){
+       // this.$store.commit('UPDATE_LOGIN_SCREEN_STATUS', false)
+        this.$f7.loginScreen.close()
+         navigator.app.exitApp()
       },
-	  processLoginButton () {
-        let myThis = this
-		myThis.baseFun.ajaxUserLogin({
-          user: myThis.username,
-          password: myThis.password,
-          success: (response) => {
-            // 登录成功。
-            console.log('login success:', JSON.stringify(response.data))
+        getRole()
+        {
+          let myThis = this
+          myThis.baseFun.ajaxUserGetLoginState({
 
-            // 获取用户信息，包括用户头像。
-            myThis.baseFun.ajaxUserInfoExt({
-              uid: response.data.current_user.uid,
-              user: response.data.current_user.name,
-              password: myThis.password,
-              success: (response) => {
-                // 登录成功后，回首页
-                myThis.showSuccess = true
-                myThis.routes.push('/') //jarong modify
-                myThis.alertLoginResult('login success',true)
-              },
-              error: (response) => {
-                // 登录成功后，回首页
-                myThis.showSuccess = true
-               // myThis.routes.push('/')//jarong modify
-                myThis.alertLoginResult('login success',true)
-              }
-            })
-          },
-          error: (response) => {
-            console.log('login fail.')
+            success: (response) => {
+              // 登录成功后，回首页
+              console.log('get role success:', JSON.stringify(response.data))
 
-            myThis.showError = false
-            if (response.response) {
-              // 显示服务器反馈的错误信息
-              let message = response.response.data.message
-              if (message.indexOf('anonymous') > -1) {
-                // This route can only be accessed by anonymous users.
-                myThis.errorMessage = 'Already login.'
-              } else {
-                myThis.errorMessage = 'Sorry, unrecognized username or password.'
-              }
-
-              myThis.showError = true
+              var event = document.createEvent('Event');
+              event.initEvent('refreshClass', true, true);
+              document.dispatchEvent(event)
+              myThis.$f7.loginScreen.close();
+            },
+            error: (response) => {
+              // 登录成功后，回首页
+              console.log('get role failed:')
+              myThis.$f7.loginScreen.close();
             }
-            else {
-              // 网络错误
-              myThis.errorMessage = response.message
-              myThis.showError = true
+          })
+        },
+        getUserInfo()
+        {
+          let myThis = this
+
+
+          // 获取用户信息，包括用户头像。
+          myThis.baseFun.ajaxUserInfoExt({
+            uid: myThis.userId,
+            user: myThis.username,
+            password: myThis.password,
+            success: (response) => {
+              myThis.getRole()
+            },
+            error: (response) => {
+              // 登录成功后，回首页
+
+              myThis.getRole()
             }
-            myThis.alertLoginResult('login fail',false)
-          }
-        })
-		}
+          })
+
+        },
+        processSecondLogin()
+        {
+          let myThis = this
+          myThis.baseFun.ajaxUserLogin({
+            user: myThis.username,
+            password: myThis.password,
+            success: (response) => {
+              // 登录成功。
+              // alert("登录成功#");
+              console.log('login success:', JSON.stringify(response.data))
+
+              myThis.userId = response.data.current_user.uid
+
+              myThis.showSuccess = false
+              myThis.showError = false
+              myThis.getUserInfo()
+
+            },
+            error: (response) => {
+              // alert("登录失败#");
+              this.adminLogined = false
+              console.log('login fail.')
+              myThis.showSuccess = false
+
+              myThis.showError = false
+              if (response.response) {
+                // 显示服务器反馈的错误信息
+                let message = response.response.data.message
+                if (message == null) {
+                  myThis.errorMessage = '網絡錯誤'
+                  myThis.showError = true
+                } else {
+                  if (message.indexOf('anonymous') > -1) {
+                    // This route can only be accessed by anonymous users.
+                    //myThis.errorMessage = 'Already login.'
+                    myThis.errorMessage = '已經登錄'
+
+
+                  } else {
+                    myThis.errorMessage = '用戶名或密碼錯誤'
+
+                    //myThis.errorMessage = 'Sorry, unrecognized username or password.'
+                  }
+                  myThis.showError = true
+
+                }
+              }
+              else
+                {
+                  // 网络错误
+                  // myThis.errorMessage = response.message
+                  myThis.errorMessage = '網絡錯誤'
+                  myThis.showError = true
+                }
+              }
+              //myThis.alertLoginResult('login fail',false)
+
+
+          })
+        },
+        forceLogoutLoginAgain()
+        {
+          let myThis = this
+          myThis.baseFun.ajaxUserForceLogout({
+            success: (response) => {
+              // 登出成功。
+              console.log('logout success.')
+              myThis.processSecondLogin()
+            },
+            error: (response) => {
+              console.log('logout fail.')
+              myThis.processSecondLogin()
+            }
+          })
+
+        },
+        processLoginButton () {
+          let myThis = this
+           let retryLogin = false
+          let getInfo = false
+
+         myThis.baseFun.ajaxUserLogin({
+            user: myThis.username,
+            password: myThis.password,
+            success: (response) => {
+              // 登录成功。
+              // alert("登录成功#");
+              console.log('login success:', JSON.stringify(response.data))
+              myThis.userId = response.data.current_user.uid
+             // myThis.dispuser = myThis.username
+              myThis.getUserInfo()
+
+            },
+            error: (response) => {
+              // alert("登录失败#");
+              this.adminLogined = false
+              console.log('login fail.')
+              myThis.showSuccess = false
+
+              myThis.showError = false
+              if (response.response) {
+                // 显示服务器反馈的错误信息
+                let message = response.response.data.message
+                if (message == null)
+                {
+                  myThis.errorMessage = '網絡錯誤'
+                 myThis.showError = true
+               }
+                else
+                {
+                  if (message.indexOf('anonymous') > -1) {
+                    // This route can only be accessed by anonymous users.
+                    //myThis.errorMessage = 'Already login.'
+                    myThis.errorMessage = '已經登錄'
+                    myThis.forceLogoutLoginAgain()
+
+                  } else {
+                    myThis.errorMessage = '用戶名或密碼錯誤'
+                      myThis.showError = true
+                    //myThis.errorMessage = 'Sorry, unrecognized username or password.'
+                  }
+                }
+
+              }
+              else {
+                // 网络错误
+                // myThis.errorMessage = response.message
+                myThis.errorMessage = '網絡錯誤'
+                myThis.showError = true
+              }
+             }
+          })
+        },
+
     },
     mounted() {
       this.$f7ready((f7) => {
@@ -244,20 +396,26 @@
           cordovaApp.init(f7);
         }
 
-        // Call F7 APIs here
-       // this.$f7router.currentRoute = '/about'
-       // var currentView = f7.views.current;
-      //  currentView.router.routes.push('/settings/');
-       // this.$store.state.
 
-     //  localStorage.removeItem('csrfToken') //debug
-       //var token = localStorage.getItem('csrfToken')
-        //if (token == null)
-          //  this.$refs.setPsd.$el.click();
+          this.baseFun.ajaxUserGetLoginState({
+
+              success: (response) => {
+                  console.log('get login state success:', JSON.stringify(response.data))
+                if (this.isLogin == false)
+                  this.$store.commit('UPDATE_LOGIN_SCREEN_STATUS', true)
+
+                },
+              error: (response) => {
+                  console.log('get login state failed:')
+
+                this.$store.commit('UPDATE_LOGIN_SCREEN_STATUS', true)
+              }
+          })
 
 
-      //  this.$router.push({path: '/webapp/page', name: 'webappBookPageMath', params: {url: url}})
-       // this.$f7route.ur
+
+        StatusBar.styleLightContent();
+        StatusBar.overlaysWebView(false);
       });
     }
   }

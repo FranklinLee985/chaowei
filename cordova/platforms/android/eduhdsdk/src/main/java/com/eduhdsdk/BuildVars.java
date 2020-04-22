@@ -20,5 +20,5 @@ public class BuildVars {
 
     public static String REQUEST_HEADER = "http://";
 
-    public static String CRASH_URL = "http://global.talk-cloud.com/update/public/";
+    public static String CRASH_URL = "http://doc.talk-cloud.net/update/public/";
 }

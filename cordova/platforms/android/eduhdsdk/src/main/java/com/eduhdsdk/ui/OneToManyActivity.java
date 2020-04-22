@@ -159,6 +159,7 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
     //白板放大或缩小 true放大  false缩小
     private boolean isZoom = false;
     private boolean isBackApp = false;
+    private boolean isShowDialog = false;
     private Map<String, Object> mediaAttrs;
     private String mediaPeerId;
 
@@ -214,6 +215,62 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
 
     private boolean isInflated;
     private View inflate;
+    private boolean isShowPlayBackPop;
+
+	
+	public void ShowNavigationBar(boolean show)
+    {
+        int uiOptions = getWindow().getDecorView().getSystemUiVisibility();
+        int newUiOptions = uiOptions;
+
+        // Navigation bar hiding:  Backwards compatible to ICS.
+        if (Build.VERSION.SDK_INT >= 14) {
+            if (show)
+                newUiOptions &= ~View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+            else
+                newUiOptions |= View.SYSTEM_UI_FLAG_HIDE_NAVIGATION;
+        }
+
+        // Status bar hiding: Backwards compatible to Jellybean
+        if (Build.VERSION.SDK_INT >= 16) {
+            if (show)
+                newUiOptions &= ~View.SYSTEM_UI_FLAG_FULLSCREEN;
+            else
+            newUiOptions |= View.SYSTEM_UI_FLAG_FULLSCREEN;
+        }
+		
+		
+		  if (Build.VERSION.SDK_INT >= 18) {
+			if (show)
+				newUiOptions &= ~View.SYSTEM_UI_FLAG_IMMERSIVE;
+			else
+				newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE;
+		 }
+		
+		 
+		/*
+        if (Build.VERSION.SDK_INT >= 18) {
+            if (show)
+                newUiOptions &= ~View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+            else
+            newUiOptions |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY;
+        }*/
+	/*	
+		if (show)
+		{	
+			newUiOptions &= ~View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            newUiOptions &= ~View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
+            newUiOptions &= ~View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+		}
+		else
+		{
+			newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
+            newUiOptions |= View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+
+		}*/
+        this.getWindow().getDecorView().setSystemUiVisibility(newUiOptions);
+    }	
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -232,6 +289,28 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
         initData();
         //绑定监听事件
         bindListener();
+		ShowNavigationBar(false);
+		
+		View decorView = getWindow().getDecorView();
+		decorView.setOnSystemUiVisibilityChangeListener
+			(new View.OnSystemUiVisibilityChangeListener() {
+			@Override
+			public void onSystemUiVisibilityChange(int visibility) {
+				// Note that system bars will only be "visible" if none of the
+				// LOW_PROFILE, HIDE_NAVIGATION, or FULLSCREEN flags are set.
+				if ((visibility & View.SYSTEM_UI_FLAG_FULLSCREEN) == 0) {
+					// TODO: The system bars are visible. Make any desired
+					// adjustments to your UI, such as showing the action bar or
+					// other navigational controls.
+					ShowNavigationBar(false);
+				} else {
+					// TODO: The system bars are NOT visible. Make any desired
+					// adjustments to your UI, such as hiding the action bar or
+					// other navigational controls.
+				}
+			}
+		});
+
     }
 
     /***
@@ -663,7 +742,16 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
         }
         isBackApp = false;
         isOpenCamera = false;
-
+        isShowDialog = true;
+        if (isShowPlayBackPop) {
+            mRootHolder.flipCamera.post(new Runnable() {
+                @Override
+                public void run() {
+                    mPlayBackSeekPopupWindow.startTimer(playbackControlUtils);
+                }
+            });
+            isShowPlayBackPop = false;
+        }
         super.onStart();
 
         if (!RoomSession.isInRoom) {
@@ -671,7 +759,7 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
             mRootHolder.tv_load.setText(R.string.joining_classroom_home);
         }
         if (mRootHolder.eye_protection.isChecked()) {
-            //EyeProtectionUtil.openSuspensionWindow(OneToManyActivity.this, true);
+            EyeProtectionUtil.openSuspensionWindow(OneToManyActivity.this, true);
         }
     }
 
@@ -680,13 +768,13 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
         if (!isFinishing()) {
             TKRoomManager.getInstance().setInBackGround(true);
             if (!isBackApp) {
-                    Intent mMonitorService = new Intent(this, MonitorService.class);
-                    mMonitorService.putExtra(MonitorService.KEY, OneToManyActivity.class.getName());
-                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                        startForegroundService(mMonitorService);
-                    } else {
-                        startService(mMonitorService);
-                    }
+                Intent mMonitorService = new Intent(this, MonitorService.class);
+                mMonitorService.putExtra(MonitorService.KEY, OneToManyActivity.class.getName());
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    startForegroundService(mMonitorService);
+                } else {
+                    startService(mMonitorService);
+                }
                 isBackApp = true;
             }
             if (TKRoomManager.getInstance().getMySelf() != null) {
@@ -700,6 +788,7 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
         if (mRootHolder.eye_protection.isChecked()) {
             EyeProtectionUtil.openSuspensionWindow(OneToManyActivity.this, false);
         }
+        isShowDialog = false;
         super.onStop();
     }
 
@@ -1107,7 +1196,7 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
             videoItems.get(index).view_choose_selected.setVisibility(View.GONE);
             return;
         }
-        if (TKRoomManager.getInstance().getMySelf() == null || TKRoomManager.getInstance().getMySelf().peerId == null) {
+        if (TKRoomManager.getInstance().getMySelf() == null || user == null || TKRoomManager.getInstance().getMySelf().peerId == null) {
             return;
         }
 
@@ -2189,6 +2278,7 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
         super.onWindowFocusChanged(hasFocus);
         //设置View的大小
         setViewSize();
+		ShowNavigationBar(false);
     }
 
     /**
@@ -2266,6 +2356,7 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
             public void dialog_ok(Dialog dialog) {
                 sendGiftPopUtils.deleteImage();
                 TKRoomManager.getInstance().leaveRoom();
+                RoomClient.getInstance().onLeaveRoom();
                 dialog.dismiss();
             }
         });
@@ -3206,6 +3297,7 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
             }
             RoomOperation.getInstance().getSystemNowTime(this);
         }
+		ShowNavigationBar(false);
     }
 
     /**
@@ -3368,8 +3460,6 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
             resetVideoitem(videoItems.get(x));
         }
         videoItems.clear();
-        videoItemToManies.clear();
-
         mRootHolder.re_loading.setVisibility(View.VISIBLE);
         mRootHolder.tv_load.setText(getString(R.string.connected));
 
@@ -3596,7 +3686,16 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
             if (mPlayBackSeekPopupWindow == null) {
                 mPlayBackSeekPopupWindow = new PlayBackSeekPopupWindow(OneToManyActivity.this, mRootHolder.re_play_back);
             }
-            mPlayBackSeekPopupWindow.startTimer(playbackControlUtils);
+            if (isShowDialog) {
+                mRootHolder.tv_back_name.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        mPlayBackSeekPopupWindow.startTimer(playbackControlUtils);
+                    }
+                });
+            } else {
+                isShowPlayBackPop = true;
+            }
             ToolCaseMgr.getInstance().setPlayBackSeekPopupWindow(mPlayBackSeekPopupWindow);
 
             mRootHolder.re_play_back.setOnTouchListener(new View.OnTouchListener() {
@@ -3612,7 +3711,12 @@ public class OneToManyActivity extends TKBaseActivity implements View.OnClickLis
                         } else {
                             if (!playbackControlUtils.isShowing) {
                                 playbackControlUtils.startHideTimer(mPlayBackSeekPopupWindow.rel_play_back);
-                                mPlayBackSeekPopupWindow.showPopupWindow();
+                                mRootHolder.re_play_back.post(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        mPlayBackSeekPopupWindow.showPopupWindow();
+                                    }
+                                });
                             }
                         }
                     }
